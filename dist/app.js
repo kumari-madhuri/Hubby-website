@@ -65,6 +65,9 @@ function init() {
 }
 
 const scrollDown = document.querySelector(".scroll-down");
+const navToggle = document.querySelector("#nav-toggle");
+const smallNav = document.querySelector(".small-nav");
+const closeBtn = document.querySelector(".close-btn");
 
 window.addEventListener("scroll", function () {
   const windowHeight = this.window.pageYOffset;
@@ -73,4 +76,11 @@ window.addEventListener("scroll", function () {
   } else {
     scrollDown.classList.remove("scroll-hide");
   }
+});
+
+navToggle.addEventListener("click", function () {
+  smallNav.classList.add("show-aside");
+});
+closeBtn.addEventListener("click", function () {
+  smallNav.classList.remove("show-aside");
 });
