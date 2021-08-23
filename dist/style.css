@@ -386,25 +386,34 @@ section {
   margin: 0;
   padding: 4rem 2rem;
   padding: 1rem 2rem 6rem 2rem;
+  position: relative;
 }
 .info-1 {
   border-left: 3px solid var(--primary-clr-2);
   border-bottom: 3px solid var(--primary-clr-2);
   border-bottom-left-radius: 1rem;
-  position: relative;
   margin-right: 1rem;
 }
 .info-2 {
+  text-align: right;
   border-right: 3px solid var(--primary-clr-2);
   border-bottom-right-radius: 1rem;
   border-top-right-radius: 1rem;
   margin-left: 1rem;
+  position: relative;
+}
+.info-2 .timeline-logo {
+  position: absolute;
+  top: 0.8rem;
+  left: 0;
+  height: 3.5rem;
+  width: 10%;
+  object-fit: contain;
 }
 .info-3 {
   border-left: 3px solid var(--primary-clr-2);
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  position: relative;
 }
 .arrow {
   position: absolute;
@@ -427,5 +436,34 @@ section {
 .about-container {
   width: 85vw;
   margin: 0 auto;
-  max-width: 50rem;
+  max-width: 60rem;
+}
+
+.timeline-logo {
+  position: absolute;
+  top: 0.8rem;
+  right: -43.5%;
+  height: 2rem;
+  width: 10%;
+  object-fit: contain;
+  /* border: 1px solid red; */
+}
+.iit {
+  height: 3.5rem;
+}
+.about-info h4 span {
+  color: #996300;
+}
+@media screen and (min-width: 800px) {
+  /* .timeline-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } */
+}
+@media screen and (min-width: 1100px) {
+  .about-info h4 {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
 }
