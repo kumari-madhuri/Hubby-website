@@ -63,3 +63,14 @@ function init() {
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
+
+const scrollDown = document.querySelector(".scroll-down");
+
+window.addEventListener("scroll", function () {
+  const windowHeight = this.window.pageYOffset;
+  if (windowHeight > 120) {
+    scrollDown.classList.add("scroll-hide");
+  } else {
+    scrollDown.classList.remove("scroll-hide");
+  }
+});
