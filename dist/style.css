@@ -465,16 +465,19 @@ section {
 .home {
   position: relative;
 }
+
 .small-nav {
+  overflow: hidden;
   position: absolute;
   top: 0;
   right: 0;
   background: black;
   height: 100%;
-  width: 50%;
+  width: 0;
   opacity: 0.8;
   transition: var(--transition);
   transform: translateX(100%);
+  opacity: 0;
 }
 .aside-links {
   margin-top: 2rem;
@@ -494,6 +497,8 @@ section {
 }
 .show-aside {
   transform: translateX(0);
+  opacity: 1;
+  width: 50%;
 }
 .sm-nav-container {
   position: relative;
