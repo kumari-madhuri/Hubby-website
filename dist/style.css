@@ -384,6 +384,9 @@ section {
   }
 }
 /*  section: academics */
+section {
+  overflow: hidden;
+}
 .about-info {
   border-bottom: 3px solid var(--primary-clr-2);
   margin: 0;
@@ -513,7 +516,7 @@ section {
 }
 .close-btn {
   position: absolute;
-  top: -1.5rem;
+  top: -2rem;
   right: 1rem;
   font-size: 2rem;
   color: var(--primary-clr-2);
