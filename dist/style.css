@@ -185,6 +185,13 @@ section {
 .nav-links {
   display: none;
 }
+.sanskrit {
+  color: var(--primary-clr-2);
+  font-size: 1rem;
+}
+.sanskrit span {
+  font-weight: bolder;
+}
 @media screen and (min-width: 800px) {
   .nav-toggle {
     display: none;
