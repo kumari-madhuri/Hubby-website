@@ -166,7 +166,7 @@ section {
   height: 6rem;
 }
 .nav-center {
-  width: 85vw;
+  width: 95vw;
   margin: 0 auto;
 }
 .nav-header {
@@ -577,9 +577,11 @@ section {
   object-fit: cover;
 }
 .contact-info {
-  /* text-align: center; */
+  text-align: center;
   padding: 2rem 1.5rem;
-  /* margin-left: 10rem; */
+  width: 23rem;
+  /* border: 1px solid red; */
+  margin: 0 auto;
 }
 
 .contact-info-box {
@@ -592,9 +594,23 @@ section {
   color: var(--primary-clr-1);
 }
 .contact-info-box p {
-  /* justify-self: flex-start; */
   margin-left: 1rem;
   text-align: left;
   color: black;
   letter-spacing: 0.01;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 1.5rem;
+  }
+  .contact-info {
+    padding: 0 0 0 4rem;
+    margin: 0;
+    /* justify-self: center; */
+    width: 100%;
+  }
 }
