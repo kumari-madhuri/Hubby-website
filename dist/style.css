@@ -163,7 +163,9 @@ section {
 /* nav */
 .nav {
   padding: 1rem 0;
-  height: 6rem;
+  /* height: 6rem; */
+  display: flex;
+  align-items: center;
 }
 .nav-center {
   width: 95vw;
@@ -373,7 +375,7 @@ section {
 
 /*  section : work */
 .work-hero {
-  height: 12vh;
+  height: 6rem;
 }
 .item {
   background-color: #eee;
