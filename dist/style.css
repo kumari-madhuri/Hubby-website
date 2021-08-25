@@ -176,6 +176,12 @@ section {
 }
 .logo {
   height: 4rem;
+  display: none;
+}
+@media screen and (min-width: 411px) {
+  .logo {
+    display: block;
+  }
 }
 .nav-toggle {
   font-size: 2rem;
@@ -579,23 +585,26 @@ section {
 .contact-info {
   text-align: center;
   padding: 2rem 1.5rem;
-  width: 23rem;
-  /* border: 1px solid red; */
+  /* width: 23rem; */
+  max-width: 60rem;
+  border: 1px solid red;
   margin: 0 auto;
 }
 
 .contact-info-box {
-  display: flex;
+  /* display: flex; */
   margin-bottom: 0.5rem;
   align-items: center;
 }
+
 .icon {
   font-size: 1.5rem;
   color: var(--primary-clr-1);
 }
 .contact-info-box p {
   margin-left: 1rem;
-  text-align: left;
+  /* text-align: left; */
+  text-align: center;
   color: black;
   letter-spacing: 0.01;
 }
@@ -608,9 +617,17 @@ section {
     grid-gap: 1.5rem;
   }
   .contact-info {
-    padding: 0 0 0 4rem;
     margin: 0;
-    /* justify-self: center; */
-    width: 100%;
+  }
+}
+@media screen and (min-width: 415px) {
+  .contact-info-box {
+    display: flex;
+  }
+  .contact-info {
+    width: 23rem;
+  }
+  .contact-info-box p {
+    text-align: left;
   }
 }
