@@ -188,6 +188,7 @@ section {
 .sanskrit {
   color: var(--primary-clr-2);
   font-size: 1rem;
+  margin-left: 0.8rem;
 }
 .sanskrit span {
   font-weight: bolder;
@@ -218,6 +219,10 @@ section {
   .current {
     border-color: var(--primary-clr-1);
   }
+}
+.nav-logo-two {
+  display: flex;
+  align-items: center;
 }
 
 /* hero */
