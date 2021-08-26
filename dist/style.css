@@ -438,10 +438,29 @@ section {
 }
 .publication-info {
   background: var(--white);
+}
+.container {
   margin-top: 2rem;
   padding: 1rem 3rem;
+  border-radius: var(--radius);
+}
+.Achievements-info {
+  background-color: #eee;
 }
 
+.teaching {
+  background-color: #eee;
+}
+.teaching-info {
+  background-color: var(--white);
+  padding: 0.5rem 2rem;
+  margin-bottom: 1rem;
+}
+.teaching-info h4 {
+  text-align: center;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+}
 /*  section: academics */
 section {
   overflow: hidden;
@@ -586,6 +605,13 @@ section {
     display: none;
   }
 }
+
+/* interests page */
+/* .meditation-info {
+  height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+    url("./media/GlobalPagoda.jpeg") no-repeat center center/cover;
+} */
 
 /* contact page */
 .contact {
