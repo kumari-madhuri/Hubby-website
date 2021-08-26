@@ -613,6 +613,13 @@ section {
     url("./media/GlobalPagoda.jpeg") no-repeat center center/cover;
 } */
 .meditation-info {
+  height: 80vh;
+  width: 100%;
+}
+.meditation-img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 /* contact page */
