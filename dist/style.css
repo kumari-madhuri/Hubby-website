@@ -163,9 +163,7 @@ section {
 /* nav */
 .nav {
   padding: 1rem 0;
-  /* height: 6rem; */
-  display: flex;
-  align-items: center;
+  height: 6rem;
 }
 .nav-center {
   width: 95vw;
@@ -375,7 +373,7 @@ section {
 
 /*  section : work */
 .work-hero {
-  height: 6rem;
+  height: 12vh;
 }
 .item {
   background-color: #eee;
@@ -595,7 +593,6 @@ section {
   padding: 2rem 1.5rem;
   /* width: 23rem; */
   max-width: 60rem;
-  /* border: 1px solid red; */
   margin: 0 auto;
 }
 
