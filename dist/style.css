@@ -419,6 +419,10 @@ section {
     grid-gap: 2rem;
     margin-bottom: 1rem;
   }
+  .item-info p {
+    align-self: start;
+    padding: 0;
+  }
 }
 /*  section: academics */
 section {
