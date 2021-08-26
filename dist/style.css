@@ -68,6 +68,9 @@ h3 {
 h4 {
   font-size: 0.875rem;
 }
+h5 {
+  font-size: 0.9rem;
+}
 button {
   background-color: transparent;
   border: none;
@@ -430,6 +433,15 @@ section {
     padding: 0;
   }
 }
+.publication {
+  background: #eee;
+}
+.publication-info {
+  background: var(--white);
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+}
+
 /*  section: academics */
 section {
   overflow: hidden;
