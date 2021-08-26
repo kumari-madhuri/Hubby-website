@@ -629,12 +629,55 @@ section {
 .interest-info p {
   text-align: justify;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .interest {
     background: var(--white);
     border-radius: 0;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
   }
+  .interest-img {
+    border-radius: 0;
+  }
+  .interest-photo {
+    width: 25rem;
+    outline: 3px solid var(--primary-clr-1);
+    outline-offset: 10px;
+  }
+  .interest-photo.right {
+    justify-self: right;
+  }
+  .interest-info {
+    padding: 0;
+    align-self: center;
+  }
+  .interest-info h3 {
+    text-align: center;
+  }
+  /* ******** */
+  #interest {
+    grid-auto-flow: dense;
+  }
+
+  .interest > .interest-photo {
+    grid-column: 1;
+  }
+
+  .interest > .interest-info {
+    grid-column: 2;
+  }
+
+  .interest.reverse > .interest-photo {
+    grid-column: 2;
+  }
+
+  .interest.reverse > .interest-info {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  /* ******** */
 }
 
 /* contact page */
