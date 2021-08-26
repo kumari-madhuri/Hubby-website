@@ -637,15 +637,39 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+    z-index: -2;
   }
   .interest-img {
     border-radius: 0;
   }
   .interest-photo {
     width: 25rem;
-    outline: 3px solid var(--primary-clr-1);
-    outline-offset: 10px;
+    position: relative;
+    z-index: 3;
   }
+  .interest-photo.right::before {
+    content: "";
+    position: absolute;
+    border: 5px solid var(--primary-clr-2);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    top: -15px;
+    left: -15px;
+    z-index: -1;
+  }
+  .interest-photo::before {
+    content: "";
+    position: absolute;
+    border: 5px solid var(--primary-clr-2);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    top: -15px;
+    left: 15px;
+    z-index: -1;
+  }
+
   .interest-photo.right {
     justify-self: right;
   }
