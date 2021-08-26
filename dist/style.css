@@ -393,9 +393,15 @@ section {
 .work-title {
   margin-bottom: 2rem;
 }
-.item-img {
+.item-photo {
   height: 16rem;
-  object-fit: contain;
+  width: 16rem;
+  margin: 0 auto;
+}
+.item-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 @media screen and (min-width: 800px) {
   .items {
