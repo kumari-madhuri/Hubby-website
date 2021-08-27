@@ -770,3 +770,17 @@ section {
     text-align: left;
   }
 }
+
+/*  */
+/* .footer-icons {
+  background: black;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon {
+  font-size: 2rem;
+  color: var(--clr-primary-1);
+  margin-right: 2rem;
+} */
