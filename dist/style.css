@@ -797,38 +797,30 @@ Contact
 .contact-info {
   text-align: center;
   padding: 2rem 0;
-  /* max-width: 60rem; */
-  /* width: 10rem; */
-  /* margin: 0 auto; */
-  /* margin: 0; */
 }
 .contact-info-box {
   margin-bottom: 0.5rem;
-  /* align-items: center; */
-  /* text-align: center; */
 }
 .icon {
   font-size: 1.5rem;
   color: var(--primary-clr-1);
 }
 .contact-info-box p {
-  /* margin-left: 1rem; */
   text-align: center;
   color: black;
   letter-spacing: 0.01;
 }
 @media screen and (min-width: 411px) {
   .flex-box {
-    border: 1px solid red;
-    /* width: 1rem; */
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .contact-info-box {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    gap: 1.5rem 0.5rem;
+    margin: 0.5rem 0;
   }
   .contact-info-box p {
     margin-left: 1rem;
