@@ -777,10 +777,14 @@ Interests
 Contact
 ============
 */
+section.section-contact {
+  padding-top: 2rem;
+}
 .contact {
   background: #eee;
   padding: 1rem 2rem;
   border-radius: var(--radius);
+  margin-top: 0;
 }
 .contact-img {
   height: 13rem;
@@ -810,6 +814,10 @@ Contact
   color: black;
   letter-spacing: 0.01;
 }
+.section-center .section-title {
+  display: none;
+}
+/* 888888888 */
 @media screen and (min-width: 411px) {
   .flex-box {
     display: flex;
@@ -833,6 +841,9 @@ Contact
   }
 }
 @media screen and (min-width: 768px) {
+  section.section-contact {
+    padding-top: 8rem;
+  }
   .contact {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -843,4 +854,26 @@ Contact
   .contact-info {
     margin: 0;
   }
+}
+
+/* 
+============
+Footer
+============
+*/
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-icon {
+  font-size: 2.2rem;
+  color: var(--primary-clr-2);
+  margin-right: 2rem;
 }
