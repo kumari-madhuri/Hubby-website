@@ -384,7 +384,7 @@ section {
   margin-bottom: 2rem;
   border-radius: var(--radius);
 }
-.item h3 {
+.item h4 {
   text-align: center;
   margin-bottom: 0.9rem;
   letter-spacing: var(--spacing);
@@ -418,8 +418,8 @@ section {
   .items {
     display: block;
   }
-  .item h3 {
-    font-size: 1.5rem;
+  .item h4 {
+    font-size: 1.3rem;
     margin-bottom: 1.2rem;
   }
   .item-info {
@@ -629,6 +629,10 @@ section {
 .interest-info p {
   text-align: justify;
 }
+.interest-info h4 {
+  text-align: center;
+  /* font-size: 1.3rem; */
+}
 @media screen and (min-width: 992px) {
   .interest {
     background: var(--white);
@@ -677,8 +681,9 @@ section {
     padding: 0;
     align-self: center;
   }
-  .interest-info h3 {
+  .interest-info h4 {
     text-align: center;
+    /* font-size: 1.3rem; */
   }
   /* ******** */
   #interest {
