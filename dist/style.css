@@ -405,7 +405,7 @@ Home: specialize
   margin: 0;
   padding: 0;
 }
-@media screen and (min-width: 625px) {
+@media screen and (min-width: 992px) {
   .section-title {
     min-height: 0;
     height: 15vh;
