@@ -134,6 +134,37 @@ p {
 html {
   scroll-behavior: smooth;
 }
+/* 
+==============
+Animation
+==============
+*/
+@media screen and (min-width: 992px) {
+  .anim {
+    opacity: 0;
+  }
+
+  @keyframes anim1 {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  /* @keyframes anim2 {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  } */
+}
 
 /* 
 ===============
