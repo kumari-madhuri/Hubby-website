@@ -164,6 +164,19 @@ Animation
       transform: translateX(-100px);
     }
   }
+  .anim1 {
+    animation: nav-anim 1.3s ease-in;
+  }
+  @keyframes nav-anim {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 /* 
