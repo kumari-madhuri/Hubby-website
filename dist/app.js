@@ -87,14 +87,14 @@ closeBtn.addEventListener("click", function () {
 
 const images = document.querySelectorAll(".anim");
 let options = {
-  rootMargin: "-150px",
+  rootMargin: "-200px 0px 0px 0px",
 };
 
 let observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     console.log(entry.target);
     if (entry.isIntersecting) {
-      entry.target.style.animation = `anim1 2s forwards ease-in`;
+      entry.target.style.animation = `anim1 1.2s forwards ease-in`;
     } else {
       entry.target.style.animation = `anim2 1s forwards ease-in`;
       // entry.target.style.animation = "none";
