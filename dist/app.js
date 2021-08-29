@@ -96,8 +96,8 @@ let observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.style.animation = `anim1 2s forwards ease-in`;
     } else {
-      // entry.target.style.animation = `anim2 1s forwards ease-in`;
-      entry.target.style.animation = "none";
+      entry.target.style.animation = `anim2 1s forwards ease-in`;
+      // entry.target.style.animation = "none";
     }
   });
 }, options);

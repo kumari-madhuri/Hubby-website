@@ -154,7 +154,7 @@ Animation
       transform: translateY(0);
     }
   }
-  /* @keyframes anim2 {
+  @keyframes anim2 {
     from {
       opacity: 1;
       transform: translateX(0);
@@ -163,7 +163,7 @@ Animation
       opacity: 0;
       transform: translateX(-100px);
     }
-  } */
+  }
 }
 
 /* 
