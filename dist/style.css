@@ -139,7 +139,7 @@ html {
 Animation
 ==============
 */
-@media screen and (min-width: 992px) {
+/* @media screen and (min-width: 992px) {
   .anim {
     opacity: 0;
   }
@@ -177,7 +177,7 @@ Animation
       transform: translateY(0);
     }
   }
-}
+} */
 
 /* 
 ===============

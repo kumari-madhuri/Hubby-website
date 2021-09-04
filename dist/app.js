@@ -85,22 +85,79 @@ closeBtn.addEventListener("click", function () {
   smallNav.classList.remove("show-aside");
 });
 
-const images = document.querySelectorAll(".anim");
-let options = {
-  rootMargin: "-200px 0px 0px 0px",
-};
+// const images = document.querySelectorAll(".anim");
+// let options = {
+//   rootMargin: "-200px 0px 0px 0px",
+// };
 
-let observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    console.log(entry.target);
-    if (entry.isIntersecting) {
-      entry.target.style.animation = `anim1 1.2s forwards ease-in`;
-    } else {
-      entry.target.style.animation = `anim2 1s forwards ease-in`;
-      // entry.target.style.animation = "none";
-    }
-  });
-}, options);
-images.forEach((image) => {
-  observer.observe(image);
+// let observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry.target);
+//     if (entry.isIntersecting) {
+//       entry.target.style.animation = `anim1 1.2s forwards ease-in`;
+//     } else {
+//       entry.target.style.animation = `anim2 1s forwards ease-in`;
+
+//     }
+//   });
+// }, options);
+// images.forEach((image) => {
+//   observer.observe(image);
+// });
+// Gsap
+gsap.registerPlugin(ScrollTrigger);
+
+// gsap.from(".nav", { duration: 2, y: "-100", opacity: "0" });
+
+window.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth >= 992) {
+    gsap.from(".right-anim", {
+      scrollTrigger: {
+        trigger: ".right-anim",
+        start: "top 80%",
+        // end: "bottom 90%",
+        // scrub: true,
+        // markers: true,
+        toggleActions: "restart none none reset",
+      },
+      x: 150,
+      opacity: 0,
+      duration: 1.5,
+    });
+    gsap.from(".left-anim", {
+      scrollTrigger: {
+        trigger: ".left-anim",
+        start: "top 80%",
+        // markers: true,
+        toggleActions: "restart none none reset",
+      },
+      x: -150,
+      opacity: 0,
+      duration: 1.5,
+    });
+    gsap.from(".right-anim-1", {
+      scrollTrigger: {
+        trigger: ".right-anim-1",
+        start: "top 80%",
+        // end: "bottom 90%",
+        // scrub: true,
+        // markers: true,
+        toggleActions: "restart none none reset",
+      },
+      x: 150,
+      opacity: 0,
+      duration: 1.5,
+    });
+    gsap.from(".left-anim-1", {
+      scrollTrigger: {
+        trigger: ".left-anim-1",
+        start: "top 80%",
+        // markers: true,
+        toggleActions: "restart none none reset",
+      },
+      x: -150,
+      opacity: 0,
+      duration: 1.5,
+    });
+  }
 });
