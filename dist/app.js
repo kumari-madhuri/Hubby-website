@@ -107,8 +107,6 @@ closeBtn.addEventListener("click", function () {
 // Gsap
 gsap.registerPlugin(ScrollTrigger);
 
-// gsap.from(".nav", { duration: 2, y: "-100", opacity: "0" });
-
 window.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth >= 992) {
     gsap.from(".right-anim", {
@@ -161,3 +159,7 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+gsap.from(".top", { duration: 2, opacity: 0, y: -150 });
+
+gsap.from(".down", { duration: 2, opacity: 0, y: 150 });
