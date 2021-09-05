@@ -822,11 +822,11 @@ Contact
 ============
 */
 section.section-contact {
-  padding-top: 2rem;
   margin: 0;
   padding: 0;
+
   position: relative;
-  min-height: calc(100vh - 96px);
+  /* min-height: calc(100vh - 96px); */
 }
 /* @media screen and (min-width: 768px) {
   section.section-contact {
@@ -839,6 +839,7 @@ section.section-contact {
   border-radius: var(--radius);
   margin-top: 1rem;
   margin-bottom: 1rem;
+  flex-grow: 1;
 }
 .contact-img {
   height: 13rem;
@@ -916,9 +917,9 @@ Footer
 ============
 */
 .footer {
-  position: absolute;
+  /* position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
   width: 100%;
   background: black;
   height: 4rem;
@@ -930,4 +931,12 @@ Footer
   font-size: 2.2rem;
   color: var(--primary-clr-2);
   margin-right: 2rem;
+}
+
+@media screen and (min-width: 411px) {
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
 }
