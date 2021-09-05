@@ -823,12 +823,22 @@ Contact
 */
 section.section-contact {
   padding-top: 2rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: calc(100vh - 96px);
 }
+/* @media screen and (min-width: 768px) {
+  section.section-contact {
+    min-height: calc(100vh - 160px);
+  }
+} */
 .contact {
   background: #eee;
   padding: 1rem 2rem;
   border-radius: var(--radius);
-  margin-top: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .contact-img {
   height: 13rem;
