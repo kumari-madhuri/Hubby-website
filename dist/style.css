@@ -134,6 +134,50 @@ p {
 html {
   scroll-behavior: smooth;
 }
+/* 
+==============
+Animation
+==============
+*/
+/* @media screen and (min-width: 992px) {
+  .anim {
+    opacity: 0;
+  }
+
+  @keyframes anim1 {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes anim2 {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  }
+  .anim1 {
+    animation: nav-anim 1.3s ease-in;
+  }
+  @keyframes nav-anim {
+    from {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+} */
 
 /* 
 ===============
@@ -405,7 +449,7 @@ Home: specialize
   margin: 0;
   padding: 0;
 }
-@media screen and (min-width: 625px) {
+@media screen and (min-width: 992px) {
   .section-title {
     min-height: 0;
     height: 15vh;
@@ -778,13 +822,24 @@ Contact
 ============
 */
 section.section-contact {
-  padding-top: 2rem;
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+  /* min-height: calc(100vh - 96px); */
 }
+/* @media screen and (min-width: 768px) {
+  section.section-contact {
+    min-height: calc(100vh - 160px);
+  }
+} */
 .contact {
   background: #eee;
   padding: 1rem 2rem;
   border-radius: var(--radius);
-  margin-top: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
 }
 .contact-img {
   height: 13rem;
@@ -862,9 +917,9 @@ Footer
 ============
 */
 .footer {
-  position: absolute;
+  /* position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 0; */
   width: 100%;
   background: black;
   height: 4rem;
@@ -876,4 +931,12 @@ Footer
   font-size: 2.2rem;
   color: var(--primary-clr-2);
   margin-right: 2rem;
+}
+
+@media screen and (min-width: 411px) {
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
 }
