@@ -10,8 +10,8 @@ variables
 :root {
   /* --primary-clr-1: #ffa500; */
   --primary-clr-1: #e59400;
-  --primary-clr-2: #ffc932;
-  --grey-clr-5: hsl(210, 22%, 49%);
+  --primary-clr-2: #ce8500;
+  --grey-clr-5: hsl(207, 48%, 5%);
   --grey-clr-5: #5b5b5b;
   --white: #ffffff;
   --transition: all 0.35s linear;
