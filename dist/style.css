@@ -134,6 +134,13 @@ p {
 html {
   scroll-behavior: smooth;
 }
+.bg-white {
+  background-color: #fff;
+  width: 85vw;
+  margin: 0 auto;
+  padding: 2rem 0;
+  border-radius: 10px;
+}
 /* 
 ==============
 Animation
@@ -549,6 +556,8 @@ section {
   border-left: 3px solid var(--primary-clr-2);
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  /* border-bottom-right-radius: -1rem; */
+  margin-right: 1rem;
 }
 .arrow {
   position: absolute;
@@ -559,6 +568,15 @@ section {
   font-size: 2rem;
 }
 .circle {
+  position: absolute;
+  color: var(--primary-clr-2);
+  bottom: -1.7rem;
+  /* right: -1.1rem; */
+  left: 0.4rem;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+}
+.circle-1 {
   position: absolute;
   color: var(--primary-clr-2);
   bottom: -1.7rem;
