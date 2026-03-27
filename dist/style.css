@@ -257,7 +257,7 @@ section       { padding: 4rem 0; overflow: hidden; }
 .description   { min-height: 85vh; position: relative; }
 
 @media (min-width: 992px) {
-  .section-title { height: 15vh; }
+  .specialize .section-title { height: 15vh; }
   .description   { height: 85vh; min-height: 0; }
 }
 .video-container {
@@ -564,7 +564,9 @@ section       { padding: 4rem 0; overflow: hidden; }
   .items { display: block; }
   .item h4 { font-size: 1.2rem; margin-bottom: 1.2rem; }
   .item-info { display: grid; grid-template-columns: 290px 1fr; gap: 2rem; }
-  .item-info p { align-self: start; padding: 0; }
+  .item-text { align-self: start; }
+  .item-text p { padding: 0; margin-top: 0.8rem; }
+  .item-text p:first-child { margin-top: 0; }
 }
 
 /* ============================================================
