@@ -35,7 +35,7 @@ function shuffleArray(arr) {
    TypeWriter Effect
    ============================================================ */
 class TypeWriter {
-  constructor(el, words, wait = 3500) {
+  constructor(el, words, wait = 7000) {
     this.el = el;
     this.words = words;
     this.txt = "";
