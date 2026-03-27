@@ -5,13 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Personal academic website of Dr. Kaushlendra Kumar, Mathematical Physicist at Queen Mary University of London." />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./media/favicons/UmlautPhase1.png" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
     <title>Kaushlendra Kumar | Mathematical Physicist</title>
@@ -29,9 +23,7 @@
                 तस्माद्धर्मो न हन्तव्यो मा नो धर्मो हतोऽवधीत् ॥
               </p>
             </div>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation">
-              <i class="fas fa-bars"></i>
-            </button>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
           </div>
           <ul class="nav-links">
             <li><a href="index.html"    class="nav-link current">home</a></li>
@@ -42,28 +34,76 @@
           </ul>
         </div>
       </div>
+
       <!-- Hero -->
       <div class="hero">
         <div class="hero-banner">
           <h1>
             Hi there, Herzlich willkommen&#x1F64F;&#x1F3FC;
-            <span
-              class="txt-type"
-              data-wait="3000"
-              data-words='["This page is my handy archived repository."]'
-            ></span>
+            <span class="txt-type" data-wait="3000"
+              data-words='["This page is my handy archived repository."]'></span>
           </h1>
           <p class="hero-text">
             I specialize in <a href="#specialize">Mathematical Physics!</a>
           </p>
         </div>
-        <a href="#specialize" class="scroll-down" aria-label="Scroll down">
+        <a href="#intro" class="scroll-down" aria-label="Scroll down">
           <div class="maous"></div>
         </a>
       </div>
     </header>
 
-    <!-- Section: What is Mathematical Physics? -->
+    <!-- ══════════════════ PERSONAL INTRO ══════════════════ -->
+    <section class="intro-section" id="intro">
+      <div class="section-center intro-card">
+
+        <div class="intro-text">
+          <h2 class="intro-name">Dr. Kaushlendra Kumar</h2>
+          <p class="intro-position">
+            <i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:0.4rem;"></i>
+            DFG Walter-Benjamin Research Fellow &mdash;
+            <a href="https://www.qmul.ac.uk/maths/" target="_blank" class="text-color">School of Mathematical Sciences, QMUL London</a>
+          </p>
+
+          <p class="intro-bio">
+            I am a mathematical physicist working at the intersection of
+            geometry, gauge theory, and fundamental physics. My research spans
+            classical and quantum aspects of Yang&ndash;Mills theory, the geometry
+            of noncommutative and quantum spaces, and emergent gravity in matrix
+            models. A recurring theme across these areas is the use of
+            sophisticated mathematical structures&mdash;Lie groups, spectral
+            triples, division algebras&mdash;to extract new physical insight.
+            My current project with
+            <a href="https://webspace.maths.qmul.ac.uk/s.majid/Welcome.html" target="_blank" class="text-color">Shahn Majid</a>
+            explores particle physics through the lens of Quantum Riemannian
+            Geometry. I hold a PhD <em>(Magna cum Laude)</em> from Leibniz
+            University Hannover and have held positions at Humboldt University
+            Berlin and the Erwin Schr&ouml;dinger Institute, Vienna.
+          </p>
+
+          <div class="intro-tags">
+            <span class="tag">Yang&ndash;Mills theory</span>
+            <span class="tag">Noncommutative geometry</span>
+            <span class="tag">IKKT matrix model</span>
+            <span class="tag">Quantum spacetime</span>
+            <span class="tag">Electromagnetic knots</span>
+            <span class="tag">Division algebras</span>
+          </div>
+
+          <div class="intro-actions">
+            <a href="./media/CV.pdf" target="_blank" class="btn btn-primary">
+              <i class="fas fa-file-pdf" style="margin-right:0.5rem;"></i>Download CV
+            </a>
+            <a href="https://inspirehep.net/authors/1706741" target="_blank" class="btn btn-outline">InspireHEP</a>
+            <a href="https://arxiv.org/a/kumar_k_2.html" target="_blank" class="btn btn-outline">arXiv</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ══════════════════ END INTRO ══════════════════ -->
+
+    <!-- ══════════════════ WHAT IS MATHEMATICAL PHYSICS ══════════════════ -->
     <section class="specialize" id="specialize">
       <div class="section-title">
         <h2>What is Mathematical Physics?</h2>
@@ -78,19 +118,19 @@
             This is an ongoing enterprise whose goal is to understand and encode
             the observed physical phenomena into a &ldquo;set of fundamental
             principles&rdquo; using the language of mathematics. Having thus
-            established some of the elements of such a &ldquo;set&rdquo; using the known
-            results of previous experiments and observations (not a prerequisite
-            though), it then tries to predict future outcomes using those elements.
-            This has been an astoundingly successful endeavour over the last few
-            centuries! We have been able to understand the workings of natural
-            laws across a wide spectrum of phenomena&#8212;from the unimaginably
-            tiny subatomic world to the humongous and ever increasing expanse of
-            the cosmos&#8212;in terms of such mathematical equations. The first
-            revolution in, if not the beginning of, this enterprise can be
-            attributed to Sir
-            <a href="https://en.wikipedia.org/wiki/Isaac_Newton" target="_blank" class="text-color">Isaac Newton</a>
-            who devised calculus to explain the everyday motion of objects including
-            classical gravity. Since then there have been several giants like
+            established some of the elements of such a &ldquo;set&rdquo; using known
+            experimental results, it then tries to predict future outcomes using
+            those elements. This has been an astoundingly successful endeavour
+            over the last few centuries! We have been able to understand the
+            workings of natural laws across a wide spectrum of
+            phenomena&#8212;from the unimaginably tiny subatomic world to the
+            humongous and ever-increasing expanse of the cosmos&#8212;in terms of
+            mathematical equations. The first revolution in, if not the
+            beginning of, this enterprise can be attributed to Sir
+            <a href="https://en.wikipedia.org/wiki/Isaac_Newton" target="_blank" class="text-color">Isaac Newton</a>,
+            who devised calculus to explain the everyday motion of objects
+            including classical gravity. Since then there have been several
+            giants like
             <a href="https://en.wikipedia.org/wiki/Leonhard_Euler" target="_blank" class="text-color">Leonhard Euler</a>,
             <a href="https://en.wikipedia.org/wiki/James_Clerk_Maxwell" target="_blank" class="text-color">James Clerk Maxwell</a>,
             <a href="https://en.wikipedia.org/wiki/Max_Planck" target="_blank" class="text-color">Max Planck</a>,
@@ -101,23 +141,19 @@
             <a href="https://en.wikipedia.org/wiki/Stephen_Hawking" target="_blank" class="text-color">Stephen Hawking</a>
             and many others who have carried the enterprise on their shoulders.
             At present, we have two sets of fundamental physics theories that
-            have been immensely successful in explaining observations and
-            experiments. One of these theories is the
+            have been immensely successful: the
             <a href="https://en.wikipedia.org/wiki/Standard_Model" target="_blank" class="text-color">Standard Model</a>
-            of particle physics, which is a quantum theory meaning that it
-            explains the physics at scales much smaller than that of an atom.
-            The other one is the famous
-            <a href="https://en.wikipedia.org/wiki/General_relativity" target="_blank" class="text-color">General Relativity</a>
-            theory given by Einstein, which not only accurately describes gravity
-            as the curvature of spacetime but also explains the standard cosmology
-            of galaxy clusters. The hunt for a more general theory that would
-            encompass both of these theories in appropriate limits has been the
-            holy grail for mathematical physicists for several decades now. There
-            have been several prominent candidates for such a unified theory like
+            of particle physics, and Einstein&rsquo;s
+            <a href="https://en.wikipedia.org/wiki/General_relativity" target="_blank" class="text-color">General Relativity</a>,
+            which accurately describes gravity as the curvature of spacetime.
+            The hunt for a unified theory encompassing both has been the holy
+            grail for mathematical physicists for decades. Prominent candidates
+            include
             <a href="https://en.wikipedia.org/wiki/String_theory" target="_blank" class="text-color">String Theory</a>,
             <a href="https://en.wikipedia.org/wiki/Loop_quantum_gravity" target="_blank" class="text-color">Loop Quantum Gravity</a>,
+            and
             <a href="https://en.wikipedia.org/wiki/Noncommutative_geometry" target="_blank" class="text-color">Noncommutative Geometry</a>,
-            etc., but none of them have been fully successful and the hunt is still on.
+            but none have yet been fully successful&mdash;the hunt is still on.
           </p>
         </div>
       </section>
