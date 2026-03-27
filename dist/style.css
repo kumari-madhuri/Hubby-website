@@ -592,7 +592,7 @@ section       { padding: 4rem 0; overflow: hidden; }
   border-bottom: 1px solid rgba(206, 133, 0, 0.3);
 }
 .misc-section h4:first-child { margin-top: 0; }
-.misc-section ol { padding-left: 1.4rem; }
+.misc-section ol { padding-left: 2.2rem; }
 .misc-section li { padding: 0.4rem 0; font-size: 0.93rem; line-height: 1.65; color: var(--text-body); }
 
 /* ============================================================
