@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="./media/favicons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Kaushlendra Kumar</title>
+  </head>
+  <body>
+    <header class="home" id="home">
+      <!-- navbar -->
+      <div class="nav">
+        <div class="nav-center">
+          <!-- small screen -->
+          <div class="nav-header">
+            <div class="nav-logo-two">
+              <img src="./media/logo.png" class="logo" alt="" />
+              <p class="sanskrit">
+                धर्म एव हतो हन्ति <span>धर्मो रक्षति रक्षितः</span> <br />
+                तस्माद्धर्मो न हन्तव्यो मा नो धर्मो हतोऽवधीत् ॥
+              </p>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <!-- nav-links -->
+          <ul class="nav-links" id="nav-links">
+            <li>
+              <a href="index.html" class="nav-link scroll-link">home</a>
+            </li>
+            <li>
+              <a href="about.html" class="nav-link scroll-link">academics</a>
+            </li>
+            <li>
+              <a href="work.html" class="nav-link scroll-link">Research</a>
+            </li>
+            <li>
+              <a href="interest.html" class="nav-link scroll-link">interests</a>
+            </li>
+            <li>
+              <a href="contact.html" class="nav-link scroll-link current"
+                >contact</a
+              >
+            </li>
+          </ul>
+          <!-- end of nav-links -->
+        </div>
+      </div>
+      <!-- end of navbar -->
+      <!-- hero -->
+      <div class="hero work-hero"></div>
+      <!-- end of hero -->
+    </header>
+    <!-- section: Contact box -->
+    <section class="section-contact">
+      <div class="section-center contact">
+        <div class="contact-img top">
+          <img src="./media/IMG_5416.jpg" alt="" class="contact-photo" />
+        </div>
+        <!-- contact-info -->
+        <div class="flex-box down">
+          <div class="contact-info">
+            <!-- name -->
+            <div class="contact-info-box">
+              <span class="icon"><i class="fas fa-signature fa-fw"></i></span>
+              <p>Dr. Kaushlendra Kumar</p>
+            </div>
+            <!-- address -->
+            <div class="contact-info-box">
+              <span class="icon"
+                ><i class="far fa-address-card fa-fw"></i
+              ></span>
+              <p>
+                Electron moves a lot,<br>
+                Photon's the culprit here,<br />
+                for Vacuum is hardly stable.
+              </p>
+            </div>
+            <!-- email -->
+            <div class="contact-info-box">
+              <span class="icon"><i class="fas fa-at fa-fw"></i></span>
+              <p>
+                kaushal.kumar224@gmail.com
+              </p>
+            </div>
+            <!-- phone -->
+            <!-- <div class="contact-info-box">
+              <span class="icon"
+                ><i class="fas fa-phone-volume fa-fw"></i
+              ></span>
+              <p>+49 511 762 3886 (office)</p>
+            </div>
+          </div> -->
+          <!-- end of contact info -->
+        </div>
+      </div>
+      <footer class="footer">
+        <a
+          href="https://www.researchgate.net/profile/Kaushlendra-Kumar-5"
+          class="footer-icon"
+          target="_blank"
+          ><i class="fab fa-researchgate"></i>
+        </a>
+        <a
+          href="https://orcid.org/0000-0001-5665-575X?lang=en"
+          class="footer-icon"
+          target="_blank"
+          ><i class="fab fa-orcid"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/kaushlendra-kumar-4aa9874b/"
+          class="footer-icon"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </footer>
+    </section>
+    <!-- end of section: contact box -->
+    <!-- footer -->
+
+    <!-- end of footer -->
+    <!-- small navbar -->
+    <aside class="small-nav">
+      <div class="sm-nav-container">
+        <button class="close-btn"><i class="fas fa-times"></i></button>
+        <!-- nav-links-->
+        <ul class="aside-links" id="nav-links">
+          <li>
+            <a href="index.html" class="aside-link scroll-link current">home</a>
+          </li>
+          <li>
+            <a href="about.html" class="aside-link scroll-link acad-link"
+              >academics</a
+            >
+          </li>
+          <li>
+            <a href="work.html" class="aside-link scroll-link">research</a>
+          </li>
+          <li>
+            <a href="interest.html" class="aside-link scroll-link">interests</a>
+          </li>
+          <li>
+            <a href="contact.html" class="aside-link scroll-link">contact</a>
+          </li>
+        </ul>
+        <!-- end of nav-links -->
+      </div>
+    </aside>
+    <!-- end of small navbar -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
