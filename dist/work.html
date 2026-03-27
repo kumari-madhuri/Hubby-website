@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Research overview, affiliations, selected publications, and talks by Dr. Kaushlendra Kumar." />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML" async></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -12,1038 +13,519 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="shortcut icon"
-      href="./media/favicons/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./media/favicons/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Kaushlendra Kumar</title>
+    <title>Research | Kaushlendra Kumar</title>
   </head>
   <body>
     <header class="home" id="home">
-      <!-- navbar -->
+      <!-- Navbar -->
       <div class="nav">
         <div class="nav-center">
-          <!-- small screen -->
           <div class="nav-header">
             <div class="nav-logo-two">
-              <img src="./media/logo.png" class="logo" alt="" />
+              <img src="./media/logo.png" class="logo" alt="Logo" />
               <p class="sanskrit">
-                धर्म एव हतो हन्ति <span>धर्मो रक्षति रक्षितः</span> <br />
+                धर्म एव हतो हन्ति <span>धर्मो रक्षति रक्षितः</span><br />
                 तस्माद्धर्मो न हन्तव्यो मा नो धर्मो हतोऽवधीत् ॥
               </p>
             </div>
-            <button class="nav-toggle" id="nav-toggle">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation">
               <i class="fas fa-bars"></i>
             </button>
           </div>
-          <!-- nav-links -->
-          <ul class="nav-links" id="nav-links">
-            <li>
-              <a href="index.html" class="nav-link scroll-link">home</a>
-            </li>
-            <li>
-              <a href="about.html" class="nav-link scroll-link">academics</a>
-            </li>
-            <li>
-              <a href="work.html" class="nav-link scroll-link current"
-                >Research</a
-              >
-            </li>
-            <li>
-              <a href="interest.html" class="nav-link scroll-link">interests</a>
-            </li>
-            <li>
-              <a href="contact.html" class="nav-link scroll-link">contact</a>
-            </li>
+          <ul class="nav-links">
+            <li><a href="index.html"    class="nav-link">home</a></li>
+            <li><a href="about.html"    class="nav-link">academics</a></li>
+            <li><a href="work.html"     class="nav-link current">research</a></li>
+            <li><a href="interest.html" class="nav-link">interests</a></li>
+            <li><a href="contact.html"  class="nav-link">contact</a></li>
           </ul>
-          <!-- end of nav-links -->
         </div>
       </div>
-      <!-- end of navbar -->
-      <!-- hero -->
       <div class="hero work-hero"></div>
-      <!-- end of hero -->
     </header>
-    <!-- section: Overview -->
+
+    <!-- Section: Bird's-eye view -->
     <section class="section" id="specialize">
       <div class="section-title work-title">
-        <h2>Bird's-eye view</h2>
+        <h2>Bird&rsquo;s-eye view</h2>
         <div class="underline"></div>
       </div>
       <div class="section-center">
         <div class="items">
-          <!-- single item -->
+
+          <!-- Item 1 -->
           <article class="item">
             <h4>Minkowski Yang&#8211;Mills solutions</h4>
             <div class="item-info">
               <div class="item-photo">
-                <img src="./media/MinkFoliations.png" alt="" class="item-img" />
+                <img src="./media/MinkFoliations.png" alt="Minkowski foliations diagram" class="item-img" />
               </div>
-              <p style="color: black">
-                An observer sitting at center 0, could witness 4-dim spacetime
-                foliations: 1. lightcone-interior into unit-hyperboloids `H^3` &
-                2. lightcone-exterior into `3`-dimensional de Sitter spaces
-                `dS_3`; care should be taken in choosing (temporal/spatial)
-                foliation parameter `u`, e.g. as shown on left. Moreover, the
-                symmetric spaces `H^3` and `dS_3` are isomorphic to non-compact
-                coset spaces built from the Lorentz group `SO(1,3)`:
-                `H^3~=SO(1,3)//SO(3)` and `dS_3~=SO(1,3)//SO(1,2)`. Keeping this
-                in mind and using
-                <a
-                  href="https://doi.org/10.1016/0370-1573(92)90101-5"
-                  target="_blank"
-                  class="text-color"
-                  >dimensional reduction</a
-                >
-                on `RRxxG//H` with gauge group `G=SO(1,3)`, we employed a
-                `G`-invariant connection one-form `ccA` in 'temporal'
-                guage&#8212;meaning `ccA` transforms into a single-variable
-                field `phi(u)`, varying with `u`&#8212;to obtain analytic
-                Yang&#8211;Mills solutions in a recent
-                <a
-                  target="_blank"
-                  class="text-color"
-                  href="https://arxiv.org/abs/2206.12009"
-                  >work</a
-                >. The resultant field equation for `phi(u)` is simply Newton's
-                equation for an inverted double-well potential; solutions are
-                well known Jacobi elliptic functions. The color electric- and
-                magnetic-fields and the corresponding stress-energy tensor are
-                singular at the lightcone, but the latter can be regularized.
-                <!-- Furthermore, future/past halves of
-                the lightcone are isomorphic to the coset `SO(1,3)//ISO(2)`, but
-                we do not have a foliation here and hence no dynamics.  -->
-                This work was also presented at a Colloquiium in Strasbourg [<a
-                  href="https://doi.org/10.21468/SciPostPhysProc.14.033"
-                  target="_blank"
-                  class="text-color"
-                  >proceeding</a
-                >].
+              <p>
+                An observer at the origin could witness 4-dimensional spacetime
+                foliations: (1) lightcone-interior into unit hyperboloids `H^3` and
+                (2) lightcone-exterior into 3-dimensional de Sitter spaces `dS_3`;
+                care should be taken in choosing the (temporal/spatial) foliation
+                parameter `u`. Moreover, the symmetric spaces `H^3` and `dS_3` are
+                isomorphic to non-compact coset spaces built from the Lorentz group
+                `SO(1,3)`: `H^3 ~= SO(1,3)//SO(3)` and `dS_3 ~= SO(1,3)//SO(1,2)`.
+                Keeping this in mind and using
+                <a href="https://doi.org/10.1016/0370-1573(92)90101-5" target="_blank" class="text-color">dimensional reduction</a>
+                on `RR xx G//H` with gauge group `G = SO(1,3)`, we employed a
+                `G`-invariant connection one-form `ccA` in the temporal gauge&mdash;meaning
+                `ccA` transforms into a single-variable field `phi(u)` varying with
+                `u`&mdash;to obtain analytic Yang&#8211;Mills solutions in a recent
+                <a href="https://arxiv.org/abs/2206.12009" target="_blank" class="text-color">work</a>.
+                The resultant field equation for `phi(u)` is simply Newton's equation
+                for an inverted double-well potential; solutions are the well-known
+                Jacobi elliptic functions. The colour electric and magnetic fields and
+                the corresponding stress-energy tensor are singular at the lightcone,
+                but the latter can be regularized. This work was also presented at a
+                Colloquium in Strasbourg [<a href="https://doi.org/10.21468/SciPostPhysProc.14.033" target="_blank" class="text-color">proceeding</a>].
               </p>
             </div>
           </article>
-          <!-- end of single item -->
-          <!-- single item -->
+
+          <!-- Item 2 -->
           <article class="item">
             <h4>Cosmic Yang&#8211;Mills fields</h4>
             <div class="item-info">
               <div class="item-photo">
-                <img src="./media/HiggsMechanics.png" alt="" class="item-img" />
+                <img src="./media/HiggsMechanics.png" alt="Higgs mechanics diagram" class="item-img" />
               </div>
-              <p style="color: black">
-                Lately,
-                <a
-                  href="https://arxiv.org/abs/2005.05349"
-                  target="_blank"
-                  class="text-color"
-                  >Daniel Friedan
-                </a>
+              <p>
+                <a href="https://arxiv.org/abs/2005.05349" target="_blank" class="text-color">Daniel Friedan</a>
                 has tried to explain the early cosmological epoch as a coupled
-                Einstein&#8211;Yang&#8211;Mills&#8211;Higgs system with a
-                `SU(2)` gauge field in a conformally flat (spatialy closed)
-                background. A `SO(4)`-symmetry is then imposed on the system
-                that makes the Higgs field vanish. The proposal only works until
-                the Electroweak energy scale after which `SO(4)`-symmetry is
-                violated and the Higgs field rolls down to it's minima as shown
-                in the figure on the left. Explicit time-dependent solutions for
-                the scale-factor and the remaining scalar field (after the
-                symmetry is imposed on the gauge field) are given in terms of
-                two different sets of anharmonic oscillators. We have analysed
-                the stability of such solutions against arbitrary linear
-                perturbations of the gauge field in a recent
-                <a
-                  href="https://arxiv.org/abs/2102.08401"
-                  target="_blank"
-                  class="text-color"
-                  >work</a
-                >. The time-dependent eigenmodes that arise after linearising
-                the Yang&#8211;Mills equations depend on the `fr su(2)` spin
-                values `j` and needs to be analysed for different spin cases. We
-                have used the Floquet analysis to study the stability behaviour
-                of these modes for up to `j=2` and found that they are all
-                <em>unstable</em>.
+                Einstein&#8211;Yang&#8211;Mills&#8211;Higgs system with an `SU(2)` gauge
+                field in a conformally flat (spatially closed) background. A
+                `SO(4)`-symmetry is then imposed on the system that makes the Higgs
+                field vanish. The proposal only works until the Electroweak energy
+                scale, after which `SO(4)`-symmetry is violated and the Higgs field
+                rolls down to its minimum as shown in the figure. Explicit
+                time-dependent solutions for the scale factor and the remaining scalar
+                field (after the symmetry is imposed on the gauge field) are given in
+                terms of two different sets of anharmonic oscillators. We have analysed
+                the stability of such solutions against arbitrary linear perturbations
+                of the gauge field in a recent
+                <a href="https://arxiv.org/abs/2102.08401" target="_blank" class="text-color">work</a>.
+                The time-dependent eigenmodes arising after linearising the
+                Yang&#8211;Mills equations depend on the `su(2)` spin values `j` and
+                must be analysed for different spin cases. We used Floquet analysis to
+                study the stability behaviour of these modes for up to `j = 2` and
+                found that they are all <em>unstable</em>.
               </p>
             </div>
           </article>
-          <!-- end of single item -->
-          <!-- single item -->
+
+          <!-- Item 3 -->
           <article class="item">
             <h4>Electromagnetic knots</h4>
             <div class="item-info">
               <div class="item-photo">
-                <img src="./media/Knots.png" alt="" class="item-img" />
+                <img src="./media/Knots.png" alt="Electromagnetic knot field lines" class="item-img" />
               </div>
-              <p style="color: black">
-                The study of electromagnetic knots&#8212;those EM fields whose
-                field-lines form closed non-trivial knots like the ones shown on
-                the left with electric (red) and magnetic (green) field
-                lines&#8212;has been an active area of research among a section
-                of theoretical physicists ever since Antonio F. Rañada first
-                introduced
-                <a
-                  href="https://link.springer.com/article/10.1007%2FBF00401864"
-                  target="_blank"
-                  class="text-color"
-                  >them</a
-                >
-                in 1989. Interestingly, some of these simple knot
-                configurations, including the one with figure-eight topology,
-                have been experimentally
-                <a
-                  href="https://www.nature.com/articles/s41567-018-0229-2"
-                  target="_blank"
-                  class="text-color"
-                  >realized</a
-                >
-                lately, using laser beams with knotted polarization
-                singularities. A new method of constructing families of such
-                knot solutions using a de Sitter&#8211;Minkowski conformal
-                correspondence, while passing via a finite `S^3`-cylinder, was
-                recently
-                <a
-                  href="https://arxiv.org/abs/1711.11144"
-                  target="_blank"
-                  class="text-color"
-                  >proposed</a
-                >
-                that would complement the other existing
-                <a
-                  href="https://www.sciencedirect.com/science/article/abs/pii/S0370157316303908?via%3Dihub"
-                  target="_blank"
-                  class="text-color"
-                  >methods</a
-                >. These basis-knot solutions, characterized by spin `j` of
-                `S^3`-harmonics, could be used to formally expand any
-                finite-energy, finite-action field configuration. We have
-                <a
-                  href="https://arxiv.org/abs/2002.01005"
-                  target="_blank"
-                  class="text-color"
-                  >studied</a
-                >
-                several symmetry aspects of such basis-knot configurations like
-                relation between energy and helicity, classification of null
-                fields, and transport of electromagnetic flux across the Penrose
-                diagram. We have also
-                <a
-                  href="https://arxiv.org/abs/2106.05952"
-                  target="_blank"
-                  class="text-color"
-                  >computed</a
-                >
-                Noether charges associated with the conformal group for an
-                arbitrary linear combinations of such basis configurations for a
-                fixed `j`. More recently, we have
-                <a
-                  href="https://arxiv.org/abs/2202.00169"
-                  target="_blank"
-                  class="text-color"
-                  >analyzed</a
-                >
-                the trajectories of charged particles in the background of such
-                knotted electromagnetic field confingurations with the aid of
-                numerical simulations.
+              <p>
+                The study of electromagnetic knots&mdash;EM fields whose field-lines
+                form closed non-trivial knots, like those shown with electric (red) and
+                magnetic (green) field lines&mdash;has been an active area of research
+                since Antonio F. Ra&ntilde;ada first
+                <a href="https://link.springer.com/article/10.1007%2FBF00401864" target="_blank" class="text-color">introduced them</a>
+                in 1989. Interestingly, some simple knot configurations, including the
+                one with figure-eight topology, have been experimentally
+                <a href="https://www.nature.com/articles/s41567-018-0229-2" target="_blank" class="text-color">realized</a>
+                using laser beams with knotted polarization singularities. A new method
+                for constructing families of such knot solutions using a
+                de Sitter&#8211;Minkowski conformal correspondence, while passing via a
+                finite `S^3`-cylinder, was recently
+                <a href="https://arxiv.org/abs/1711.11144" target="_blank" class="text-color">proposed</a>,
+                complementing other existing
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0370157316303908?via%3Dihub" target="_blank" class="text-color">methods</a>.
+                These basis-knot solutions, characterized by spin `j` of
+                `S^3`-harmonics, can be used to formally expand any finite-energy,
+                finite-action field configuration. We have
+                <a href="https://arxiv.org/abs/2002.01005" target="_blank" class="text-color">studied</a>
+                several symmetry aspects of such basis-knot configurations, including
+                the relation between energy and helicity, classification of null fields,
+                and transport of electromagnetic flux across the Penrose diagram. We
+                have also
+                <a href="https://arxiv.org/abs/2106.05952" target="_blank" class="text-color">computed</a>
+                Noether charges associated with the conformal group for arbitrary linear
+                combinations of such basis configurations at fixed `j`. More recently,
+                we
+                <a href="https://arxiv.org/abs/2202.00169" target="_blank" class="text-color">analyzed</a>
+                the trajectories of charged particles in the background of such knotted
+                electromagnetic field configurations with the aid of numerical
+                simulations.
               </p>
             </div>
           </article>
-          <!-- end of single item -->
-          <!-- single item -->
+
+          <!-- Item 4 -->
           <article class="item">
             <h4>Quantum spaces</h4>
             <div class="item-info">
               <div class="item-photo">
-                <img src="./media/quantumSpace.jpg" alt="" class="item-img" />
+                <img src="./media/quantumSpace.jpg" alt="Quantum space illustration" class="item-img" />
               </div>
-              <p style="color: black">
-                It has long been argued that the quantum structure of spacetime
-                is discrete and the observed classical continuum of spacetime is
-                an emergent phenomenon. The famous models of such space(time)
-                has a characteristic configuration-space fuzzyness, analogous to
-                a quantum mechanical phase-space, and cures the well known issue
-                of gravitational collapse at small length scale as proposed
-                <a
-                  href="https://link.springer.com/article/10.1007/BF02104515"
-                  target="_blank"
-                  class="text-color"
-                  >here</a
-                >. The geometry of such spaces can be studied using the spectral
-                triple toolkit of Noncommutative geometry, developed by Field
-                medalist
-                <a
-                  href="https://en.wikipedia.org/wiki/Alain_Connes"
-                  target="_blank"
-                  class="text-color"
-                  >Alain Connes</a
-                >. The distance between any pair of generalized points,
-                technically known as pure-states, in such a setting can be
-                computed using these spectral triples consisting of 3
-                mathematical objects: a non-commutative algebra, a Hilbert space
-                and a Dirac operator. We have thoroughly
-                <a
-                  href="https://inspirehep.net/literature/1482378"
-                  target="_blank"
-                  class="text-color"
-                  >investigated</a
-                >
-                the geometry of two such models: the `2`-dimensional Moyal plane
-                and the `3`-dimensional Fuzzy sphere by revising a previous
-                calculation and providing a new, almost general, result for
-                arbitrary spin-`j` `fr su(2)` representation of the Fuzzy sphere
-                (a peculiar result for `j=1//2` is demonstrated on the left).
-                Unlike others, we perform our calculations using a
-                Hilbert&#8211;Schmidt operatorial formalism thus avoiding any
-                issues arising from the choice of star products. We also
-                <a
-                  href="https://doi.org/10.1103/PhysRevD.97.086019"
-                  target="_blank"
-                  class="text-color"
-                  >studied</a
-                >
-                another model called the doubled Moyal plane where we reproduced
-                the "Pythagoras theorem" between different sets of pure states
-                and demostrated the emergence of Higgs field from the internal
+              <p>
+                It has long been argued that the quantum structure of spacetime is
+                discrete and the observed classical continuum is an emergent
+                phenomenon. Famous models of such space(time) exhibit a characteristic
+                configuration-space fuzziness, analogous to a quantum mechanical
+                phase-space, and cure the well-known issue of gravitational collapse at
+                small length scales as
+                <a href="https://link.springer.com/article/10.1007/BF02104515" target="_blank" class="text-color">proposed</a>.
+                The geometry of such spaces can be studied using the spectral triple
+                toolkit of Noncommutative geometry, developed by Fields medalist
+                <a href="https://en.wikipedia.org/wiki/Alain_Connes" target="_blank" class="text-color">Alain Connes</a>.
+                The distance between any pair of generalized points, technically known
+                as pure states, in such a setting can be computed using spectral triples
+                consisting of three mathematical objects: a non-commutative algebra, a
+                Hilbert space, and a Dirac operator. We have thoroughly
+                <a href="https://inspirehep.net/literature/1482378" target="_blank" class="text-color">investigated</a>
+                the geometry of two such models: the 2-dimensional Moyal plane and the
+                3-dimensional Fuzzy sphere, revising a previous calculation and
+                providing a new, almost general result for arbitrary spin-`j` `su(2)`
+                representation of the Fuzzy sphere. Unlike others, we perform
+                calculations using a Hilbert&#8211;Schmidt operatorial formalism, thus
+                avoiding issues arising from the choice of star products. We also
+                <a href="https://doi.org/10.1103/PhysRevD.97.086019" target="_blank" class="text-color">studied</a>
+                another model called the doubled Moyal plane, where we reproduced the
+                &ldquo;Pythagoras theorem&rdquo; between different sets of pure states and
+                demonstrated the emergence of the Higgs field from the internal
                 fluctuation of the Dirac operator.
               </p>
             </div>
           </article>
-          <!-- end of single item -->
+
         </div>
       </div>
     </section>
-    <!-- end of section: Overview -->
-    <!-- start of section: Affiliations -->
+    <!-- End: Bird's-eye view -->
+
+    <!-- Section: Affiliations -->
     <section class="section teaching">
       <div class="section-title work-title">
-        <h2 class="left">Affiliations</h2>
+        <h2>Affiliations</h2>
         <div class="underline"></div>
       </div>
-      <!-- timeline -->
-      <div class="bg-white">
+      <div class="bg-white" style="width:85vw;margin:0 auto;padding:2rem 0;border-radius:10px;">
         <div class="section-center about-container">
+
           <article class="about-info info-1">
             <h4><span>Mar, 2024 &#8212; ~Sep, 2027</span></h4>
-            <h4>
-              School of Mathematical Sciences, Queen Mary University of London
-            </h4>
-            <a href="https://www.qmul.ac.uk/maths/" target="_blank"
-              ><img
-                src="./media/QMUL-logo-scaled.jpg"
-                alt="LUH"
-                class="timeline-logo"
-            /></a>
-            <p style="color: black" class="about-info-para">
+            <h4>School of Mathematical Sciences, Queen Mary University of London</h4>
+            <a href="https://www.qmul.ac.uk/maths/" target="_blank">
+              <img src="./media/QMUL-logo-scaled.jpg" alt="QMUL logo" class="timeline-logo" />
+            </a>
+            <p class="about-info-para">
               I am currently working with
-              <a
-                href="https://webspace.maths.qmul.ac.uk/s.majid/Welcome.html"
-                target="_blank"
-                class="text-color"
-                >Shahn Majid</a
-              >
-              at QMUL maths on an ambitious project funded by German Research
-              Foundation (DFG). The key idea here is to understand the nature of
-              quantum spacetime as per
-              <a
-                href="https://link.springer.com/book/10.1007/978-3-030-30294-8"
-                target="_blank"
-                class="text-color"
-                >Beggs&#8212;Majid</a
-              >, e.g. what's a quantum geodesic! and make use of this
-              drastically new formulation to understand particle physics
-              problems in a new light.
+              <a href="https://webspace.maths.qmul.ac.uk/s.majid/Welcome.html" target="_blank" class="text-color">Shahn Majid</a>
+              at QMUL Maths on an ambitious project funded by the German Research
+              Foundation (DFG). The key idea is to understand the nature of quantum
+              spacetime as per
+              <a href="https://link.springer.com/book/10.1007/978-3-030-30294-8" target="_blank" class="text-color">Beggs&#8211;Majid</a>
+              &mdash;e.g. what is a quantum geodesic?&mdash;and make use of this
+              drastically new formulation to illuminate particle physics problems.
             </p>
-            <!-- <div class="arrow"><i class="fas fa-sort-up"></i></div> -->
           </article>
+
           <article class="about-info info-1">
-            <h4><span>Jul, 2023 &#8212; Feb 2024</span></h4>
+            <h4><span>Jul, 2023 &#8212; Feb, 2024</span></h4>
             <h4>Institute of Physics, Humboldt University Berlin</h4>
-            <a
-              href="https://www.physik.hu-berlin.de/en/standardseite"
-              target="_blank"
-              ><img src="./media/LogoHUB.svg" alt="LUH" class="timeline-logo"
-            /></a>
-            <p style="color: black" class="about-info-para">
+            <a href="https://www.physik.hu-berlin.de/en/standardseite" target="_blank">
+              <img src="./media/LogoHUB.svg" alt="HU Berlin logo" class="timeline-logo" />
+            </a>
+            <p class="about-info-para">
               This short-term postdoc position at HU Berlin with my host
-              <a
-                href="https://www.furey.space/"
-                target="_blank"
-                class="text-color"
-                >Nichol Furey</a
-              >
-              was really fruitful. This was funded generously by host's
-              Freigeist grant from Volkswagen Stiftung. We are working on
-              particle physics applications, combining Nichol's unique and
-              insightful approach to division-algebraic models with my previous
-              expertise in non-commutative geometry á la Connes.
+              <a href="https://www.furey.space/" target="_blank" class="text-color">Nichol Furey</a>
+              was really fruitful, generously funded by the host&rsquo;s Freigeist grant
+              from Volkswagen Stiftung. We worked on particle physics applications,
+              combining Nichol&rsquo;s unique approach to division-algebraic models with
+              my expertise in non-commutative geometry &agrave; la Connes.
             </p>
-            <!-- <div class="arrow"><i class="fas fa-sort-up"></i></div> -->
           </article>
+
           <article class="about-info info-1">
-            <h4><span>Summers 2023 & 2024</span></h4>
-            <h4>Erwin Schrödinger Institute, Vienna</h4>
-            <a href="https://www.esi.ac.at/" target="_blank"
-              ><img src="./media/LogoESI.png" alt="LUH" class="timeline-logo"
-            /></a>
-            <p style="color: black" class="about-info-para">
+            <h4><span>Summers 2023 &amp; 2024</span></h4>
+            <h4>Erwin Schr&ouml;dinger Institute, Vienna</h4>
+            <a href="https://www.esi.ac.at/" target="_blank">
+              <img src="./media/LogoESI.png" alt="ESI Vienna logo" class="timeline-logo" />
+            </a>
+            <p class="about-info-para">
               These visits, funded by the
-              <a
-                href="https://www.esi.ac.at/events/e513/"
-                target="_blank"
-                class="text-color"
-                >JRF</a
-              >
-              program of ESI led to a fruitful collaboration with
-              <a
-                href="https://homepage.univie.ac.at/harold.steinacker/"
-                target="_blank"
-                class="text-color"
-                >Harold Steinacker</a
-              >, at the Physics dept. of the University. We already have a
-              <a
-                href="https://doi.org/10.1088/1361-6382/ad6e4b"
-                target="_blank"
-                class="text-color"
-                >paper</a
-              >
-              together on emergent gravity in IKKT model, published in CGQ.
+              <a href="https://www.esi.ac.at/events/e513/" target="_blank" class="text-color">JRF</a>
+              programme of ESI, led to a fruitful collaboration with
+              <a href="https://homepage.univie.ac.at/harold.steinacker/" target="_blank" class="text-color">Harold Steinacker</a>
+              at the Physics Department of the University of Vienna. We have a
+              <a href="https://doi.org/10.1088/1361-6382/ad6e4b" target="_blank" class="text-color">paper</a>
+              together on emergent gravity in the IKKT model, published in CQG.
             </p>
           </article>
+
           <article class="about-info info-1">
             <h4><span>Oct, 2018 &#8212; Jun, 2023</span></h4>
             <h4>Institute for Theoretical Physics (LUH), Hannover</h4>
-            <a
-              href="https://www.iiserkol.ac.in/web/en/#gsc.tab=0"
-              target="_blank"
-            >
-              <img
-                src="./media/logoLUH.png"
-                alt="LUH"
-                class="timeline-logo iiser"
-            /></a>
-            <p style="color: black" class="about-info-para">
+            <a href="https://www.uni-hannover.de/en/" target="_blank">
+              <img src="./media/logoLUH.png" alt="LUH logo" class="timeline-logo" />
+            </a>
+            <p class="about-info-para">
               I worked with
-              <a
-                href="https://www.itp.uni-hannover.de/de/ag/lechtenf/?&L=1"
-                target="_blank"
-                class="text-color"
-                >Olaf Lechtenfeld</a
-              >
-              on various aspects of spacetime geometry in classical gauge theory
-              during my tenure, first as a doctoral scholar and later as a
-              postdoc. This included works on de Sitter space for both Abelian
-              (EM knots) and non-Abelian (cosmic gauge field) cases during PhD
-              and on symmetric spaces as well as anti-de Sitter space during
-              postdoc.
+              <a href="https://www.itp.uni-hannover.de/de/ag/lechtenf/?&L=1" target="_blank" class="text-color">Olaf Lechtenfeld</a>
+              on various aspects of spacetime geometry in classical gauge theory,
+              first as a doctoral scholar and later as a postdoc. This included works
+              on de Sitter space for both Abelian (EM knots) and non-Abelian (cosmic
+              gauge field) cases during the PhD, and on symmetric spaces as well as
+              anti-de Sitter space during the postdoc.
             </p>
           </article>
+
           <article class="about-info info-1">
             <h4><span>2013 &#8212; 2018 (multiple short visits)</span></h4>
-            <h4>S.N.Bose National Center for Basic Sciences, Kolkata</h4>
-            <a href="https://www.bose.res.in/" target="_blank"
-              ><img
-                src="./media/LogoSNBNCBS.gif"
-                alt="LUH"
-                class="timeline-logo"
-            /></a>
-            <p style="color: black" class="about-info-para">
-              I visited Bose Center numerous times to collaborate with and learn
-              from my favorite mentor
-              <a
-                href="http://people.bose.res.in/faculty/fac_new/biswajitchakrabarty.html"
-                target="_blank"
-                class="text-color"
-                >Biswajit Chakraborty</a
-              >. A major chunk of my research with him on Noncommutative quantum
-              mechanics and Noncommutative geometry happened during three
-              separate summer visits of over 2 months each. In total, these
-              collaborations yielded 3 published articles.
+            <h4>S.N. Bose National Centre for Basic Sciences, Kolkata</h4>
+            <a href="https://www.bose.res.in/" target="_blank">
+              <img src="./media/LogoSNBNCBS.gif" alt="S.N. Bose Centre logo" class="timeline-logo" />
+            </a>
+            <p class="about-info-para">
+              I visited the Bose Centre numerous times to collaborate with my
+              favourite mentor
+              <a href="http://people.bose.res.in/faculty/fac_new/biswajitchakrabarty.html" target="_blank" class="text-color">Biswajit Chakraborty</a>.
+              A major portion of my research on Noncommutative quantum mechanics and
+              Noncommutative geometry took place during three separate summer visits of
+              over two months each, yielding three published articles.
             </p>
-            <!-- <div class="circle"><i class="fas fa-circle"></i></i></div> -->
-            <!-- <div class="arrow"><i class="fas fa-sort-up"></i></div> -->
           </article>
+
         </div>
       </div>
     </section>
-    <!-- end of section: Affiliations -->
-    <!-- start of section: Publications -->
+    <!-- End: Affiliations -->
+
+    <!-- Section: Selected Publications -->
     <section>
       <div class="section-title section-center">
-        <h2>Selected compilations</h2>
+        <h2>Selected Publications</h2>
         <div class="underline"></div>
-        <!-- <p> -->
-        <p style="margin-bottom: 0.5cm"></p>
-        For a better overview of my papers, including citations, please visit my
-        <a
-          href="https://inspirehep.net/authors/1706741"
-          target="_blank"
-          class="text-color"
-          >InspireHEP</a
-        >
-        or
-        <a
-          href="https://arxiv.org/a/kumar_k_2.html"
-          target="_blank"
-          class="text-color"
-          >arXiv</a
-        >
-        profile. Below I list down more prominent works for a ready reference.
-        <!-- </p> -->
+        <p style="margin-top: 1rem;">
+          For a full overview, including citations, please visit my
+          <a href="https://inspirehep.net/authors/1706741" target="_blank" class="text-color">InspireHEP</a>
+          or
+          <a href="https://arxiv.org/a/kumar_k_2.html" target="_blank" class="text-color">arXiv</a>
+          profile. Below are selected prominent works for ready reference.
+        </p>
       </div>
-
       <div class="publication section-center container">
         <ol>
           <li>
             Kaushlendra Kumar and Harold Steinacker,
-            <em>
-              Modified Einstein equations from the 1-loop effective action of
-              the IKKT model
-            </em>
-            <a
-              href="https://doi.org/10.1088/1361-6382/ad6e4b"
-              target="_blank"
-              class="text-color"
-            >
-              Class.Quant.Grav. 41 (2024) 18, 185007 </a
-            >,
-            <a
-              href="https://arxiv.org/abs/2312.01317"
-              target="_blank"
-              class="text-color"
-              >arXiv:2312.01317 [hep-th]</a
-            >.
+            <em>Modified Einstein equations from the 1-loop effective action of the IKKT model</em>
+            <a href="https://doi.org/10.1088/1361-6382/ad6e4b" target="_blank" class="text-color">Class.&thinsp;Quant.&thinsp;Grav. 41 (2024) 18, 185007</a>,
+            <a href="https://arxiv.org/abs/2312.01317" target="_blank" class="text-color">arXiv:2312.01317 [hep-th]</a>.
           </li>
-          <!-- <li>
-            Savan Hirpara, Kaushlendra Kumar and Olaf Lechtenfeld,
-            <em> Exact gauge fields from anti-de Sitter space</em>
-            <a
-              href="https://arxiv.org/abs/2301.03606"
-              target="_blank"
-              class="text-color"
-              >arXiv:2301.03606 [hep-th]</a
-            >.
-          </li> -->
-          <!-- <li>
-            Kaushlendra Kumar,
-            <em
-              >SO(1,3) Yang&#8211;Mills solutions on Minkowski space via
-              cosets</em
-            >
-            <a
-              href="https://arxiv.org/abs/2212.01341"
-              target="_blank"
-              class="text-color"
-              >arXiv:2212.01341 [hep-th]</a
-            >.
-          </li> -->
           <li>
-            Kaushlendra Kumar, Olaf Lechtenfeld, Gabriel Picanço Costa and Jona
-            Röhrig,
-            <em
-              >Yang&#8211;Mills solutions on Minkowski space via non-compact
-              coset spaces
-            </em>
-            <a
-              href="https://doi.org/10.1016/j.physletb.2022.137564"
-              target="_blank"
-              class="text-color"
-              >Phys. Lett. B <b>835</b> (2022) 137564</a
-            >,
-            <a
-              href="https://arxiv.org/abs/2206.12009"
-              target="_blank"
-              class="text-color"
-            >
-              arXiv:2206.12009 [hep-th]</a
-            >.
+            Kaushlendra Kumar, Olaf Lechtenfeld, Gabriel Pican&ccedil;o Costa and Jona R&ouml;hrig,
+            <em>Yang&#8211;Mills solutions on Minkowski space via non-compact coset spaces</em>
+            <a href="https://doi.org/10.1016/j.physletb.2022.137564" target="_blank" class="text-color">Phys. Lett. B <b>835</b> (2022) 137564</a>,
+            <a href="https://arxiv.org/abs/2206.12009" target="_blank" class="text-color">arXiv:2206.12009 [hep-th]</a>.
           </li>
           <li>
             Kaushlendra Kumar,
-            <em
-              >Solutions of Yang&#8211;Mills theory in four-dimensional de
-              Sitter space
-            </em>
-            <a
-              href="https://doi.org/10.15488/12546"
-              target="_blank"
-              class="text-color"
-            >
-              Leibniz Universität Hannover, Diss., 2022, viii, 95 S.</a
-            >,
-            <a
-              href="https://arxiv.org/abs/2202.12215"
-              target="_blank"
-              class="text-color"
-            >
-              arXiv:2202.12215 [hep-th]</a
-            >. [<a
-              href="https://notebookarchive.org/2022-04-dbzrbqg"
-              target="_blank"
-              class="text-color"
-              rel="noopener noreferrer"
-              >Mathematica-notebook</a
-            >]
+            <em>Solutions of Yang&#8211;Mills theory in four-dimensional de Sitter space</em>
+            <a href="https://doi.org/10.15488/12546" target="_blank" class="text-color">Leibniz Universit&auml;t Hannover, Diss., 2022</a>,
+            <a href="https://arxiv.org/abs/2202.12215" target="_blank" class="text-color">arXiv:2202.12215 [hep-th]</a>.
+            [<a href="https://notebookarchive.org/2022-04-dbzrbqg" target="_blank" class="text-color" rel="noopener noreferrer">Mathematica notebook</a>]
           </li>
           <li>
-            Kaushlendra Kumar, Olaf Lechtenfeld and Gabriel Picanço Costa,
-            <em
-              >Trajectories of charged particles in knotted electromagnetic
-              fields
-            </em>
-            <a
-              href="https://doi.org/10.1088/1751-8121/ac7c49"
-              target="_blank"
-              class="text-color"
-              >J. Phys. A: Math. Theor. <b>55</b> (2022) 315401</a
-            >,
-            <a
-              href="https://arxiv.org/abs/2202.00169"
-              target="_blank"
-              class="text-color"
-            >
-              arXiv:2202.00169 [math-ph]</a
-            >. [<a
-              href="https://notebookarchive.org/2022-05-7es6sj9"
-              target="_blank"
-              class="text-color"
-              >Mathematica-notebook</a
-            >]
+            Kaushlendra Kumar, Olaf Lechtenfeld and Gabriel Pican&ccedil;o Costa,
+            <em>Trajectories of charged particles in knotted electromagnetic fields</em>
+            <a href="https://doi.org/10.1088/1751-8121/ac7c49" target="_blank" class="text-color">J. Phys. A: Math. Theor. <b>55</b> (2022) 315401</a>,
+            <a href="https://arxiv.org/abs/2202.00169" target="_blank" class="text-color">arXiv:2202.00169 [math-ph]</a>.
+            [<a href="https://notebookarchive.org/2022-05-7es6sj9" target="_blank" class="text-color">Mathematica notebook</a>]
           </li>
-          <!-- <li>
-            Kaushlendra Kumar, Gabriel Picanço Costa and Lukas Hantzko,
-            <em>Conserved charges for rational electromagnetic knots</em>
-            <a
-              href="https://doi.org/10.1140/epjp/s13360-022-02563-4"
-              target="_blank"
-              class="text-color"
-              >Eur. Phys. J. Plus <b>137</b> (2022) 407</a
-            >,
-            <a
-              href="https://arxiv.org/abs/2106.05952"
-              target="_blank"
-              class="text-color"
-            >
-              arXiv:2106.05952 [math-ph]</a
-            >.
-          </li> -->
           <li>
-            Kaushlendra Kumar, Olaf Lechtenfeld and Gabriel Picanço Costa,
-            <em>Instability of cosmic Yang&#8211;Mills fields</em
-            ><a
-              href="https://doi.org/10.1016/j.nuclphysb.2021.115583"
-              target="_blank"
-              class="text-color"
-            >
-              Nucl. Phys. B <b>973</b> (2021) 115583</a
-            >,<a
-              href="https://arxiv.org/abs/2102.08401"
-              target="_blank"
-              class="text-color"
-            >
-              <br />
-              arXiv:2102.08401 [hep-th]</a
-            >.
+            Kaushlendra Kumar, Olaf Lechtenfeld and Gabriel Pican&ccedil;o Costa,
+            <em>Instability of cosmic Yang&#8211;Mills fields</em>
+            <a href="https://doi.org/10.1016/j.nuclphysb.2021.115583" target="_blank" class="text-color">Nucl. Phys. B <b>973</b> (2021) 115583</a>,
+            <a href="https://arxiv.org/abs/2102.08401" target="_blank" class="text-color">arXiv:2102.08401 [hep-th]</a>.
           </li>
           <li>
             Kaushlendra Kumar and Olaf Lechtenfeld,
-            <em>On rational electromagnetic fields</em
-            ><a
-              href="https://doi.org/10.1016/j.physleta.2020.126445"
-              target="_blank"
-              class="text-color"
-            >
-              Phys. Lett. A <b>384</b> (2020) 126445</a
-            >,
-            <a
-              href="https://arxiv.org/abs/2002.01005"
-              target="_blank"
-              class="text-color"
-            >
-              arXiv:2002.01005 [hep-th]</a
-            >.
+            <em>On rational electromagnetic fields</em>
+            <a href="https://doi.org/10.1016/j.physleta.2020.126445" target="_blank" class="text-color">Phys. Lett. A <b>384</b> (2020) 126445</a>,
+            <a href="https://arxiv.org/abs/2002.01005" target="_blank" class="text-color">arXiv:2002.01005 [hep-th]</a>.
           </li>
           <li>
             Kaushlendra Kumar and Biswajit Chakraborty,
-            <em
-              >Spectral distances on doubled Moyal plane using Dirac
-              eigen-spinors</em
-            >
-            <a
-              href="https://doi.org/10.1103/PhysRevD.97.086019"
-              target="_blank"
-              class="text-color"
-            >
-              Phys. Rev. D <b>97</b> (2018) 086019</a
-            >,
-            <a
-              href="https://arxiv.org/abs/1711.00653"
-              target="_blank"
-              class="text-color"
-            >
-              arXiv:1711.00653 [math-ph]</a
-            >.
+            <em>Spectral distances on doubled Moyal plane using Dirac eigen-spinors</em>
+            <a href="https://doi.org/10.1103/PhysRevD.97.086019" target="_blank" class="text-color">Phys. Rev. D <b>97</b> (2018) 086019</a>,
+            <a href="https://arxiv.org/abs/1711.00653" target="_blank" class="text-color">arXiv:1711.00653 [math-ph]</a>.
           </li>
-          <!-- <li>
-            Yendrembam C. Devi, Kaushlendra Kumar, Biswajit Chakraborty and
-            Frederik G. Scholtz,
-            <em
-              >Revisiting Connes' Finite Spectral Distance on Noncommutative
-              Spaces: Moyal Plane and Fuzzy Sphere</em
-            ><a
-              href="https://doi.org/10.1142/S0219887818502043"
-              target="_blank"
-              class="text-color"
-            >
-              Int. J. Geo. Meth. Mod. Phys. <b>15</b> (2018) 1850204</a
-            >.
-          </li> -->
-          <!-- <li>
-            Kaushlendra Kumar, Shivraj Prajapat and Biswajit Chakraborty,
-            <em
-              >On the role of Schwinger's SU(2) generators for Simple Harmonic
-              Oscillator in 2D Moyal plane</em><a
-              href="https://doi.org/10.1140/epjp/i2015-15120-7"
-              target="_blank"
-              class="text-color"
-            >
-              Eur. Phys. J. Plus <b>130</b> (2015) 120</a
-            >,
-            <a
-              href="https://arxiv.org/abs/1312.3095"
-              target="_blank"
-              class="text-color"
-            >
-              arXiv:1312.3095 [math-ph]</a
-            >.
-          </li> -->
         </ol>
       </div>
     </section>
-    <!-- end of section: Publications -->
-    <!-- section: Miscellaneous -->
-    <section class="Achievements teaching">
+    <!-- End: Publications -->
+
+    <!-- Section: Miscellaneous -->
+    <section class="Achievements teaching misc-section">
       <div class="section-title">
         <h2>Miscellaneous</h2>
         <div class="underline"></div>
       </div>
       <article class="section-center teaching-info container">
-        <h4>TALKS</h4>
+
+        <h4>Talks</h4>
         <ol>
           <li>
-            <b>Aug 18, 2023</b> <em>@Room 316 meeting (Bal)</em> "Emergent
-            gravity from the 1-loop effective action of the IKKT matrix model"
-            [<a
-              href="https://video.syr.edu/media/t/1_o7p5ekjl"
-              target="_blank"
-              class="text-color"
-              >Video</a
-            >] [<a
-              class="text-color"
-              href="https://drive.google.com/file/d/1Wfg3r00fXh63zXqPRYex8_lujWEEOBpT/view?pli=1"
-              target="_blank"
-              >Slides</a
-            >]
+            <b>Aug 18, 2023</b> <em>@Room 316 meeting (Bal)</em> &ldquo;Emergent gravity from the 1-loop effective action of the IKKT matrix model&rdquo;
+            [<a href="https://video.syr.edu/media/t/1_o7p5ekjl" target="_blank" class="text-color">Video</a>]
+            [<a href="https://drive.google.com/file/d/1Wfg3r00fXh63zXqPRYex8_lujWEEOBpT/view?pli=1" target="_blank" class="text-color">Slides</a>]
           </li>
           <li>
             <b>Jul 27, 2023</b>
-            <a
-              class="text-color"
-              href="http://qts12.com/schedule/"
-              target="_blank"
-              ><em>@QTS12 conference, Prague</em></a
-            >
-            "Exact gauge fields from Anti-de Sitter space" [<a
-              class="text-color"
-              href="./media/AdS-YM_QTS12.pdf"
-              target="_blank"
-              >Slides</a
-            >]
+            <a href="http://qts12.com/schedule/" target="_blank" class="text-color"><em>@QTS12 conference, Prague</em></a>
+            &ldquo;Exact gauge fields from Anti-de Sitter space&rdquo;
+            [<a href="./media/AdS-YM_QTS12.pdf" target="_blank" class="text-color">Slides</a>]
           </li>
           <li>
-            <b>Jun 28, 2023</b>
-            <em>@Lechtenfeld's group meeting, Hannover</em> "Emergent gravity
-            from the 1-loop effective action of the IKKT matrix model"
+            <b>Jun 28, 2023</b> <em>@Lechtenfeld&rsquo;s group meeting, Hannover</em>
+            &ldquo;Emergent gravity from the 1-loop effective action of the IKKT matrix model&rdquo;
           </li>
           <li>
             <b>May 4, 2023</b>
-            <a
-              class="text-color"
-              href="https://www.esi.ac.at/events/t1312/"
-              target="_blank"
-              ><em>@ESI, Vienna</em></a
-            >
-            "Exact gauge fields from Anti-de Sitter space" [<a
-              class="text-color"
-              href="./media/AdS-YM_ESI.pdf"
-              target="_blank"
-              >Slides</a
-            >]
+            <a href="https://www.esi.ac.at/events/t1312/" target="_blank" class="text-color"><em>@ESI, Vienna</em></a>
+            &ldquo;Exact gauge fields from Anti-de Sitter space&rdquo;
+            [<a href="./media/AdS-YM_ESI.pdf" target="_blank" class="text-color">Slides</a>]
           </li>
           <li>
             <b>Mar 15, 2023</b>
-            <a
-              class="text-color"
-              href="http://solitonsatwork.net/?display=seminars"
-              target="_blank"
-              ><em>@Solitons at Work (online)</em></a
-            >
-            "Exact gauge fields from anti-de Sitter space" [<a
-              target="_blank"
-              class="text-color"
-              href="https://youtu.be/EPtzquQ1sig"
-              >Video</a
-            >] [<a
-              class="text-color"
-              href="./media/AdS-YM_S@W.pdf"
-              target="_blank"
-              >Slides</a
-            >]
+            <a href="http://solitonsatwork.net/?display=seminars" target="_blank" class="text-color"><em>@Solitons at Work (online)</em></a>
+            &ldquo;Exact gauge fields from anti-de Sitter space&rdquo;
+            [<a href="https://youtu.be/EPtzquQ1sig" target="_blank" class="text-color">Video</a>]
+            [<a href="./media/AdS-YM_S@W.pdf" target="_blank" class="text-color">Slides</a>]
           </li>
           <li>
             <b>Aug 23, 2022</b>
-            <a
-              href="https://confluence.desy.de/display/STJC/String+Theory+Journal+Club"
-              target="_blank"
-              class="text-color"
-              ><em>@String theory journal club of DESY, Hamburg</em></a
-            >
-            "Yang&#8211;Mills solutions on Minkowski space via non-compact coset
-            spaces" [<a
-              href="./media/YMonMink-DESY.pdf"
-              target="_blank"
-              class="text-color"
-              >Slides</a
-            >]
+            <a href="https://confluence.desy.de/display/STJC/String+Theory+Journal+Club" target="_blank" class="text-color"><em>@String Theory Journal Club, DESY Hamburg</em></a>
+            &ldquo;Yang&#8211;Mills solutions on Minkowski space via non-compact coset spaces&rdquo;
+            [<a href="./media/YMonMink-DESY.pdf" target="_blank" class="text-color">Slides</a>]
           </li>
           <li>
             <b>Jul 18, 2022</b>
-            <a
-              href="https://indico.in2p3.fr/event/23498/"
-              target="_blank"
-              class="text-color"
-              ><em>@GROUP34 conference, Strasbourg</em></a
-            >
-            "Yang&#8211;Mills solutions on Minkowski space via non-compact coset
-            spaces" [<a
-              href="./media/YMonMink-GROUP34.pdf"
-              target="_blank"
-              class="text-color"
-              >Slides</a
-            >]
+            <a href="https://indico.in2p3.fr/event/23498/" target="_blank" class="text-color"><em>@GROUP34 conference, Strasbourg</em></a>
+            &ldquo;Yang&#8211;Mills solutions on Minkowski space via non-compact coset spaces&rdquo;
+            [<a href="./media/YMonMink-GROUP34.pdf" target="_blank" class="text-color">Slides</a>]
           </li>
           <li>
             <b>Mar 16, 2022</b>
-            <a
-              class="text-color"
-              href="http://solitonsatwork.net/?display=seminars"
-              target="_blank"
-              ><em>@Solitons at Work (online)</em></a
-            >
-            "Yang&#8211;Mills solutions on Minkowski space via non-compact coset
-            spaces" [<a
-              target="_blank"
-              class="text-color"
-              href="https://www.youtube.com/watch?v=zT61SlnRc7c&ab_channel=ChrisHalcrow"
-              >Video</a
-            >] [<a class="text-color" href="./media/MinkYM.pdf" target="_blank"
-              >Slides</a
-            >]
+            <a href="http://solitonsatwork.net/?display=seminars" target="_blank" class="text-color"><em>@Solitons at Work (online)</em></a>
+            &ldquo;Yang&#8211;Mills solutions on Minkowski space via non-compact coset spaces&rdquo;
+            [<a href="https://www.youtube.com/watch?v=zT61SlnRc7c&ab_channel=ChrisHalcrow" target="_blank" class="text-color">Video</a>]
+            [<a href="./media/MinkYM.pdf" target="_blank" class="text-color">Slides</a>]
           </li>
           <li>
-            <b>Jun 1, 2022</b>
-            <em>@Lechtenfeld's group meeting, Hannover</em> "U(1) gauge theory
-            in noncommutative geometry" based on [<a
-              class="text-color"
-              href="https://doi.org/10.1142/S0129055X1230004X"
-              target="_blank"
-              >Dungen & Suijlekom, 2012</a
-            >]
+            <b>Jun 1, 2022</b> <em>@Lechtenfeld&rsquo;s group meeting, Hannover</em>
+            &ldquo;U(1) gauge theory in noncommutative geometry&rdquo; based on
+            [<a href="https://doi.org/10.1142/S0129055X1230004X" target="_blank" class="text-color">Dungen &amp; Suijlekom, 2012</a>]
           </li>
           <li>
-            <b>Apr 20, 2022</b>
-            <em>@Lechtenfeld's group meeting, Hannover</em> "Spectral triple
-            with real structure on fuzzy sphere" based on [<a
-              class="text-color"
-              href="https://doi.org/10.1063/5.0084008"
-              target="_blank"
-              >Chakraborty, Nandy & Chakraborty 2022</a
-            >]
+            <b>Apr 20, 2022</b> <em>@Lechtenfeld&rsquo;s group meeting, Hannover</em>
+            &ldquo;Spectral triple with real structure on fuzzy sphere&rdquo; based on
+            [<a href="https://doi.org/10.1063/5.0084008" target="_blank" class="text-color">Chakraborty, Nandy &amp; Chakraborty, 2022</a>]
           </li>
           <li>
-            <b>Dec 1, 2021:</b>
-            <em>@Lechtenfeld's group meeting, Hannover</em> "New Yang-Mills
-            solution on T_+"
+            <b>Dec 1, 2021</b> <em>@Lechtenfeld&rsquo;s group meeting, Hannover</em>
+            &ldquo;New Yang&#8211;Mills solution on `T_+`&rdquo;
           </li>
           <li>
-            <b>Jul 7, 2017</b> <em>@S.N. Bose Center, Kolkata</em> "Spectral
-            distances on doubled Moyal plane" [<a
-              class="text-color"
-              href="./media/Summer2017.pdf"
-              target="_blank"
-              >Slides</a
-            >]
+            <b>Jul 7, 2017</b> <em>@S.N. Bose Centre, Kolkata</em>
+            &ldquo;Spectral distances on doubled Moyal plane&rdquo;
+            [<a href="./media/Summer2017.pdf" target="_blank" class="text-color">Slides</a>]
           </li>
           <li>
-            <b>Nov 4, 2016</b>
-            <em>@DPS journal club IISER, Kolkata</em> "Angular momentum & simple
-            harmonic oscillator in noncommutative Moyal plane" [<a
-              class="text-color"
-              href="./media/DPS@IISER-K.pdf"
-              target="_blank"
-              >Slides</a
-            >]
+            <b>Nov 4, 2016</b> <em>@DPS journal club, IISER Kolkata</em>
+            &ldquo;Angular momentum &amp; simple harmonic oscillator in noncommutative Moyal plane&rdquo;
+            [<a href="./media/DPS@IISER-K.pdf" target="_blank" class="text-color">Slides</a>]
           </li>
           <li>
-            <b>Jul 11, 2016</b> <em>@S.N. Bose Center, Kolkata</em> "Connes
-            spectral distance on non-commutative spaces: fuzzy sphere & double
-            Moyal plane" [<a
-              class="text-color"
-              href="./media/Summer2016.pdf"
-              target="_blank"
-              >Slides</a
-            >]
+            <b>Jul 11, 2016</b> <em>@S.N. Bose Centre, Kolkata</em>
+            &ldquo;Connes spectral distance on non-commutative spaces: fuzzy sphere &amp; doubled Moyal plane&rdquo;
+            [<a href="./media/Summer2016.pdf" target="_blank" class="text-color">Slides</a>]
           </li>
-          <br />
         </ol>
-        <h4>CONFERENCES</h4>
+
+        <h4>Conferences</h4>
         <ol>
           <li>
-            <b>Jul 24&#8211;28, 2023:</b> The 12th International Symposium on
-            Quantum Theory and Symmetries at Prague, Czech Republic. [<a
-              target="_blank"
-              class="text-color"
-              href="http://qts12.com/"
-              >Link</a
-            >]
+            <b>Jul 24&#8211;28, 2023:</b> The 12th International Symposium on Quantum Theory and Symmetries, Prague, Czech Republic.
+            [<a href="http://qts12.com/" target="_blank" class="text-color">Link</a>]
           </li>
           <li>
-            <b>Feb 06&#8211;17, 2023:</b> Vortex Moduli at ICTS Bangalore, India
-            (online). [<a
-              target="_blank"
-              class="text-color"
-              href="https://www.icts.res.in/program/Vort2023"
-              >Link</a
-            >]
+            <b>Feb 06&#8211;17, 2023:</b> Vortex Moduli at ICTS Bangalore, India (online).
+            [<a href="https://www.icts.res.in/program/Vort2023" target="_blank" class="text-color">Link</a>]
           </li>
           <li>
-            <b>Jul 18&#8211;22, 2022:</b> The 34th International Colloquium on
-            Group Theoretical Methods in Physics at Strasbourg, France. [<a
-              target="_blank"
-              class="text-color"
-              href="https://indico.in2p3.fr/event/23498/"
-              >Link</a
-            >]
+            <b>Jul 18&#8211;22, 2022:</b> The 34th International Colloquium on Group Theoretical Methods in Physics, Strasbourg, France.
+            [<a href="https://indico.in2p3.fr/event/23498/" target="_blank" class="text-color">Link</a>]
           </li>
           <li>
-            <b>Aug 02&#8211;07, 2021:</b> International Congress on Mathematical
-            Physics & Young Researchers Symposium at Geneva, Switzerland. [<a
-              target="_blank"
-              class="text-color"
-              href="https://www.icmp2021.com/"
-              >Link</a
-            >]
+            <b>Aug 02&#8211;07, 2021:</b> International Congress on Mathematical Physics &amp; Young Researchers Symposium, Geneva, Switzerland.
+            [<a href="https://www.icmp2021.com/" target="_blank" class="text-color">Link</a>]
           </li>
           <li>
-            <b>Jan 15&#8211;19, 2018:</b> Quantum Groups & Noncommutative
-            Geometry at NISER Bhubaneswar, India. [<a
-              target="_blank"
-              class="text-color"
-              href="https://sites.google.com/a/niser.ac.in/qgrpncg/home"
-              >Link</a
-            >]
+            <b>Jan 15&#8211;19, 2018:</b> Quantum Groups &amp; Noncommutative Geometry, NISER Bhubaneswar, India.
+            [<a href="https://sites.google.com/a/niser.ac.in/qgrpncg/home" target="_blank" class="text-color">Link</a>]
           </li>
-          <br />
         </ol>
-        <h4>SCHOOLS</h4>
+
+        <h4>Schools</h4>
         <ol>
           <li>
-            <b>Aug 29&#8211;Sep 09, 2022:</b> 28th Saalburg Summer School
-            "Modern methods in QFT" at Bayrischzell, Germany. [<a
-              target="_blank"
-              class="text-color"
-              href="https://saalburg.aei.mpg.de/earlier-schools/school-of-2021/"
-              >Link</a
-            >]
+            <b>Aug 29&#8211;Sep 09, 2022:</b> 28th Saalburg Summer School &ldquo;Modern methods in QFT&rdquo;, Bayrischzell, Germany.
+            [<a href="https://saalburg.aei.mpg.de/earlier-schools/school-of-2021/" target="_blank" class="text-color">Link</a>]
           </li>
           <li>
-            <b>Aug 30&#8211;Sep 10, 2021:</b> 27th Saalburg Summer School
-            "Gravitational waves and Black holes" at Heigenbrücken, Germany. [<a
-              target="_blank"
-              class="text-color"
-              href="https://saalburg.aei.mpg.de/earlier-schools/school-of-2021/"
-              >Link</a
-            >]
+            <b>Aug 30&#8211;Sep 10, 2021:</b> 27th Saalburg Summer School &ldquo;Gravitational waves and Black holes&rdquo;, Heigenbrücken, Germany.
+            [<a href="https://saalburg.aei.mpg.de/earlier-schools/school-of-2021/" target="_blank" class="text-color">Link</a>]
           </li>
           <li>
-            <b>Aug 31&#8211;Sep 11, 2020:</b> 26th Saalburg Summer School "QFT,
-            Integrable system & string field theory" at Heigenbrücken, Germany.
-            [<a
-              target="_blank"
-              class="text-color"
-              href="https://saalburg.aei.mpg.de/earlier-schools/school-of-2020/"
-              >Link</a
-            >]
+            <b>Aug 31&#8211;Sep 11, 2020:</b> 26th Saalburg Summer School &ldquo;QFT, Integrable systems &amp; string field theory&rdquo;, Heigenbrücken, Germany.
+            [<a href="https://saalburg.aei.mpg.de/earlier-schools/school-of-2020/" target="_blank" class="text-color">Link</a>]
           </li>
           <li>
-            <b>Sep 23&#8211;27, 2019:</b> Summer School "Special
-            Holonomy&#8212;Geometry and Physics" at Freiburg, Germany. [<a
-              target="_blank"
-              class="text-color"
-              href="https://www.gk1821.uni-freiburg.de/event/summerschool/2019"
-              >Link</a
-            >]
+            <b>Sep 23&#8211;27, 2019:</b> Summer School &ldquo;Special Holonomy&mdash;Geometry and Physics&rdquo;, Freiburg, Germany.
+            [<a href="https://www.gk1821.uni-freiburg.de/event/summerschool/2019" target="_blank" class="text-color">Link</a>]
           </li>
           <li>
-            <b>Sep 02&#8211;13, 2019:</b> 25th Saalburg Summer School
-            "Assymptotic symmetries and Hamiltonian formulation" at
-            Heigenbrücken, Germany. [<a
-              target="_blank"
-              class="text-color"
-              href="https://saalburg.aei.mpg.de/earlier-schools/school-of-2019/"
-              >Link</a
-            >]
+            <b>Sep 02&#8211;13, 2019:</b> 25th Saalburg Summer School &ldquo;Asymptotic symmetries and Hamiltonian formulation&rdquo;, Heigenbrücken, Germany.
+            [<a href="https://saalburg.aei.mpg.de/earlier-schools/school-of-2019/" target="_blank" class="text-color">Link</a>]
           </li>
           <li>
-            <b>Nov 06&#8211;24, 2017:</b> Preschool & Advanced school "Geometry,
-            Groups and Dynamics" at ICTS Bangalore, India. [<a
-              target="_blank"
-              class="text-color"
-              href="https://www.icts.res.in/program/ggd2017"
-              >Link</a
-            >]
+            <b>Nov 06&#8211;24, 2017:</b> Preschool &amp; Advanced school &ldquo;Geometry, Groups and Dynamics&rdquo;, ICTS Bangalore, India.
+            [<a href="https://www.icts.res.in/program/ggd2017" target="_blank" class="text-color">Link</a>]
           </li>
         </ol>
+
       </article>
     </section>
-    <!-- end of section: Miscellaneous -->
-    <!-- small navbar -->
-    <aside class="small-nav">
+    <!-- End: Miscellaneous -->
+
+    <!-- Mobile sidebar nav -->
+    <aside class="small-nav" aria-label="Mobile navigation">
       <div class="sm-nav-container">
-        <button class="close-btn"><i class="fas fa-times"></i></button>
-        <!-- nav-links-->
-        <ul class="aside-links" id="nav-links">
-          <li>
-            <a href="index.html" class="aside-link scroll-link current">home</a>
-          </li>
-          <li>
-            <a href="about.html" class="aside-link scroll-link acad-link"
-              >academics</a
-            >
-          </li>
-          <li>
-            <a href="work.html" class="aside-link scroll-link">research</a>
-          </li>
-          <li>
-            <a href="interest.html" class="aside-link scroll-link">interests</a>
-          </li>
-          <li>
-            <a href="contact.html" class="aside-link scroll-link">contact</a>
-          </li>
+        <button class="close-btn" aria-label="Close navigation"><i class="fas fa-times"></i></button>
+        <ul class="aside-links">
+          <li><a href="index.html"    class="aside-link">home</a></li>
+          <li><a href="about.html"    class="aside-link">academics</a></li>
+          <li><a href="work.html"     class="aside-link current">research</a></li>
+          <li><a href="interest.html" class="aside-link">interests</a></li>
+          <li><a href="contact.html"  class="aside-link">contact</a></li>
         </ul>
-        <!-- end of nav-links -->
       </div>
     </aside>
-    <!-- end of small navbar -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

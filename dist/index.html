@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal academic website of Dr. Kaushlendra Kumar, Mathematical Physicist at Queen Mary University of London." />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -11,64 +12,41 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="shortcut icon" href="./media/favicons/UmlautPhase1.png" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
-    <link
-      rel="shortcut icon"
-      href="./media/favicons/UmlautPhase1.png"
-      type="image/x-icon"
-    />
-
-    <title>Kaushlendra Kumar</title>
+    <title>Kaushlendra Kumar | Mathematical Physicist</title>
   </head>
   <body>
     <header class="home" id="home">
-      <!-- navbar -->
+      <!-- Navbar -->
       <div class="nav">
         <div class="nav-center">
-          <!-- small screen -->
           <div class="nav-header">
             <div class="nav-logo-two">
-              <img src="./media/logo.png" class="logo" alt="" />
+              <img src="./media/logo.png" class="logo" alt="Logo" />
               <p class="sanskrit">
-                धर्म एव हतो हन्ति <span>धर्मो रक्षति रक्षितः</span> <br />
+                धर्म एव हतो हन्ति <span>धर्मो रक्षति रक्षितः</span><br />
                 तस्माद्धर्मो न हन्तव्यो मा नो धर्मो हतोऽवधीत् ॥
               </p>
             </div>
-            <button class="nav-toggle" id="nav-toggle">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation">
               <i class="fas fa-bars"></i>
             </button>
           </div>
-          <!--nav-quotation-->
-
-          <!-- nav-links -->
-          <ul class="nav-links" id="nav-links">
-            <li>
-              <a href="index.html" class="nav-link scroll-link current">home</a>
-            </li>
-            <li>
-              <a href="about.html" class="nav-link scroll-link acad-link"
-                >academics</a
-              >
-            </li>
-            <li>
-              <a href="work.html" class="nav-link scroll-link">Research</a>
-            </li>
-            <li>
-              <a href="interest.html" class="nav-link scroll-link">interests</a>
-            </li>
-            <li>
-              <a href="contact.html" class="nav-link scroll-link">contact</a>
-            </li>
+          <ul class="nav-links">
+            <li><a href="index.html"    class="nav-link current">home</a></li>
+            <li><a href="about.html"    class="nav-link">academics</a></li>
+            <li><a href="work.html"     class="nav-link">research</a></li>
+            <li><a href="interest.html" class="nav-link">interests</a></li>
+            <li><a href="contact.html"  class="nav-link">contact</a></li>
           </ul>
-          <!-- end of nav-links -->
         </div>
       </div>
-      <!-- end of navbar -->
-      <!-- hero -->
+      <!-- Hero -->
       <div class="hero">
         <div class="hero-banner">
           <h1>
-            Hi there, Herzlich willkommen🙏🏼
+            Hi there, Herzlich willkommen&#x1F64F;&#x1F3FC;
             <span
               class="txt-type"
               data-wait="3000"
@@ -76,184 +54,88 @@
             ></span>
           </h1>
           <p class="hero-text">
-            I specialize in
-            <a href="#specialize">Mathematical Physics!</a>
+            I specialize in <a href="#specialize">Mathematical Physics!</a>
           </p>
-          <a href="http://kkwingsforhonig.de" target="_blank"
-            ><button class="btn">Latest webPage (under construction)</button></a
-          >
-          <a href="#specialize" class="scroll-down">
-            <div class="maous">
-              <span></span>
-            </div>
-          </a>
         </div>
+        <a href="#specialize" class="scroll-down" aria-label="Scroll down">
+          <div class="maous"></div>
+        </a>
       </div>
-      <!-- end of hero -->
     </header>
-    <!-- section: Specialize -->
+
+    <!-- Section: What is Mathematical Physics? -->
     <section class="specialize" id="specialize">
       <div class="section-title">
         <h2>What is Mathematical Physics?</h2>
         <div class="underline"></div>
       </div>
-      <!-- description -->
       <section class="description">
-        <video controls muted autoplay loop class="video-container">
-          <!-- <source src="./media/runstart.mp4" type="video/mp4" /> -->
+        <video controls muted autoplay loop class="video-container" aria-label="Fractal visualisation">
           <source src="./media/FractalVideo.mp4" type="video/mp4" />
         </video>
         <div class="section-center description-center">
           <p>
-            This is an ongoing enterprize whose goal is to understand and encode
-            the observed physical phenomena into a "set of fundamental
-            principles" using the language of mathematics. Having thus
-            established some of the elements of such a "set" using the known
-            results of previous experiments/observations (not a prerequisite
-            though), it then tries to predict the future outcome using those
-            elements. This has been an astoundingly successful endeavour over
-            the last few centuries! We have been able to understand the workings
-            of natural laws across a wide spectrum of phenomena&#8212;from the
-            unimaginably tiny subatomic world to the humongous and ever
-            increasing expance of cosmos&#8212;in terms of such mathematical
-            equations. The first revolution in, if not the beginning of, this
-            enterprize can be attributed to Sir
-            <a
-              href="https://en.wikipedia.org/wiki/Isaac_Newton"
-              target="_blank"
-              class="text-color"
-              >Isaac Newton</a
-            >
-            who devised calculus to explain the everyday motion of objects
-            including classical gravity. Since then there has been several
-            giants like
-            <a
-              href="https://en.wikipedia.org/wiki/Leonhard_Euler"
-              target="_blank"
-              class="text-color"
-              >Leonhard Euler</a
-            >,
-            <a
-              href="https://en.wikipedia.org/wiki/James_Clerk_Maxwell"
-              target="_blank"
-              class="text-color"
-              >James Clerk Maxwell</a
-            >,
-            <a
-              href="https://en.wikipedia.org/wiki/Max_Planck"
-              target="_blank"
-              class="text-color"
-              >Max Planck</a
-            >,
-            <a
-              href="https://en.wikipedia.org/wiki/Albert_Einstein"
-              target="_blank"
-              class="text-color"
-              >Albert Einstein</a
-            >,
-            <a
-              href="https://en.wikipedia.org/wiki/Erwin_Schrödinger"
-              target="_blank"
-              class="text-color"
-              >Erwin Schrödinger</a
-            >,
-            <a
-              href="https://en.wikipedia.org/wiki/Paul_Dirac"
-              target="_blank"
-              class="text-color"
-              >Paul Dirac</a
-            >,
-            <a
-              href="https://en.wikipedia.org/wiki/Richard_Feynman"
-              target="_blank"
-              class="text-color"
-              >Richard Feynman</a
-            >,
-            <a
-              href="https://en.wikipedia.org/wiki/Stephen_Hawking"
-              target="_blank"
-              class="text-color"
-              >Stephen Hawking</a
-            >
-            and many others who have carried the enterprize on their shoulders.
+            This is an ongoing enterprise whose goal is to understand and encode
+            the observed physical phenomena into a &ldquo;set of fundamental
+            principles&rdquo; using the language of mathematics. Having thus
+            established some of the elements of such a &ldquo;set&rdquo; using the known
+            results of previous experiments and observations (not a prerequisite
+            though), it then tries to predict future outcomes using those elements.
+            This has been an astoundingly successful endeavour over the last few
+            centuries! We have been able to understand the workings of natural
+            laws across a wide spectrum of phenomena&#8212;from the unimaginably
+            tiny subatomic world to the humongous and ever increasing expanse of
+            the cosmos&#8212;in terms of such mathematical equations. The first
+            revolution in, if not the beginning of, this enterprise can be
+            attributed to Sir
+            <a href="https://en.wikipedia.org/wiki/Isaac_Newton" target="_blank" class="text-color">Isaac Newton</a>
+            who devised calculus to explain the everyday motion of objects including
+            classical gravity. Since then there have been several giants like
+            <a href="https://en.wikipedia.org/wiki/Leonhard_Euler" target="_blank" class="text-color">Leonhard Euler</a>,
+            <a href="https://en.wikipedia.org/wiki/James_Clerk_Maxwell" target="_blank" class="text-color">James Clerk Maxwell</a>,
+            <a href="https://en.wikipedia.org/wiki/Max_Planck" target="_blank" class="text-color">Max Planck</a>,
+            <a href="https://en.wikipedia.org/wiki/Albert_Einstein" target="_blank" class="text-color">Albert Einstein</a>,
+            <a href="https://en.wikipedia.org/wiki/Erwin_Schrödinger" target="_blank" class="text-color">Erwin Schrödinger</a>,
+            <a href="https://en.wikipedia.org/wiki/Paul_Dirac" target="_blank" class="text-color">Paul Dirac</a>,
+            <a href="https://en.wikipedia.org/wiki/Richard_Feynman" target="_blank" class="text-color">Richard Feynman</a>,
+            <a href="https://en.wikipedia.org/wiki/Stephen_Hawking" target="_blank" class="text-color">Stephen Hawking</a>
+            and many others who have carried the enterprise on their shoulders.
             At present, we have two sets of fundamental physics theories that
-            have been immensely successful in explaining the
-            observations/experiments. One of these theories is the
-            <a
-              href="https://en.wikipedia.org/wiki/Standard_Model"
-              target="_blank"
-              class="text-color"
-              >Standard Model</a
-            >
+            have been immensely successful in explaining observations and
+            experiments. One of these theories is the
+            <a href="https://en.wikipedia.org/wiki/Standard_Model" target="_blank" class="text-color">Standard Model</a>
             of particle physics, which is a quantum theory meaning that it
             explains the physics at scales much smaller than that of an atom.
             The other one is the famous
-            <a
-              href="https://en.wikipedia.org/wiki/General_relativity"
-              target="_blank"
-              class="text-color"
-              >General Relativity</a
-            >
-            theory given by Einstein that not only accurately descibes gravity
-            as the curvature of spacetime but also explains the standard
-            cosmology of galaxy-clusters. The hunt for a more general theory
-            that would encompass both of these theories in appropriate limits
-            has been the holy grail for mathematical physicists for several
-            decades now. There have been several prominent candidates for such a
-            unified theory like
-            <a
-              href="https://en.wikipedia.org/wiki/String_theory"
-              target="_blank"
-              class="text-color"
-              >String Theory</a
-            >,
-            <a
-              href="https://en.wikipedia.org/wiki/Loop_quantum_gravity"
-              target="_blank"
-              class="text-color"
-              >Loop Quantum Gravity</a
-            >,
-            <a
-              href="https://en.wikipedia.org/wiki/Noncommutative_geometry"
-              target="_blank"
-              class="text-color"
-              >Noncommutative Geometry</a
-            >, etc. but none of them have been fully successful and the hunt is
-            still on.
+            <a href="https://en.wikipedia.org/wiki/General_relativity" target="_blank" class="text-color">General Relativity</a>
+            theory given by Einstein, which not only accurately describes gravity
+            as the curvature of spacetime but also explains the standard cosmology
+            of galaxy clusters. The hunt for a more general theory that would
+            encompass both of these theories in appropriate limits has been the
+            holy grail for mathematical physicists for several decades now. There
+            have been several prominent candidates for such a unified theory like
+            <a href="https://en.wikipedia.org/wiki/String_theory" target="_blank" class="text-color">String Theory</a>,
+            <a href="https://en.wikipedia.org/wiki/Loop_quantum_gravity" target="_blank" class="text-color">Loop Quantum Gravity</a>,
+            <a href="https://en.wikipedia.org/wiki/Noncommutative_geometry" target="_blank" class="text-color">Noncommutative Geometry</a>,
+            etc., but none of them have been fully successful and the hunt is still on.
           </p>
         </div>
       </section>
     </section>
-    <!-- end of section: Specialize -->
 
-    <!-- small navbar -->
-    <aside class="small-nav">
+    <!-- Mobile sidebar nav -->
+    <aside class="small-nav" aria-label="Mobile navigation">
       <div class="sm-nav-container">
-        <button class="close-btn"><i class="fas fa-times"></i></button>
-        <!-- nav-links-->
-        <ul class="aside-links" id="nav-links">
-          <li>
-            <a href="index.html" class="aside-link scroll-link current">home</a>
-          </li>
-          <li>
-            <a href="about.html" class="aside-link scroll-link acad-link"
-              >academics</a
-            >
-          </li>
-          <li>
-            <a href="work.html" class="aside-link scroll-link">work</a>
-          </li>
-          <li>
-            <a href="interest.html" class="aside-link scroll-link">interests</a>
-          </li>
-          <li>
-            <a href="contact.html" class="aside-link scroll-link">contact</a>
-          </li>
+        <button class="close-btn" aria-label="Close navigation"><i class="fas fa-times"></i></button>
+        <ul class="aside-links">
+          <li><a href="index.html"    class="aside-link current">home</a></li>
+          <li><a href="about.html"    class="aside-link">academics</a></li>
+          <li><a href="work.html"     class="aside-link">research</a></li>
+          <li><a href="interest.html" class="aside-link">interests</a></li>
+          <li><a href="contact.html"  class="aside-link">contact</a></li>
         </ul>
-        <!-- end of nav-links -->
       </div>
     </aside>
-    <!-- end of small navbar -->
 
     <script src="./app.js"></script>
   </body>

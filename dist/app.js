@@ -1,50 +1,39 @@
+/* ============================================================
+   app.js — Kaushlendra Kumar Academic Site
+   ============================================================ */
+
+/* ============================================================
+   TypeWriter Effect
+   ============================================================ */
 class TypeWriter {
-  constructor(txtElement, words, wait = 3000) {
-    this.txtElement = txtElement;
+  constructor(el, words, wait = 3000) {
+    this.el = el;
     this.words = words;
     this.txt = "";
     this.wordIndex = 0;
     this.wait = parseInt(wait, 10);
-    this.type();
     this.isDeleting = false;
+    this.type();
   }
 
   type() {
-    // Current index of word
-    const current = this.wordIndex % this.words.length;
-    // Get full text of current word
-    const fullTxt = this.words[current];
+    const current  = this.wordIndex % this.words.length;
+    const fullTxt  = this.words[current];
 
-    // Check if deleting
-    if (this.isDeleting) {
-      // Remove char
-      this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-      // Add char
-      this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
+    this.txt = this.isDeleting
+      ? fullTxt.substring(0, this.txt.length - 1)
+      : fullTxt.substring(0, this.txt.length + 1);
 
-    // Insert txt into element
-    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+    this.el.innerHTML = `<span class="txt">${this.txt}</span>`;
 
-    // Initial Type Speed
-    let typeSpeed = 300;
+    let typeSpeed = this.isDeleting ? 150 : 300;
 
-    if (this.isDeleting) {
-      typeSpeed /= 2;
-    }
-
-    // If word is complete
     if (!this.isDeleting && this.txt === fullTxt) {
-      // Make pause at end
       typeSpeed = this.wait;
-      // Set delete to true
       this.isDeleting = true;
     } else if (this.isDeleting && this.txt === "") {
       this.isDeleting = false;
-      // Move to next word
       this.wordIndex++;
-      // Pause before start typing
       typeSpeed = 500;
     }
 
@@ -52,114 +41,84 @@ class TypeWriter {
   }
 }
 
-// Init On DOM Load
-document.addEventListener("DOMContentLoaded", init);
+/* ============================================================
+   DOM Ready — all initialisation runs here
+   ============================================================ */
+document.addEventListener("DOMContentLoaded", function () {
 
-// Init App
-function init() {
+  /* ---- TypeWriter (index.html only) ---- */
   const txtElement = document.querySelector(".txt-type");
-  const words = JSON.parse(txtElement.getAttribute("data-words"));
-  const wait = txtElement.getAttribute("data-wait");
-  // Init TypeWriter
-  new TypeWriter(txtElement, words, wait);
-}
-
-const scrollDown = document.querySelector(".scroll-down");
-const navToggle = document.querySelector("#nav-toggle");
-const smallNav = document.querySelector(".small-nav");
-const closeBtn = document.querySelector(".close-btn");
-
-window.addEventListener("scroll", function () {
-  const windowHeight = this.window.pageYOffset;
-  if (windowHeight > 120) {
-    scrollDown.classList.add("scroll-hide");
-  } else {
-    scrollDown.classList.remove("scroll-hide");
+  if (txtElement) {
+    const words = JSON.parse(txtElement.getAttribute("data-words"));
+    const wait  = txtElement.getAttribute("data-wait");
+    new TypeWriter(txtElement, words, wait);
   }
-});
 
-navToggle.addEventListener("click", function () {
-  smallNav.classList.add("show-aside");
-});
-closeBtn.addEventListener("click", function () {
-  smallNav.classList.remove("show-aside");
-});
-
-// const images = document.querySelectorAll(".anim");
-// let options = {
-//   rootMargin: "-200px 0px 0px 0px",
-// };
-
-// let observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     console.log(entry.target);
-//     if (entry.isIntersecting) {
-//       entry.target.style.animation = `anim1 1.2s forwards ease-in`;
-//     } else {
-//       entry.target.style.animation = `anim2 1s forwards ease-in`;
-
-//     }
-//   });
-// }, options);
-// images.forEach((image) => {
-//   observer.observe(image);
-// });
-// Gsap
-gsap.registerPlugin(ScrollTrigger);
-
-window.addEventListener("DOMContentLoaded", function () {
-  if (window.innerWidth >= 992) {
-    gsap.from(".right-anim", {
-      scrollTrigger: {
-        trigger: ".right-anim",
-        start: "top 80%",
-        // end: "bottom 90%",
-        // scrub: true,
-        // markers: true,
-        toggleActions: "restart none none reset",
-      },
-      x: 150,
-      opacity: 0,
-      duration: 1.5,
+  /* ---- Scroll indicator fade (index.html only) ---- */
+  const scrollDown = document.querySelector(".scroll-down");
+  if (scrollDown) {
+    window.addEventListener("scroll", function () {
+      scrollDown.classList.toggle("scroll-hide", window.pageYOffset > 120);
     });
-    gsap.from(".left-anim", {
-      scrollTrigger: {
-        trigger: ".left-anim",
-        start: "top 80%",
-        // markers: true,
-        toggleActions: "restart none none reset",
-      },
-      x: -150,
-      opacity: 0,
-      duration: 1.5,
+  }
+
+  /* ---- Mobile sidebar nav ---- */
+  const navToggle = document.querySelector("#nav-toggle");
+  const smallNav  = document.querySelector(".small-nav");
+  const closeBtn  = document.querySelector(".close-btn");
+
+  if (navToggle && smallNav && closeBtn) {
+    navToggle.addEventListener("click", () => smallNav.classList.add("show-aside"));
+    closeBtn.addEventListener("click",  () => smallNav.classList.remove("show-aside"));
+
+    /* Close sidebar when any nav link is clicked */
+    smallNav.querySelectorAll(".aside-link").forEach((link) => {
+      link.addEventListener("click", () => smallNav.classList.remove("show-aside"));
     });
-    gsap.from(".right-anim-1", {
-      scrollTrigger: {
-        trigger: ".right-anim-1",
-        start: "top 80%",
-        // end: "bottom 90%",
-        // scrub: true,
-        // markers: true,
-        toggleActions: "restart none none reset",
-      },
-      x: 150,
-      opacity: 0,
-      duration: 1.5,
+
+    /* Close sidebar when clicking outside */
+    document.addEventListener("click", (e) => {
+      if (
+        smallNav.classList.contains("show-aside") &&
+        !smallNav.contains(e.target) &&
+        !navToggle.contains(e.target)
+      ) {
+        smallNav.classList.remove("show-aside");
+      }
     });
-    gsap.from(".left-anim-1", {
-      scrollTrigger: {
-        trigger: ".left-anim-1",
-        start: "top 80%",
-        // markers: true,
-        toggleActions: "restart none none reset",
-      },
-      x: -150,
-      opacity: 0,
-      duration: 1.5,
+  }
+
+  /* ---- GSAP animations (guard: GSAP may not be loaded on all pages) ---- */
+  if (typeof gsap === "undefined") return;
+
+  /* Entry animations — used on contact page (.top / .down) */
+  if (document.querySelector(".top"))  gsap.from(".top",  { duration: 1.5, opacity: 0, y: -80, ease: "power2.out" });
+  if (document.querySelector(".down")) gsap.from(".down", { duration: 1.5, opacity: 0, y:  80, ease: "power2.out" });
+
+  /* Scroll-triggered slide-in animations (interests page, desktop only) */
+  if (typeof ScrollTrigger !== "undefined" && window.innerWidth >= 992) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const slideAnims = [
+      { selector: ".right-anim",   x:  130 },
+      { selector: ".right-anim-1", x:  130 },
+      { selector: ".left-anim",    x: -130 },
+      { selector: ".left-anim-1",  x: -130 },
+    ];
+
+    slideAnims.forEach(({ selector, x }) => {
+      if (!document.querySelector(selector)) return;
+      gsap.from(selector, {
+        scrollTrigger: {
+          trigger: selector,
+          start: "top 80%",
+          toggleActions: "restart none none reset",
+        },
+        x,
+        opacity: 0,
+        duration: 1.3,
+        ease: "power2.out",
+      });
     });
   }
 });
-
-gsap.from(".top", { duration: 2, opacity: 0, y: -150 });
-
-gsap.from(".down", { duration: 2, opacity: 0, y: 150 });
