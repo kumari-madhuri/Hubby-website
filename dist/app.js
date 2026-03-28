@@ -20,21 +20,31 @@ const QUOTES = [
   "The miracle of the appropriateness of mathematics for the formulation of physics is a wonderful gift. — Wigner",
   "Physics is not about how the world is; it is about what we can say about the world. — Bohr",
   "What we observe is not nature itself, but nature exposed to our method of questioning. — Heisenberg",
+  "In mathematics you don't understand things. You just get used to them. — von Neumann",
+  "The purpose of computing is insight, not numbers. — Hamming",
+  /* Goethe */
+  "Whatever you can do, or dream you can, begin it. Boldness has genius, power, and magic in it. — Goethe",
+  "Knowing is not enough; we must apply. Willing is not enough; we must do. — Goethe",
+  "The greatest thing in this world is not so much where we stand, as in what direction we are moving. — Goethe",
   /* Philosophy */
   "Whereof one cannot speak, thereof one must be silent. — Wittgenstein",
   "The limits of my language mean the limits of my world. — Wittgenstein",
   "Wonder is the beginning of wisdom. — Socrates",
-  /* Upanishads and Gita — in English */
+  "He who has a why to live can bear almost any how. — Nietzsche",
+  /* Upanishads and Gita */
   "That by which the mind thinks — know that alone as Brahman. — Kena Upanishad",
   "Tat tvam asi: That thou art. — Chandogya Upanishad",
   "From the unreal lead me to the real; from darkness lead me to light. — Brihadaranyaka Upanishad",
   "Let right deeds be thy motive, not the fruit which comes from them. — Bhagavad Gita",
+  "The Self is not born, nor does it ever die. — Bhagavad Gita",
   /* Buddhism */
   "Three things cannot be long hidden: the sun, the moon, and the truth. — Buddha",
   "Work out your own salvation. Do not depend on others. — Buddha",
+  "Peace comes from within. Do not seek it without. — Buddha",
   /* Tolkien */
   "Not all those who wander are lost. — Tolkien",
   "All we have to decide is what to do with the time that is given us. — Tolkien",
+  "There is some good in this world, and it is worth fighting for. — Tolkien",
 ];
 
 function shuffleArray(arr) {
