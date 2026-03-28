@@ -8,18 +8,73 @@
    Tolkien/fantasy, Hindi literature tradition, Upanishads.
    ============================================================ */
 const QUOTES = [
+  /* Physics & Mathematics */
   '"The most beautiful thing we can experience is the mysterious." — Einstein',
+  '"Imagination is more important than knowledge." — Einstein',
+  '"God does not play dice with the universe." — Einstein',
   '"God used beautiful mathematics in creating the world." — Dirac',
+  '"A theory with mathematical beauty is more likely to be correct." — Dirac',
   '"What I cannot create, I do not understand." — Feynman',
+  '"Nature uses only the longest threads to weave her patterns." — Feynman',
   '"What we observe is not nature itself, but nature exposed to our method of questioning." — Heisenberg',
-  '"Whereof one cannot speak, thereof one must be silent." — Wittgenstein',
-  '"Not all those who wander are lost." — Tolkien',
-  '"The butterfly counts not months but moments, and has time enough." — Tagore',
+  '"Everything we call real is made of things that cannot be regarded as real." — Bohr',
+  '"The task is not to see what has never been seen before, but to think what has never been thought before about what you see every day." — Schrödinger',
+  '"If you are not completely confused by quantum mechanics, you do not understand it." — Feynman',
+  '"Mathematics is the language in which God has written the universe." — Galileo',
+  '"The miracle of the appropriateness of mathematics for the formulation of physics is a wonderful gift." — Wigner',
+  '"To those who do not know mathematics it is difficult to get across a real feeling as to the beauty, the deepest beauty, of nature." — Feynman',
+  '"The most incomprehensible thing about the world is that it is comprehensible." — Einstein',
+  '"Pure mathematics is, in its way, the poetry of logical ideas." — Einstein',
+  '"It is a profoundly erroneous truism that we should cultivate the habit of thinking of what we are doing." — Whitehead',
+  '"Space is not simply the stage on which the drama of physics unfolds — it is part of the cast." — Penrose',
+  '"Physics is not about how the world is, it is about what we can say about the world." — Bohr',
+
+  /* Meditation, Buddhism, Vipassana */
   '"Three things cannot be long hidden: the sun, the moon, and the truth." — Buddha',
-  '"You yourself, as much as anybody in the entire universe, deserve your love." — Buddha',
+  '"Peace comes from within. Do not seek it without." — Buddha',
+  '"The mind is everything. What you think, you become." — Buddha',
+  '"All that we are is the result of what we have thought." — Dhammapada',
+  '"Better than a thousand hollow words is one word that brings peace." — Buddha',
+  '"Work out your own salvation. Do not depend on others." — Buddha',
+  '"Meditate. Live purely. Be quiet. Do your work with mastery." — Buddha',
+  '"Happiness is not ready-made. It comes from your own actions." — Buddha',
+
+  /* Upanishads, Gita, Vedanta */
   '"The Self is not born, nor does it ever die." — Bhagavad Gita',
+  '"The soul which is not moved, which with stoic firmness meets good and evil alike, is fit for immortality." — Bhagavad Gita',
+  '"Let right deeds be thy motive, not the fruit which comes from them." — Bhagavad Gita',
   '"That by which the mind thinks — know that alone as Brahman." — Kena Upanishad',
-  '"Silence is not empty. It is full of answers." — Zen saying',
+  '"Tat tvam asi — That thou art." — Chandogya Upanishad',
+  '"The Atman is that which one should know; the Atman is Brahman." — Brihadaranyaka Upanishad',
+  '"From the unreal lead me to the real; from darkness lead me to light; from death lead me to immortality." — Brihadaranyaka Upanishad',
+  '"As a man casts off worn-out garments, the Self casts off worn-out bodies." — Bhagavad Gita',
+  '"Desire never rests by enjoyment of lusts — it grows more and more as does the fire to which fuel is added." — Mahabharata',
+
+  /* Hindi / Kabir / Rahim / Tagore */
+  '"The butterfly counts not months but moments, and has time enough." — Tagore',
+  '"Where the mind is without fear and the head is held high — into that heaven of freedom, let my country awake." — Tagore',
+  '"You can not cross the sea merely by standing and staring at the water." — Tagore',
+  '"Dheere dheere re mana, dheere sab kuch hoye — mali seenche so ghara, ritu aaye phal hoye." — Kabir',
+  '"Bura jo dekhan main chala, bura na milya koi — jo man khoja aapna, mujhse bura na koi." — Kabir',
+  '"Pothi padh padh jag mua, pandit bhaya na koi — dhai aakhar prem ka, padhe so pandit hoye." — Kabir',
+
+  /* Tolkien & Literature */
+  '"Not all those who wander are lost." — Tolkien',
+  '"Even the smallest person can change the course of the future." — Tolkien',
+  '"I wish it need not have happened in my time. So do I, and so do all who live to see such times. But that is not for them to decide." — Tolkien',
+  '"The world is indeed full of peril, and in it there are many dark places. But still there is much that is fair." — Tolkien',
+  '"All we have to decide is what to do with the time that is given us." — Tolkien',
+  '"There is some good in this world, and it's worth fighting for." — Tolkien',
+
+  /* Philosophy */
+  '"Whereof one cannot speak, thereof one must be silent." — Wittgenstein',
+  '"The limits of my language mean the limits of my world." — Wittgenstein',
+  '"God is a circle whose centre is everywhere and circumference is nowhere." — Pascal',
+  '"He who has a why to live can bear almost any how." — Nietzsche',
+  '"To live is to suffer, to survive is to find some meaning in the suffering." — Nietzsche',
+  '"Wonder is the beginning of wisdom." — Socrates',
+  '"The unexamined life is not worth living." — Socrates',
+  '"We are all just walking each other home." — Ram Dass',
 ];
 
 function shuffleArray(arr) {
