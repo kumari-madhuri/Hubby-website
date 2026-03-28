@@ -8,7 +8,7 @@
    Kabir/Tagore/Hindi tradition, Tolkien, Philosophy.
    ============================================================ */
 const QUOTES = [
-  /* Structure, geometry, necessity — the mathematical spine */
+  /* Mathematical structure */
   "God used beautiful mathematics in creating the world. — Dirac",
   "A theory with mathematical beauty is more likely to be correct. — Dirac",
   "What I cannot create, I do not understand. — Feynman",
@@ -20,22 +20,19 @@ const QUOTES = [
   "The miracle of the appropriateness of mathematics for the formulation of physics is a wonderful gift. — Wigner",
   "Physics is not about how the world is; it is about what we can say about the world. — Bohr",
   "What we observe is not nature itself, but nature exposed to our method of questioning. — Heisenberg",
-  /* Precise philosophy */
+  /* Philosophy */
   "Whereof one cannot speak, thereof one must be silent. — Wittgenstein",
   "The limits of my language mean the limits of my world. — Wittgenstein",
   "Wonder is the beginning of wisdom. — Socrates",
-  /* Upanishads and Gita — short, sharp */
+  /* Upanishads and Gita — in English */
   "That by which the mind thinks — know that alone as Brahman. — Kena Upanishad",
-  "Tat tvam asi. — Chandogya Upanishad",
+  "Tat tvam asi: That thou art. — Chandogya Upanishad",
   "From the unreal lead me to the real; from darkness lead me to light. — Brihadaranyaka Upanishad",
   "Let right deeds be thy motive, not the fruit which comes from them. — Bhagavad Gita",
-  /* Kabir — Hindi tradition */
-  "Pothi padh padh jag mua, pandit bhaya na koi — dhai aakhar prem ka, padhe so pandit hoye. — Kabir",
-  "Bura jo dekhan main chala, bura na milya koi — jo man khoja aapna, mujhse bura na koi. — Kabir",
   /* Buddhism */
   "Three things cannot be long hidden: the sun, the moon, and the truth. — Buddha",
   "Work out your own salvation. Do not depend on others. — Buddha",
-  /* Tolkien — the wanderer strand */
+  /* Tolkien */
   "Not all those who wander are lost. — Tolkien",
   "All we have to decide is what to do with the time that is given us. — Tolkien",
 ];
