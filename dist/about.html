@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Academic background, degrees, teaching, and scholarships of Dr. Kaushlendra Kumar." />
+    <meta name="description" content="Academic trajectory, degrees, teaching experience, and fellowships of Dr. Kaushlendra Kumar." />
+    <link rel="canonical" href="https://k-kumar.netlify.app/about.html" />
+    <meta property="og:title" content="Academics | Kaushlendra Kumar" />
+    <meta property="og:description" content="Academic trajectory, degrees, teaching experience, and fellowships of Dr. Kaushlendra Kumar." />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://k-kumar.netlify.app/about.html" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="./media/favicons/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
@@ -16,25 +21,46 @@
         <div class="nav-center">
           <div class="nav-header">
             <div class="nav-logo-two">
-              <img src="./media/logo.png" class="logo" alt="Logo" />
-              <p class="sanskrit">
+              <img src="./media/logo.png" class="logo" alt="KK site logo" />
+              <p
+                class="sanskrit"
+                lang="sa"
+                title="Dharma, when protected, protects."
+                aria-label="Sanskrit verse: Dharma, when protected, protects."
+              >
                 धर्म एव हतो हन्ति <span>धर्मो रक्षति रक्षितः</span><br />
                 तस्माद्धर्मो न हन्तव्यो मा नो धर्मो हतोऽवधीत् ॥
               </p>
             </div>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation"><i class="fas fa-bars"></i></button>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false"><i class="fas fa-bars"></i></button>
           </div>
           <ul class="nav-links">
             <li><a href="index.html"    class="nav-link">home</a></li>
             <li><a href="about.html"    class="nav-link current">academics</a></li>
             <li><a href="work.html"     class="nav-link">research</a></li>
-            <li><a href="interest.html" class="nav-link">interests</a></li>
+            <li><a href="interest.html" class="nav-link">personal</a></li>
             <li><a href="contact.html"  class="nav-link">contact</a></li>
           </ul>
         </div>
       </div>
       <div class="hero work-hero"></div>
     </header>
+
+    <main class="academics-page">
+    <section class="academic-trajectory" aria-labelledby="trajectory-title">
+      <div class="section-center intro-card">
+        <p class="section-eyebrow">Academic trajectory</p>
+        <h1 id="trajectory-title">Academic trajectory</h1>
+        <p>
+          My path into mathematical physics runs from engineering training at
+          IIT-BHU through physics at IISER Kolkata and doctoral work in
+          theoretical physics at Leibniz University Hannover, followed by
+          postdoctoral positions in Hannover, HU Berlin, ESI Vienna, and QMUL.
+          The common thread has been the use of exact algebraic and geometric
+          methods in field theory, noncommutative geometry, and quantum geometry.
+        </p>
+      </div>
+    </section>
 
     <!-- ══════════════════ DEGREES — zigzag timeline ══════════════════ -->
     <section class="section">
@@ -52,13 +78,13 @@
             <span class="tl-date">Oct 2018 &mdash; May 2022</span>
             <h4>PhD &mdash; Theoretical Physics</h4>
             <p class="tl-institution">Institute for Theoretical Physics (LUH), Hannover</p>
-            <a href="https://www.uni-hannover.de/en/" target="_blank">
+            <a href="https://www.uni-hannover.de/en/" target="_blank" rel="noopener noreferrer">
               <img src="./media/logoLUH.png" alt="LUH" class="tl-logo" />
             </a>
             <p class="tl-para">
               Awarded <em>Magna cum Laude</em>. Supervised by
-              <a href="https://www.itp.uni-hannover.de/de/ag/lechtenf/?&L=1" target="_blank" class="text-color">Olaf Lechtenfeld</a>,
-              funded by <a href="https://www.daad.de/en/" target="_blank" class="text-color">DAAD</a>.
+              <a href="https://www.itp.uni-hannover.de/de/ag/lechtenf/?&L=1" target="_blank" class="text-color" rel="noopener noreferrer">Olaf Lechtenfeld</a>,
+              funded by <a href="https://www.daad.de/en/" target="_blank" class="text-color" rel="noopener noreferrer">DAAD</a>.
               Thesis: <em>&ldquo;Solutions of Yang&#8211;Mills theory in four-dimensional de Sitter space.&rdquo;</em>
             </p>
           </div>
@@ -71,12 +97,12 @@
             <span class="tl-date">Jul 2015 &mdash; May 2018</span>
             <h4>MSc &mdash; Physics</h4>
             <p class="tl-institution">Indian Institute of Science Education &amp; Research, Kolkata</p>
-            <a href="https://www.iiserkol.ac.in/web/en/" target="_blank">
+            <a href="https://www.iiserkol.ac.in/web/en/" target="_blank" rel="noopener noreferrer">
               <img src="./media/LogoIISERK.png" alt="IISER-K" class="tl-logo" />
             </a>
             <p class="tl-para">
               Integrated PhD programme at the
-              <a href="https://physics.iiserkol.ac.in/" target="_blank" class="text-color">Department of Physical Sciences</a>.
+              <a href="https://physics.iiserkol.ac.in/" target="_blank" class="text-color" rel="noopener noreferrer">Department of Physical Sciences</a>.
               Intensive course-work in Physics and Mathematics, with research
               in Noncommutative geometry at S.N. Bose National Centre, Kolkata.
             </p>
@@ -90,12 +116,12 @@
             <span class="tl-date">Jul 2010 &mdash; May 2015</span>
             <h4>BTech &amp; MTech &mdash; Biochemical Engineering</h4>
             <p class="tl-institution">Indian Institute of Technology (BHU), Varanasi</p>
-            <a href="https://www.iitbhu.ac.in" target="_blank">
+            <a href="https://www.iitbhu.ac.in" target="_blank" rel="noopener noreferrer">
               <img src="./media/LogoIITBHU.jpeg" alt="IIT-BHU" class="tl-logo tl-logo-tall" />
             </a>
             <p class="tl-para">
               Five-year integrated programme at the
-              <a href="https://www.iitbhu.ac.in/dept/bce" target="_blank" class="text-color">School of Biochemical Engineering</a>.
+              <a href="https://www.iitbhu.ac.in/dept/bce" target="_blank" class="text-color" rel="noopener noreferrer">School of Biochemical Engineering</a>.
               A parallel passion for theoretical physics, pursued independently
               alongside, eventually won out &mdash; and a pivot to mathematical physics followed.
             </p>
@@ -113,6 +139,11 @@
       </div>
 
       <article class="section-center teaching-info container">
+        <p class="teaching-summary">
+          Teaching experience includes quantum theory, mathematical methods,
+          Lie groups and representations, advanced mathematical methods, and
+          electromagnetism.
+        </p>
         <h4>Institute for Theoretical Physics, Leibniz University Hannover</h4>
         <ol>
           <li><p>Spring 2020 &mdash; Intensive revision course (lectures&thinsp;+&thinsp;exercises): <em>Introduction to Quantum Theory</em>.</p></li>
@@ -120,7 +151,7 @@
           <li>
             <p>Spring 2019 &mdash; Teaching assistant (exercises&thinsp;+&thinsp;2 lectures):
               <em>Lie Groups, Algebra and their Representations</em>, taught by
-              <a href="https://www.itp.uni-hannover.de/de/ag/lechtenf/?&L=1" target="_blank" class="text-color">Olaf Lechtenfeld</a>.
+              <a href="https://www.itp.uni-hannover.de/de/ag/lechtenf/?&L=1" target="_blank" class="text-color" rel="noopener noreferrer">Olaf Lechtenfeld</a>.
             </p>
           </li>
         </ol>
@@ -131,12 +162,12 @@
         <ol>
           <li>
             <p>Fall 2017 &mdash; Teaching assistant (assignments): <em>Advanced Mathematical Methods of Physics</em>,
-              taught by <a href="https://people.bose.res.in/faculty/fac_new/sunandan.html" target="_blank" class="text-color">Sunandan Gangopadhyay</a>.
+              taught by <a href="https://people.bose.res.in/faculty/fac_new/sunandan.html" target="_blank" class="text-color" rel="noopener noreferrer">Sunandan Gangopadhyay</a>.
             </p>
           </li>
           <li>
             <p>Spring 2017 &mdash; Teaching assistant (exercises&thinsp;+&thinsp;assignments): <em>Intermediate Electricity and Magnetism</em>,
-              taught by <a href="https://www.iiserkol.ac.in/web/en/people/faculty/dps/adg" target="_blank" class="text-color">Ananda Dasgupta</a>.
+              taught by <a href="https://www.iiserkol.ac.in/web/en/people/faculty/dps/adg" target="_blank" class="text-color" rel="noopener noreferrer">Ananda Dasgupta</a>.
             </p>
           </li>
         </ol>
@@ -154,51 +185,71 @@
         <div class="Achievements-grid">
 
           <div class="achievment-photo">
-            <a href="https://www.dfg.de/en" target="_blank"><img src="./media/DFG-logo-blau.svg.png" alt="DFG" class="achievment-img" /></a>
+            <a href="https://www.dfg.de/en" target="_blank" rel="noopener noreferrer"><img src="./media/DFG-logo-blau.svg.png" alt="DFG" class="achievment-img" /></a>
           </div>
-          <p><strong>DFG Walter-Benjamin Fellowship (2024&ndash;2027)</strong> &mdash;
-            funding my current position at QMUL London with
-            <a href="https://webspace.maths.qmul.ac.uk/s.majid/Welcome.html" target="_blank" class="text-color">Shahn Majid</a>
+          <p><strong>DFG Walter-Benjamin Research Fellowship (2024&ndash;2027)</strong> &mdash;
+            funding my current position at Queen Mary University of London with
+            <a href="https://webspace.maths.qmul.ac.uk/s.majid/Welcome.html" target="_blank" class="text-color" rel="noopener noreferrer">Shahn Majid</a>
             on &ldquo;Particle physics from Quantum Riemannian Geometry.&rdquo;
-            Details <a href="https://gepris.dfg.de/gepris/projekt/515782239?context=projekt&task=showDetail&id=515782239&" target="_blank" class="text-color">here</a>.
+            Details <a href="https://gepris.dfg.de/gepris/projekt/515782239?context=projekt&task=showDetail&id=515782239&" target="_blank" class="text-color" rel="noopener noreferrer">here</a>.
           </p>
 
           <div class="achievment-photo">
-            <a href="https://www.daad.de/en/" target="_blank"><img src="./media/logoDAAD.png" alt="DAAD" class="achievment-img" /></a>
+            <a href="https://www.daad.de/en/" target="_blank" rel="noopener noreferrer"><img src="./media/logoDAAD.png" alt="DAAD" class="achievment-img" /></a>
           </div>
           <p><strong>DAAD Doctoral Fellowship (2018&ndash;2022)</strong> &mdash;
             funded the PhD in Hannover via the
-            <a href="https://www.daad.de/en/" target="_blank" class="text-color">Deutscher Akademischer Austauschdienst</a>,
+            <a href="https://www.daad.de/en/" target="_blank" class="text-color" rel="noopener noreferrer">Deutscher Akademischer Austauschdienst</a>,
             including a pre-doctoral German language course in Berlin.
           </p>
 
           <div class="achievment-photo">
-            <a href="https://www.csir.res.in/" target="_blank"><img src="./media/logoCSIRNET.png" alt="CSIR" class="achievment-img" /></a>
+            <a href="https://www.csir.res.in/" target="_blank" rel="noopener noreferrer"><img src="./media/logoCSIRNET.png" alt="CSIR" class="achievment-img" /></a>
           </div>
           <p><strong>CSIR Junior Research Fellowship (2016&ndash;2018)</strong> &mdash;
             awarded after qualifying the NET, funding research at IISER-K.
           </p>
 
           <div class="achievment-photo">
-            <a href="https://www.super30.org/" target="_blank"><img src="./media/LogoSuper30.jpeg" alt="Super 30" class="achievment-img" /></a>
+            <a href="https://www.super30.org/" target="_blank" rel="noopener noreferrer"><img src="./media/LogoSuper30.jpeg" alt="Super 30" class="achievment-img" /></a>
           </div>
           <p><strong>Super-30 (2009&ndash;10)</strong> &mdash;
             intensive IIT-JEE preparation programme founded by mathematician
-            <a href="https://en.wikipedia.org/wiki/Anand_Kumar" target="_blank" class="text-color">Anand Kumar</a>;
+            <a href="https://en.wikipedia.org/wiki/Anand_Kumar" target="_blank" class="text-color" rel="noopener noreferrer">Anand Kumar</a>;
             one of thirty students selected nationally.
           </p>
 
           <div class="achievment-photo">
-            <a href="https://www.dakshana.org/" target="_blank"><img src="./media/LogoDakshana.png" alt="Dakshana" class="achievment-img" /></a>
+            <a href="https://www.dakshana.org/" target="_blank" rel="noopener noreferrer"><img src="./media/LogoDakshana.png" alt="Dakshana" class="achievment-img" /></a>
           </div>
           <p><strong>Dakshana Foundation (2008&ndash;09)</strong> &mdash;
-            participated at <a href="https://navodaya.gov.in/nvs/nvs-school/RANCHI/en/about_us/About-JNV/" target="_blank" class="text-color">JNV, Ranchi</a>.
+            participated at <a href="https://navodaya.gov.in/nvs/nvs-school/RANCHI/en/about_us/About-JNV/" target="_blank" class="text-color" rel="noopener noreferrer">JNV, Ranchi</a>.
             The spark of fascination for physics was lit here.
           </p>
 
         </div>
       </div>
     </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-center site-footer-inner">
+        <p>
+          <strong>Dr. Kaushlendra Kumar</strong> &middot; DFG Walter-Benjamin
+          Research Fellow, Queen Mary University of London
+        </p>
+        <nav aria-label="Footer links">
+          <a href="mailto:kaushlendra.kumar@qmul.ac.uk">Email</a>
+          <a href="work.html#selected-works">Publications</a>
+          <a href="./media/CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+          <a href="https://orcid.org/0000-0001-5665-575X" target="_blank" rel="noopener noreferrer">ORCID</a>
+          <a href="https://arxiv.org/a/kumar_k_2.html" target="_blank" rel="noopener noreferrer">arXiv</a>
+          <a href="https://inspirehep.net/authors/1706741" target="_blank" rel="noopener noreferrer">InspireHEP</a>
+        </nav>
+        <p class="footer-updated">Last updated: 2 May 2026</p>
+      </div>
+    </footer>
 
     <!-- Mobile sidebar nav -->
     <aside class="small-nav" aria-label="Mobile navigation">
@@ -208,7 +259,7 @@
           <li><a href="index.html"    class="aside-link">home</a></li>
           <li><a href="about.html"    class="aside-link current">academics</a></li>
           <li><a href="work.html"     class="aside-link">research</a></li>
-          <li><a href="interest.html" class="aside-link">interests</a></li>
+          <li><a href="interest.html" class="aside-link">personal</a></li>
           <li><a href="contact.html"  class="aside-link">contact</a></li>
         </ul>
       </div>
