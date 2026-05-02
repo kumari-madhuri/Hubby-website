@@ -140,6 +140,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  /* Publication filters (work.html only) */
+  var publicationFilters = document.querySelectorAll("[data-publication-filter]");
+  var publicationCards = document.querySelectorAll("[data-publication-tags]");
+
+  if (publicationFilters.length && publicationCards.length) {
+    publicationFilters.forEach(function(button) {
+      button.addEventListener("click", function() {
+        var filter = button.getAttribute("data-publication-filter");
+
+        publicationFilters.forEach(function(item) {
+          item.classList.toggle("active", item === button);
+        });
+
+        publicationCards.forEach(function(card) {
+          var tags = card.getAttribute("data-publication-tags") || "";
+          var isVisible = filter === "all" || tags.split(/\s+/).indexOf(filter) !== -1;
+          card.classList.toggle("is-hidden", !isVisible);
+        });
+      });
+    });
+  }
+
   /* GSAP animations */
   if (typeof gsap === "undefined") return;
 
