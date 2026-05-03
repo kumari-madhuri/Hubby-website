@@ -72,7 +72,7 @@ const PUBLICATIONS = [
     status: "preprint",
     tags: ["Quantum Geometry", "Black Holes"],
     featured: true,
-    shortSignificance: "A current public preprint connecting quantum-Riemannian geometry with black-hole flow structures.",
+    shortSignificance: "Develops geodesic-flow technology for quantum-Riemannian black-hole geometry.",
     links: {
       arxiv: "https://arxiv.org/abs/2603.03222",
       notebook: "https://www.notebookarchive.org/2026-03-0yfd51x/",
@@ -87,7 +87,7 @@ const PUBLICATIONS = [
     status: "published",
     tags: ["Yang–Mills", "Exact Fields"],
     featured: true,
-    shortSignificance: "Shows how anti-de Sitter geometry generates exact non-Abelian gauge fields on curved space.",
+    shortSignificance: "Constructs exact gauge-field configurations from anti-de Sitter geometry.",
     links: {
       doi: "https://doi.org/10.1063/5.0150027",
       arxiv: "https://arxiv.org/abs/2301.03606",
@@ -100,9 +100,9 @@ const PUBLICATIONS = [
     authors: "Kaushlendra Kumar and Harold Steinacker",
     venue: "Classical and Quantum Gravity 41 (2024) 18, 185007",
     status: "published",
-    tags: ["Matrix Models", "Quantum Geometry"],
+    tags: ["Matrix Models", "Emergent Gravity", "Quantum Geometry"],
     featured: true,
-    shortSignificance: "Develops gravitational field equations emerging from the one-loop effective action of a matrix model.",
+    shortSignificance: "Connects one-loop matrix-model dynamics with modified gravitational equations.",
     links: {
       doi: "https://doi.org/10.1088/1361-6382/ad6e4b",
       arxiv: "https://arxiv.org/abs/2312.01317",
@@ -117,7 +117,7 @@ const PUBLICATIONS = [
     status: "published",
     tags: ["Yang–Mills", "Homogeneous Spaces", "Exact Fields"],
     featured: true,
-    shortSignificance: "Uses non-compact homogeneous spaces as a systematic source of exact Yang–Mills solutions.",
+    shortSignificance: "Uses non-compact coset geometry to generate exact Yang–Mills solutions.",
     links: {
       doi: "https://doi.org/10.1016/j.physletb.2022.137564",
       arxiv: "https://arxiv.org/abs/2206.12009",
@@ -145,9 +145,9 @@ const PUBLICATIONS = [
     authors: "Lukas Hantzko, Kaushlendra Kumar and Gabriel Picanço Costa",
     venue: "European Physical Journal Plus 137 (2022) 407",
     status: "published",
-    tags: ["Electromagnetic Knots", "Exact Fields"],
+    tags: ["Electromagnetic Knots", "Conserved Charges", "Exact Fields"],
     featured: true,
-    shortSignificance: "Identifies conserved charges for rational electromagnetic knot sectors.",
+    shortSignificance: "Computes conserved quantities for rational knotted Maxwell fields.",
     links: {
       doi: "https://doi.org/10.1140/epjp/s13360-022-02563-4",
       arxiv: "https://arxiv.org/abs/2106.05952",
@@ -204,7 +204,7 @@ const PUBLICATIONS = [
     venue: "Physical Review D 97 (2018) 086019",
     status: "published",
     tags: ["Noncommutative Geometry", "Spectral Distance"],
-    featured: true,
+    featured: false,
     shortSignificance: "A spectral-distance computation in noncommutative geometry using Dirac eigenspinor data.",
     links: {
       doi: "https://doi.org/10.1103/PhysRevD.97.086019",
@@ -275,7 +275,7 @@ const TALKS = [
     venue: "Quantum Algebras seminar, Queen Mary University of London",
     location: "London",
     type: "seminar talk",
-    selected: true,
+    selected: false,
     links: {
       slides: "./media/BHflowSlides.pdf",
     },
@@ -297,7 +297,7 @@ const TALKS = [
     venue: "Quantum Algebras seminar, Queen Mary University of London",
     location: "London",
     type: "seminar talk",
-    selected: true,
+    selected: false,
     links: {},
     tags: ["Matrix Models", "Quantum Geometry"],
   },
@@ -484,6 +484,76 @@ const SCHOOLS = [
   { date: "Nov 6–24, 2017", title: "Preschool and Advanced School: Geometry, Groups and Dynamics", location: "ICTS Bangalore, India" },
 ];
 
+const RESEARCH_DIRECTIONS = [
+  {
+    title: "Exact fields and geometric transport",
+    label: "Published work",
+    text: "Yang–Mills fields, conformal transport, homogeneous-space reductions, de Sitter/anti-de Sitter constructions, electromagnetic knots, and conserved charges.",
+    tags: ["Yang–Mills", "Exact Fields", "Electromagnetic Knots"],
+    related: [
+      "adS-exact-gauge-fields",
+      "minkowski-coset-yang-mills",
+      "rational-em-charges",
+      "rational-em-fields",
+    ],
+  },
+  {
+    title: "Quantum geometry and emergent spacetime",
+    label: "Public preprint + published work",
+    text: "Quantum Riemannian Geometry, black-hole geodesic flows, finite spaces, and matrix-model emergent gravity.",
+    tags: ["Quantum Geometry", "Black Holes", "Matrix Models"],
+    related: [
+      "black-hole-geodesic-flows",
+      "ikkt-effective-einstein",
+    ],
+  },
+  {
+    title: "Algebraic particle geometry",
+    label: "Ongoing collaboration",
+    text: "Finite spectral triples, Clifford/division-algebraic structures, scalar sectors, link fields, and particle-sector model building.",
+    tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
+    relatedText: "Current collaborative work with Shahn Majid and previous work with Nichol Furey.",
+  },
+  {
+    title: "Spectral and information geometry",
+    label: "Published work + current project",
+    text: "Spectral distances in noncommutative geometry, finite metric structures, Helstrom distinguishability, calibration geometry, and quantum-information diagnostics.",
+    tags: ["Spectral Distance", "Noncommutative Geometry", "Quantum Information"],
+    related: [
+      "doubled-moyal-spectral-distance",
+      "finite-spectral-distance",
+    ],
+  },
+];
+
+const RESEARCH_TRAJECTORY = [
+  {
+    date: "2024–present",
+    place: "Queen Mary University of London",
+    text: "Current work with Shahn Majid on Quantum Riemannian Geometry.",
+  },
+  {
+    date: "2023–2024",
+    place: "HU Berlin",
+    text: "Work with Nichol Furey on division-algebraic and finite-geometric particle structures.",
+  },
+  {
+    date: "2023–2024",
+    place: "ESI Vienna",
+    text: "Collaboration with Harold Steinacker on IKKT matrix models and emergent gravity.",
+  },
+  {
+    date: "2018–2023",
+    place: "Leibniz University Hannover",
+    text: "PhD and postdoctoral exact Yang–Mills work with Olaf Lechtenfeld.",
+  },
+  {
+    date: "2013–2018",
+    place: "S.N. Bose Centre",
+    text: "Early spectral-distance and noncommutative-geometry work with Biswajit Chakraborty.",
+  },
+];
+
 function shuffleArray(arr) {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -536,13 +606,13 @@ function renderPublicationLinks(links) {
   return linkOrder.map(([key, label]) => linkButton(label, links[key])).join("");
 }
 
-function renderPublicationCard(pub, compact) {
-  const significance = compact && pub.shortSignificance
+function renderPublicationCard(pub, featured) {
+  const significance = featured && pub.shortSignificance
     ? `<p class="publication-significance">${escapeHTML(pub.shortSignificance)}</p>`
     : "";
 
   return `
-    <article class="publication-card" data-publication-tags="${escapeHTML(pub.tags.map(slugify).join(" "))}" data-publication-id="${escapeHTML(pub.id)}">
+    <article class="publication-card ${featured ? "featured-publication-card" : ""}" data-publication-tags="${escapeHTML(pub.tags.map(slugify).join(" "))}" data-publication-id="${escapeHTML(pub.id)}">
       <div class="publication-meta">
         <span>${escapeHTML(pub.year)}</span>
         <span>${escapeHTML(pub.status)}</span>
@@ -551,10 +621,34 @@ function renderPublicationCard(pub, compact) {
       <p class="publication-authors">${escapeHTML(pub.authors)}</p>
       <p>${escapeHTML(pub.venue)}</p>
       ${significance}
-      <div class="tag-list">${renderTagList(pub.tags)}</div>
+      <div class="tag-list">${renderTagList(pub.tags.slice(0, 4))}</div>
       <div class="link-row">${renderPublicationLinks(pub.links)}</div>
     </article>
   `;
+}
+
+function renderPublicationRow(pub) {
+  return `
+    <article class="publication-row" data-publication-tags="${escapeHTML(pub.tags.map(slugify).join(" "))}" data-publication-id="${escapeHTML(pub.id)}">
+      <div class="publication-row-year">${escapeHTML(pub.year)}</div>
+      <div class="publication-row-main">
+        <div class="publication-row-heading">
+          <h3>${escapeHTML(pub.title)}</h3>
+          <span>${escapeHTML(pub.status)}</span>
+        </div>
+        <p class="publication-authors">${escapeHTML(pub.authors)}</p>
+        <p class="publication-venue">${escapeHTML(pub.venue)}</p>
+        <div class="publication-row-footer">
+          <div class="link-row">${renderPublicationLinks(pub.links)}</div>
+          <div class="tag-list">${renderTagList(pub.tags.slice(0, 4))}</div>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function findPublication(id) {
+  return PUBLICATIONS.find((pub) => pub.id === id);
 }
 
 function renderPublicationFilters() {
@@ -574,6 +668,7 @@ function renderFeaturedWorks() {
 
   featuredContainer.innerHTML = PUBLICATIONS
     .filter((pub) => pub.featured)
+    .slice(0, 5)
     .map((pub) => renderPublicationCard(pub, true))
     .join("");
 }
@@ -601,7 +696,7 @@ function renderPublications() {
     return matchesFilter && (!query || haystack.indexOf(query) !== -1);
   });
 
-  results.innerHTML = filtered.map((pub) => renderPublicationCard(pub, false)).join("");
+  results.innerHTML = filtered.map(renderPublicationRow).join("");
 
   const status = document.querySelector("#publication-count");
   if (status) {
@@ -618,7 +713,49 @@ function clearPublicationControls() {
   renderPublications();
 }
 
+function renderResearchDirections() {
+  const container = document.querySelector("#research-directions-grid");
+  if (!container) return;
+
+  container.innerHTML = RESEARCH_DIRECTIONS.map((direction) => {
+    const relatedLinks = (direction.related || [])
+      .map(findPublication)
+      .filter(Boolean)
+      .map((pub) => `<a href="#selected-works" data-publication-id-link="${escapeHTML(pub.id)}">${escapeHTML(pub.title)}</a>`)
+      .join("");
+
+    const related = relatedLinks
+      ? `<div class="direction-related"><span>Related works</span>${relatedLinks}</div>`
+      : `<div class="direction-related"><span>Related thread</span><p>${escapeHTML(direction.relatedText || "")}</p></div>`;
+
+    return `
+      <article class="direction-card">
+        <span class="direction-label">${escapeHTML(direction.label)}</span>
+        <h3>${escapeHTML(direction.title)}</h3>
+        <p>${escapeHTML(direction.text)}</p>
+        <div class="tag-list">${renderTagList(direction.tags.slice(0, 4))}</div>
+        ${related}
+      </article>
+    `;
+  }).join("");
+}
+
+function renderResearchTrajectory() {
+  const container = document.querySelector("#trajectory-list");
+  if (!container) return;
+
+  container.innerHTML = RESEARCH_TRAJECTORY.map((item) => `
+    <article class="trajectory-item">
+      <span>${escapeHTML(item.date)}</span>
+      <h3>${escapeHTML(item.place)}</h3>
+      <p>${escapeHTML(item.text)}</p>
+    </article>
+  `).join("");
+}
+
 function wirePublicationControls() {
+  renderResearchDirections();
+  renderResearchTrajectory();
   renderPublicationFilters();
   renderFeaturedWorks();
   renderPublications();
@@ -652,6 +789,22 @@ function wirePublicationControls() {
         });
         renderPublications();
       }
+    });
+  });
+
+  document.querySelectorAll("[data-publication-id-link]").forEach((link) => {
+    link.addEventListener("click", () => {
+      clearPublicationControls();
+      window.setTimeout(() => {
+        const id = link.getAttribute("data-publication-id-link");
+        const card = Array.from(document.querySelectorAll("[data-publication-id]"))
+          .find((item) => item.getAttribute("data-publication-id") === id);
+        if (card) {
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          card.classList.add("publication-highlight");
+          window.setTimeout(() => card.classList.remove("publication-highlight"), 1400);
+        }
+      }, 0);
     });
   });
 }
