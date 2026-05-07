@@ -121,6 +121,14 @@ section       { padding: 4rem 0; overflow: hidden; }
 
 .logo { height: 4rem; display: none; }
 @media (min-width: 411px) { .logo { display: block; } }
+.site-logo-link {
+  align-items: center;
+  display: inline-flex;
+}
+.site-logo-link:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 4px;
+}
 
 .sanskrit { color: var(--gold-dark); font-size: 0.85rem; line-height: 1.55; }
 .sanskrit span { font-weight: 700; }
@@ -994,9 +1002,23 @@ section       { padding: 4rem 0; overflow: hidden; }
   font-size: 1rem;
   margin-bottom: 0.55rem;
 }
+.personal-verse-source {
+  color: var(--gold-dark);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
 .personal-verse-translation {
   color: var(--text-muted);
   line-height: 1.65;
+  margin-bottom: 0.5rem;
+}
+.personal-verse-note {
+  color: var(--text-body);
+  font-style: italic;
+  line-height: 1.6;
   margin-bottom: 0;
 }
 
@@ -1574,24 +1596,6 @@ summary:focus-visible {
   border-color: var(--gold);
   color: #fff;
 }
-.hero-profile-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem;
-  justify-content: center;
-  margin: 0.1rem 0 1.2rem;
-}
-.hero-profile-links a {
-  border-bottom: 1px solid rgba(255, 214, 102, 0.45);
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.06rem;
-  text-transform: uppercase;
-}
-.hero-profile-links a:hover {
-  color: var(--gold-light);
-}
 .broad-audience-home {
   align-items: center;
   background: #111;
@@ -1623,18 +1627,13 @@ summary:focus-visible {
   color: #fff;
 }
 .broad-audience-panel h2 {
+  color: var(--gold-light);
   font-size: 2rem;
 }
-.broad-audience-panel p:not(.media-caption) {
+.broad-audience-panel p {
   color: rgba(255, 255, 255, 0.9);
   font-size: 1rem;
   line-height: 1.85;
-}
-.broad-audience-panel .media-caption {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.82rem;
-  line-height: 1.5;
-  margin-top: 0.85rem;
 }
 
 .research-program-hero-compact {
