@@ -520,7 +520,7 @@ const TALKS = [
     venue: "Quantum Algebras seminar, Queen Mary University of London",
     location: "London",
     type: "seminar talk",
-    selected: false,
+    selected: true,
     links: {
       slides: "./media/BHflowSlides.pdf",
     },
@@ -542,7 +542,7 @@ const TALKS = [
     venue: "Quantum Algebras seminar, Queen Mary University of London",
     location: "London",
     type: "seminar talk",
-    selected: false,
+    selected: true,
     links: {},
     tags: ["Matrix Models", "Quantum Geometry"],
   },
@@ -567,6 +567,7 @@ const TALKS = [
     type: "conference talk",
     selected: true,
     links: {
+      proceedings: "https://iopscience.iop.org/issue/1742-6596/2667/1",
       slides: "./media/AdS-YM_QTS12.pdf",
     },
     tags: ["Yang–Mills", "Exact Fields"],
@@ -589,6 +590,7 @@ const TALKS = [
     type: "institute talk",
     selected: true,
     links: {
+      event: "https://www.esi.ac.at/events/t1312/",
       slides: "./media/AdS-YM_ESI.pdf",
     },
     tags: ["Yang–Mills", "Exact Fields"],
@@ -612,7 +614,7 @@ const TALKS = [
     venue: "String Theory Journal Club, DESY Hamburg",
     location: "Hamburg",
     type: "journal club",
-    selected: true,
+    selected: false,
     links: {
       slides: "./media/YMonMink-DESY.pdf",
     },
@@ -626,6 +628,7 @@ const TALKS = [
     type: "conference talk",
     selected: true,
     links: {
+      event: "https://indico.in2p3.fr/e/group34",
       slides: "./media/YMonMink-GROUP34.pdf",
     },
     tags: ["Yang–Mills", "Homogeneous Spaces"],
@@ -682,10 +685,25 @@ const TALKS = [
 ];
 
 const CONFERENCES = [
-  { date: "Jul 7–11, 2025", title: "A Quantum of Noncommutativity", location: "Ambleside, UK" },
-  { date: "Jul 24–28, 2023", title: "The 12th International Symposium on Quantum Theory and Symmetries", location: "Prague, Czech Republic" },
+  {
+    date: "Jul 7–11, 2025",
+    title: "A Quantum of Noncommutativity",
+    location: "Ambleside, UK",
+    url: "https://sites.google.com/view/aqon2025/",
+  },
+  {
+    date: "Jul 24–28, 2023",
+    title: "The 12th International Symposium on Quantum Theory and Symmetries",
+    location: "Prague, Czech Republic",
+    url: "https://iopscience.iop.org/issue/1742-6596/2667/1",
+  },
   { date: "Feb 6–17, 2023", title: "Vortex Moduli at ICTS Bangalore", location: "online" },
-  { date: "Jul 18–22, 2022", title: "The 34th International Colloquium on Group Theoretical Methods in Physics", location: "Strasbourg, France" },
+  {
+    date: "Jul 18–22, 2022",
+    title: "The 34th International Colloquium on Group Theoretical Methods in Physics",
+    location: "Strasbourg, France",
+    url: "https://indico.in2p3.fr/e/group34",
+  },
   { date: "Aug 2–7, 2021", title: "International Congress on Mathematical Physics and Young Researchers Symposium", location: "Geneva, Switzerland" },
   { date: "Jan 15–19, 2018", title: "Quantum Groups and Noncommutative Geometry", location: "NISER Bhubaneswar, India" },
 ];
@@ -737,7 +755,7 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         label: "Current frontier",
-        text: "The continuing programme is exact gauge-field transport: using spacetime geometry and symmetry reduction to produce field sectors with calculable charges, trajectories, and propagation laws.",
+        text: "The continuing programme is exact gauge-field transport: extending the completed de Sitter, anti-de Sitter, Minkowski, and knotted-field constructions toward pulse/transport laws, defect and source structures, and field sectors whose charges and trajectories remain calculable.",
       },
     ],
     tags: ["Yang–Mills", "Exact Fields", "Electromagnetic Knots"],
@@ -786,7 +804,7 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         label: "Current frontier",
-        text: "The frontier is to understand how exact quantum geometry changes transport, phases, and effective gravitational dynamics without reducing spacetime to a purely classical background.",
+        text: "The frontier is an ongoing set of quantum-Riemannian spacetime diagnostics: geometric and Aharonov-Bohm phases, companion congruence and flow directions, horizon-crossing density evolution, and effective gravitational equations that remain tied to explicit nonclassical geometry.",
       },
     ],
     tags: ["Quantum Geometry", "Black Holes", "Matrix Models"],
@@ -810,19 +828,19 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction treats particle-sector data as finite geometry: internal spaces, scalar sectors, and representation data organized by algebraic and metric constraints rather than introduced as unrelated lists of fields.",
+        text: "This direction asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. The guiding objects are finite spectral triples, Clifford/octonionic algebras, quaternionic finite spaces, and linked finite geometries whose metric and fluctuation data constrain scalar and representation sectors.",
       },
       {
         label: "Methods",
-        text: "The mathematical language is finite spectral triples, Clifford and octonionic structures, quaternionic finite geometry, linked finite spaces, Peirce/ladder decompositions, scalar sectors, and inner fluctuations.",
+        text: "Technically the work uses finite Dirac operators, real structures, gradings, order-one conditions, Clifford and Peirce decompositions, quaternionic reductions, scalar-matrix-scalar link geometries, inner fluctuations, and gauge quotients. The emphasis is on deriving the allowed finite one-forms and link fields before making phenomenological claims.",
       },
       {
         label: "Outputs",
-        text: "The outputs are structural model-building data: finite metrics, scalar and link fields, algebraic constraints on representations, and candidate internal geometries for particle-like degrees of freedom.",
+        text: "Outputs include finite metric data, scalar/link-field sectors, obstruction and completion results for finite triples, algebraic organization of particle-like degrees of freedom, and disciplined model-building constraints.",
       },
       {
         label: "Current frontier",
-        text: "The current programme remains deliberately disciplined: structural finite geometry and algebraic organization of particle sectors, not a claim of a completed phenomenological model.",
+        text: "Near-term work develops a Cl6/octonionic finite-triple line and a linked finite-geometry line with Shahn Majid. The broader frontier is to understand which particle-sector structures are forced by exact finite geometry, and which are optional model-building choices.",
       },
     ],
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
@@ -860,7 +878,7 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         label: "Methods",
-        text: "The tools are Connes spectral distance, finite metric structures, Dirac eigenspinor data, fuzzy-spin distances, Helstrom distinguishability, matrix-anchor calibration, and anisotropic qubit-channel geometry.",
+        text: "The tools are Connes spectral distance, finite metric structures, Dirac eigenspinor data, fuzzy-spin distances, isotropic scalar-anchor Helstrom geometry, matrix-anchor calibration, and anisotropic qubit-channel diagnostics.",
       },
       {
         label: "Outputs",
@@ -868,7 +886,7 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         label: "Current frontier",
-        text: "The frontier is to make information geometry as explicit as the earlier noncommutative-distance calculations: exact formulas first, then operational interpretation.",
+        text: "Current work develops isotropic scalar-anchor Helstrom geometry, matrix-anchor calibration, fuzzy-spin spectral distances, and anisotropic channel diagnostics. The aim is to make information geometry as explicit as the earlier Connes-distance calculations: exact formulas first, operational interpretation second.",
       },
     ],
     tags: ["Spectral Distance", "Noncommutative Geometry", "Quantum Information"],
@@ -1242,6 +1260,8 @@ function wirePublicationControls() {
 
 function renderEventLinks(links) {
   return [
+    ["event", "Event"],
+    ["proceedings", "Proceedings"],
     ["slides", "Slides"],
     ["video", "Video"],
   ].map(([key, label]) => linkButton(label, links[key])).join("");
@@ -1249,13 +1269,16 @@ function renderEventLinks(links) {
 
 function renderTalkItem(talk) {
   const links = renderEventLinks(talk.links);
+  const venue = talk.links && talk.links.event
+    ? `<a href="${escapeHTML(talk.links.event)}" target="_blank" rel="noopener noreferrer">${escapeHTML(talk.venue)}</a>`
+    : escapeHTML(talk.venue);
   return `
     <article class="talk-item">
       <div class="talk-date">${escapeHTML(talk.date)}</div>
       ${links ? `<div class="link-row talk-links">${links}</div>` : ""}
       <div>
         <h3>${escapeHTML(talk.title)}</h3>
-        <p>${escapeHTML(talk.venue)} · ${escapeHTML(talk.location)}</p>
+        <p class="talk-venue">${venue} · ${escapeHTML(talk.location)}</p>
         <p class="talk-kind">${escapeHTML(talk.type)}</p>
       </div>
     </article>
@@ -1263,10 +1286,13 @@ function renderTalkItem(talk) {
 }
 
 function renderSimpleEventItem(event) {
+  const title = event.url
+    ? `<a href="${escapeHTML(event.url)}" target="_blank" rel="noopener noreferrer">${escapeHTML(event.title)}</a>`
+    : escapeHTML(event.title);
   return `
     <article class="mini-event">
       <span>${escapeHTML(event.date)}</span>
-      <strong>${escapeHTML(event.title)}</strong>
+      <strong>${title}</strong>
       <em>${escapeHTML(event.location)}</em>
     </article>
   `;
