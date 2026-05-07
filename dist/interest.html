@@ -18,7 +18,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="shortcut icon" href="./media/favicons/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css?v=20260507d" />
     <title>Personal | Kaushlendra Kumar</title>
   </head>
   <body>
@@ -28,7 +28,9 @@
         <div class="nav-center">
           <div class="nav-header">
             <div class="nav-logo-two">
-              <img src="./media/logo.png" class="logo" alt="KK site logo" />
+              <a href="index.html" class="site-logo-link" aria-label="Home">
+                <img src="./media/logo.png" class="logo" alt="KK site logo" />
+              </a>
             </div>
             <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
               <i class="fas fa-bars"></i>
@@ -53,27 +55,22 @@
         <div class="underline"></div>
       </div>
 
-      <aside class="personal-verse section-center" aria-labelledby="personal-verse-title">
-        <div>
-          <p class="section-eyebrow">A verse I keep close</p>
-          <h2 id="personal-verse-title">Dharma, when protected, protects</h2>
-        </div>
+      <aside class="personal-verse section-center" aria-label="Personal verse">
         <blockquote>
           <p
-            class="sanskrit personal-sanskrit"
-            lang="sa"
-            title="Dharma, when protected, protects."
-            aria-label="Sanskrit verse: Dharma, when protected, protects."
+            class="pali personal-sanskrit"
+            lang="pi"
+            title="The effort is yours to make; the Tathagatas only show the way."
+            aria-label="Pali verse from the Dhammapada."
           >
-            धर्म एव हतो हन्ति <span>धर्मो रक्षति रक्षितः</span><br />
-            तस्माद्धर्मो न हन्तव्यो मा नो धर्मो हतोऽवधीत् ॥
+            Tumhehi kiccaṃ ātappaṃ, akkhātāro tathāgatā;<br />
+            paṭipannā pamokkhanti, jhāyino mārabandhanā.
           </p>
-          <p class="personal-verse-source">Manusmriti 8.15</p>
           <p class="personal-verse-translation">
-            Dharma, when harmed, harms; dharma, when protected, protects.
-            Therefore dharma should not be harmed, lest harmed dharma destroy us.
+            The effort is yours to make; the Tathagatas only show the way.
+            Those who practise the path in meditation are freed from Mara's bonds.
           </p>
-          <p class="personal-verse-note">This verse has stayed with me for a long time.</p>
+          <p class="personal-verse-source">Dhammapada 276</p>
         </blockquote>
       </aside>
 
@@ -225,6 +222,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
-    <script src="./app.js"></script>
+    <script src="./app.js?v=20260507d"></script>
   </body>
 </html>

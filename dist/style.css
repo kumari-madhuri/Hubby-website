@@ -1720,13 +1720,44 @@ summary:focus-visible {
   border: 1px solid rgba(26, 26, 26, 0.08);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  padding: 0;
+}
+.direction-card summary {
+  cursor: pointer;
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
   padding: 1.25rem;
+}
+.direction-card summary::-webkit-details-marker {
+  display: none;
+}
+.direction-card summary::after {
+  align-self: start;
+  color: var(--gold-dark);
+  content: "Open";
+  font-size: 0.72rem;
+  font-weight: 700;
+  justify-self: start;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+.direction-card[open] summary::after {
+  content: "Close";
 }
 .direction-card h3 {
   font-size: 1.08rem;
+  margin-bottom: 0;
 }
 .direction-card p {
   line-height: 1.72;
+}
+.direction-expanded {
+  border-top: 1px solid rgba(26, 26, 26, 0.08);
+  display: grid;
+  gap: 0.85rem;
+  padding: 0.95rem 1.25rem 1.25rem;
 }
 .direction-related {
   border-top: 1px solid rgba(26, 26, 26, 0.08);
@@ -1757,11 +1788,41 @@ summary:focus-visible {
   max-width: 860px;
   padding: 0.9rem 1rem;
 }
+.emerging-direction summary {
+  color: var(--gold-dark);
+  cursor: pointer;
+  font-weight: 700;
+}
+.emerging-direction p {
+  line-height: 1.7;
+  margin: 0.75rem 0 0;
+}
 .featured-publication-card {
   border-top: 4px solid var(--gold);
 }
+.featured-grid {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1080px;
+}
 .compact-publications-section {
   background: #fff;
+}
+.publication-tools {
+  background: var(--bg-off);
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: var(--radius);
+  margin: 0 auto 1.25rem;
+  max-width: 920px;
+  padding: 0.85rem 1rem;
+}
+.publication-tools summary {
+  color: var(--gold-dark);
+  cursor: pointer;
+  font-weight: 700;
+}
+.publication-tools[open] summary {
+  margin-bottom: 0.9rem;
 }
 .publication-list {
   display: grid;
@@ -1819,7 +1880,9 @@ summary:focus-visible {
 .selected-talk-panel {
   min-width: 0;
 }
-.schools-details summary {
+.schools-details summary,
+.conference-details summary,
+.trajectory-details summary {
   border-bottom: 1px solid rgba(206, 133, 0, 0.28);
   color: var(--gold-dark);
   cursor: pointer;
@@ -1831,7 +1894,9 @@ summary:focus-visible {
   padding-bottom: 0.35rem;
   text-transform: uppercase;
 }
-.schools-details[open] summary {
+.schools-details[open] summary,
+.conference-details[open] summary,
+.trajectory-details[open] summary {
   margin-bottom: 1rem;
 }
 .research-trajectory-section {
@@ -1879,7 +1944,7 @@ summary:focus-visible {
     grid-template-columns: 1fr auto;
   }
   .trajectory-list {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
 
@@ -1900,7 +1965,7 @@ summary:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .featured-grid {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
   .records-generated {
     grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.75fr) minmax(220px, 0.55fr);

@@ -116,7 +116,7 @@ const PUBLICATIONS = [
     venue: "Physics Letters B 835 (2022) 137564",
     status: "published",
     tags: ["Yang–Mills", "Homogeneous Spaces", "Exact Fields"],
-    featured: true,
+    featured: false,
     shortSignificance: "Uses non-compact coset geometry to generate exact Yang–Mills solutions.",
     links: {
       doi: "https://doi.org/10.1016/j.physletb.2022.137564",
@@ -204,8 +204,8 @@ const PUBLICATIONS = [
     venue: "Physical Review D 97 (2018) 086019",
     status: "published",
     tags: ["Noncommutative Geometry", "Spectral Distance"],
-    featured: false,
-    shortSignificance: "A spectral-distance computation in noncommutative geometry using Dirac eigenspinor data.",
+    featured: true,
+    shortSignificance: "Computes Connes spectral distances using Dirac eigenspinor data in a noncommutative setting.",
     links: {
       doi: "https://doi.org/10.1103/PhysRevD.97.086019",
       arxiv: "https://arxiv.org/abs/1711.00653",
@@ -404,7 +404,7 @@ const TALKS = [
     venue: "S.N. Bose Centre",
     location: "Kolkata",
     type: "seminar talk",
-    selected: true,
+    selected: false,
     links: {
       slides: "./media/Summer2017.pdf",
     },
@@ -458,7 +458,8 @@ const RESEARCH_DIRECTIONS = [
   {
     title: "Exact fields and geometric transport",
     label: "Published work",
-    text: "Yang–Mills fields, conformal transport, homogeneous-space reductions, de Sitter/anti-de Sitter constructions, electromagnetic knots, and conserved charges.",
+    summary: "Exact Yang–Mills and Maxwell sectors generated from symmetry, conformal structure, and homogeneous-space reductions.",
+    detail: "This direction grew from de Sitter and Minkowski Yang–Mills constructions and rational electromagnetic knots. The common method is to use a rigid spacetime or symmetry input, reduce the field equations to tractable geometric data, and extract observables such as conserved charges, particle trajectories, or transport channels.",
     tags: ["Yang–Mills", "Exact Fields", "Electromagnetic Knots"],
     related: [
       "adS-exact-gauge-fields",
@@ -470,7 +471,8 @@ const RESEARCH_DIRECTIONS = [
   {
     title: "Quantum geometry and emergent spacetime",
     label: "Public preprint + published work",
-    text: "Quantum Riemannian Geometry, black-hole geodesic flows, finite spaces, and matrix-model emergent gravity.",
+    summary: "Quantum-Riemannian black-hole geometry and matrix-model emergent gravity, with geodesic flows and effective gravitational equations as computable test cases.",
+    detail: "This direction connects noncommutative and quantum geometry to gravitational dynamics. Current work with Shahn Majid develops geodesic-flow ideas on black-hole backgrounds, while work with Harold Steinacker studies how one-loop IKKT matrix-model dynamics modifies gravitational field equations.",
     tags: ["Quantum Geometry", "Black Holes", "Matrix Models"],
     related: [
       "black-hole-geodesic-flows",
@@ -480,14 +482,16 @@ const RESEARCH_DIRECTIONS = [
   {
     title: "Algebraic particle geometry",
     label: "Ongoing collaboration",
-    text: "Finite spectral triples, Clifford/division-algebraic structures, scalar sectors, link fields, and particle-sector model building.",
+    summary: "Finite spectral triples and Clifford/division-algebraic structures as constrained settings for particle-sector model building.",
+    detail: "This line studies how finite geometric and algebraic data — Clifford and division algebras, linked finite spaces, scalar sectors, and inner fluctuations — can organize particle-like degrees of freedom. The public presentation stays deliberately conservative: structural model building, not premature phenomenological claims.",
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
     relatedText: "Current collaborative work with Shahn Majid and previous work with Nichol Furey.",
   },
   {
     title: "Spectral and information geometry",
     label: "Published work + current project",
-    text: "Spectral distances in noncommutative geometry, finite metric structures, Helstrom distinguishability, calibration geometry, and quantum-information diagnostics.",
+    summary: "Metric and operational geometry of quantum states: spectral distance, finite metric structures, Helstrom distinguishability, and calibration-sensitive information flow.",
+    detail: "This direction begins with published spectral-distance computations in noncommutative geometry and extends toward operational quantum-information questions. The public anchor is spectral distance; the information-geometric work is presented as a current extension unless and until public manuscripts are posted.",
     tags: ["Spectral Distance", "Noncommutative Geometry", "Quantum Information"],
     related: [
       "doubled-moyal-spectral-distance",
@@ -699,13 +703,18 @@ function renderResearchDirections() {
       : `<div class="direction-related"><span>Related thread</span><p>${escapeHTML(direction.relatedText || "")}</p></div>`;
 
     return `
-      <article class="direction-card">
-        <span class="direction-label">${escapeHTML(direction.label)}</span>
-        <h3>${escapeHTML(direction.title)}</h3>
-        <p>${escapeHTML(direction.text)}</p>
-        <div class="tag-list">${renderTagList(direction.tags.slice(0, 4))}</div>
-        ${related}
-      </article>
+      <details class="direction-card">
+        <summary>
+          <span class="direction-label">${escapeHTML(direction.label)}</span>
+          <h3>${escapeHTML(direction.title)}</h3>
+          <p>${escapeHTML(direction.summary)}</p>
+          <div class="tag-list">${renderTagList(direction.tags.slice(0, 3))}</div>
+        </summary>
+        <div class="direction-expanded">
+          <p>${escapeHTML(direction.detail)}</p>
+          ${related}
+        </div>
+      </details>
     `;
   }).join("");
 }
@@ -880,7 +889,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const txtElement = document.querySelector(".txt-type");
   if (txtElement) {
     const wait = txtElement.getAttribute("data-wait") || 7000;
-    new TypeWriter(txtElement, shuffleArray(QUOTES), wait);
+    const shuffledQuotes = shuffleArray(QUOTES);
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      txtElement.textContent = shuffledQuotes[0];
+    } else {
+      new TypeWriter(txtElement, shuffledQuotes, wait);
+    }
   }
 
   const scrollDown = document.querySelector(".scroll-down");
