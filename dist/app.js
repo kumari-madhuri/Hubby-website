@@ -707,8 +707,8 @@ const RESEARCH_DIRECTIONS = [
     summary: "Exact Yang–Mills and Maxwell sectors generated from symmetry, conformal structure, and homogeneous-space reductions.",
     figures: [
       {
-        src: "./media/MinkFoliations.png",
-        alt: "Conformal foliation diagram used in exact Yang-Mills constructions",
+        src: "./media/MinkFoliations-padded.png",
+        alt: "Conformal foliation diagram used in exact Yang-Mills constructions on Minkowski space",
         caption: "Conformal / homogeneous-space reduction",
       },
       {
@@ -717,35 +717,31 @@ const RESEARCH_DIRECTIONS = [
         caption: "Rational Maxwell knots",
       },
       {
-        src: "./media/ads-ym-schematic.svg",
-        alt: "Anti-de Sitter geometry feeding an equivariant ansatz and exact Yang-Mills field",
-        caption: "AdS geometry to exact fields",
+        src: "./media/AdS-gluing.png",
+        alt: "Anti-de Sitter gluing diagram from exact Yang-Mills work",
+        caption: "AdS gluing geometry",
       },
     ],
     detailSections: [
       {
-        label: "Studies",
-        text: "Closed-form non-Abelian and Abelian field configurations where symmetry and spacetime geometry make the field equations explicitly tractable.",
+        label: "Core idea",
+        text: "This direction constructs exact Yang–Mills and Maxwell sectors from rigid spacetime and symmetry data, rather than beginning with perturbative ansätze. The aim is to turn geometry itself into a source of computable field configurations.",
       },
       {
-        label: "Tools",
-        text: "Homogeneous spaces, equivariant reductions, de Sitter and anti-de Sitter embeddings, conformal compactifications, rational Maxwell bases, and knotted field geometry.",
+        label: "Methods",
+        text: "The main tools are homogeneous spaces, equivariant reductions, de Sitter and anti-de Sitter embeddings, conformal compactification, rational Maxwell bases, and the geometry of knotted field lines.",
       },
       {
         label: "Outputs",
-        text: "Exact fields, conserved conformal charges, probe trajectories, defect sources, pulse and transport structures, and gauge-theoretic cosmological sectors.",
+        text: "The public outputs include closed-form gauge fields, conserved conformal charges, charged-particle trajectories, defect sources, pulse and transport structures, and gauge-theoretic cosmological sectors.",
       },
       {
         label: "Current frontier",
-        text: "A continuing programme of exact gauge-field transport: using rigid geometry to produce computable field sectors rather than perturbative ansätze alone.",
+        text: "The continuing programme is exact gauge-field transport: using spacetime geometry and symmetry reduction to produce field sectors with calculable charges, trajectories, and propagation laws.",
       },
     ],
     tags: ["Yang–Mills", "Exact Fields", "Electromagnetic Knots"],
-    entryPublicationIds: [
-      "adS-exact-gauge-fields",
-      "rational-em-charges",
-    ],
-    relatedPublicationIds: [
+    publicAnchorIds: [
       "adS-exact-gauge-fields",
       "minkowski-coset-yang-mills",
       "rational-em-charges",
@@ -762,12 +758,12 @@ const RESEARCH_DIRECTIONS = [
       {
         src: "./media/qrg-direct-phase-panel.png",
         alt: "Quantum black-hole flow diagnostic panel showing phase behaviour",
-        caption: "Quantum black-hole flow diagnostics",
+        caption: "Aharonov-Bohm phase from quantum black-hole flow",
       },
       {
-        src: "./media/qrg-packet-motion-panel.png",
-        alt: "Packet motion panel from black-hole geodesic-flow computations",
-        caption: "Packet and geodesic motion",
+        src: "./media/densFlowHor-cropped.png",
+        alt: "Density-flow plots across a corrected black-hole horizon",
+        caption: "Density flow across the black-hole horizon",
       },
       {
         src: "./media/ikkt-emergent-gravity.svg",
@@ -777,28 +773,24 @@ const RESEARCH_DIRECTIONS = [
     ],
     detailSections: [
       {
-        label: "Studies",
-        text: "Two connected routes to nonclassical spacetime: quantum-Riemannian black-hole geometry and emergent gravity from matrix models.",
+        label: "Core idea",
+        text: "This direction studies two routes to nonclassical spacetime: quantum-Riemannian black-hole geometry with Shahn Majid, and emergent gravity from the IKKT matrix model with Harold Steinacker.",
       },
       {
-        label: "Tools",
-        text: "Quantum Riemannian Geometry, geodesic-flow technology, corrected Schwarzschild backgrounds, IKKT matrix models, one-loop effective actions, and emergent gravitational equations.",
+        label: "Methods",
+        text: "The toolkit includes Quantum Riemannian Geometry, corrected Schwarzschild backgrounds, geodesic-flow technology, density motion across horizons, congruence diagnostics, IKKT matrices, and one-loop effective actions.",
       },
       {
         label: "Outputs",
-        text: "Black-hole geodesic flows, geometric phases and flow diagnostics, modified Einstein equations, and dark-matter-like geometric correction modes.",
+        text: "The outputs are geodesic flows, horizon-crossing density evolution, geometric/Aharonov-Bohm phases, modified Einstein equations, and dark-matter-like geometric correction modes.",
       },
       {
         label: "Current frontier",
-        text: "Current public work anchors the black-hole flow line; the broader programme asks how quantum geometry changes the transport and effective dynamics of spacetime.",
+        text: "The frontier is to understand how exact quantum geometry changes transport, phases, and effective gravitational dynamics without reducing spacetime to a purely classical background.",
       },
     ],
     tags: ["Quantum Geometry", "Black Holes", "Matrix Models"],
-    entryPublicationIds: [
-      "black-hole-geodesic-flows",
-      "ikkt-effective-einstein",
-    ],
-    relatedPublicationIds: [
+    publicAnchorIds: [
       "black-hole-geodesic-flows",
       "ikkt-effective-einstein",
     ],
@@ -817,28 +809,24 @@ const RESEARCH_DIRECTIONS = [
     ],
     detailSections: [
       {
-        label: "Studies",
-        text: "Finite geometric models in which particle-like degrees of freedom are organized by algebraic and metric structure rather than introduced as free lists of fields.",
+        label: "Core idea",
+        text: "This direction treats particle-sector data as finite geometry: internal spaces, scalar sectors, and representation data organized by algebraic and metric constraints rather than introduced as unrelated lists of fields.",
       },
       {
-        label: "Tools",
-        text: "Finite spectral triples, Clifford and octonionic structures, quaternionic finite geometry, linked finite spaces, scalar sectors, and inner fluctuations.",
+        label: "Methods",
+        text: "The mathematical language is finite spectral triples, Clifford and octonionic structures, quaternionic finite geometry, linked finite spaces, Peirce/ladder decompositions, scalar sectors, and inner fluctuations.",
       },
       {
         label: "Outputs",
-        text: "Particle-sector model-building data: finite metrics, scalar/link fields, algebraic constraints on representations, and structured internal geometries.",
+        text: "The outputs are structural model-building data: finite metrics, scalar and link fields, algebraic constraints on representations, and candidate internal geometries for particle-like degrees of freedom.",
       },
       {
         label: "Current frontier",
-        text: "Ongoing collaborative work develops this as structural particle geometry. The public framing stays conservative: finite-geometric organization, not a claimed completed phenomenological model.",
+        text: "The current programme remains deliberately disciplined: structural finite geometry and algebraic organization of particle sectors, not a claim of a completed phenomenological model.",
       },
     ],
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
-    entryLabel: "Public context",
-    entryPublicationIds: [
-      "finite-spectral-distance",
-    ],
-    relatedPublicationIds: [
+    publicAnchorIds: [
       "finite-spectral-distance",
     ],
     relatedText: "Current collaborative work with Shahn Majid and previous work with Nichol Furey.",
@@ -850,14 +838,14 @@ const RESEARCH_DIRECTIONS = [
     summary: "Metric and operational geometry of quantum states, from spectral distance to distinguishability and channel diagnostics.",
     figures: [
       {
+        src: "./media/quantumSpace.jpg",
+        alt: "Fuzzy-sphere visualisation used for noncommutative spectral-distance geometry",
+        caption: "Fuzzy / noncommutative metric geometry",
+      },
+      {
         src: "./media/qinfo-bloch-calibration.png",
         alt: "Bloch-ball calibration geometry for Helstrom distinguishability",
         caption: "Bloch calibration geometry",
-      },
-      {
-        src: "./media/qinfo-scalar-route.png",
-        alt: "Scalar route diagram for Helstrom distinguishability calibration",
-        caption: "Scalar calibration route",
       },
       {
         src: "./media/qinfo-spin1-metric-comparison.png",
@@ -867,27 +855,24 @@ const RESEARCH_DIRECTIONS = [
     ],
     detailSections: [
       {
-        label: "Studies",
-        text: "How geometry measures distinguishability, calibration, and transport in noncommutative spaces and finite-dimensional quantum systems.",
+        label: "Core idea",
+        text: "This direction connects older Connes spectral-distance computations in finite, Moyal, and fuzzy spaces with current operational geometry of finite-dimensional quantum states.",
       },
       {
-        label: "Tools",
-        text: "Connes spectral distance, finite metric structures, Dirac eigenspinor data, Helstrom distinguishability, matrix-anchor calibration, fuzzy-spin geometry, and anisotropic qubit channels.",
+        label: "Methods",
+        text: "The tools are Connes spectral distance, finite metric structures, Dirac eigenspinor data, fuzzy-spin distances, Helstrom distinguishability, matrix-anchor calibration, and anisotropic qubit-channel geometry.",
       },
       {
         label: "Outputs",
-        text: "Spectral distances, finite-space metric relations, operational distinguishability measures, calibration-sensitive information geometry, and channel contractivity diagnostics.",
+        text: "The outputs are exact spectral distances, finite-space metric relations, distinguishability metrics, calibration-sensitive information geometry, and diagnostics for channel contractivity and anisotropic information flow.",
       },
       {
         label: "Current frontier",
-        text: "The published anchor is spectral distance; current projects extend the same exact-metric instinct toward Helstrom geometry, fuzzy-spin distances, and information-flow diagnostics.",
+        text: "The frontier is to make information geometry as explicit as the earlier noncommutative-distance calculations: exact formulas first, then operational interpretation.",
       },
     ],
     tags: ["Spectral Distance", "Noncommutative Geometry", "Quantum Information"],
-    entryPublicationIds: [
-      "doubled-moyal-spectral-distance",
-    ],
-    relatedPublicationIds: [
+    publicAnchorIds: [
       "doubled-moyal-spectral-distance",
       "finite-spectral-distance",
     ],
@@ -991,15 +976,15 @@ function findPublication(id) {
   return PUBLICATIONS.find((pub) => pub.id === id);
 }
 
-function renderEntryPointWork(pub, label) {
+function renderPublicAnchor(pub) {
   return `
-    <span class="entry-chip">
-      <a href="#selected-works" data-publication-id-link="${escapeHTML(pub.id)}">
-        <span>${escapeHTML(label || "Entry point")} · ${escapeHTML(pub.year)}</span>
+    <article class="public-anchor-row">
+      <div>
         <strong>${escapeHTML(pub.title)}</strong>
-      </a>
-      <span class="entry-chip-links">${renderPublicationLinks(pub.links)}</span>
-    </span>
+        <span>${escapeHTML(pub.year)} · ${escapeHTML(pub.venue)}</span>
+      </div>
+      <div class="link-row public-anchor-links">${renderPublicationLinks(pub.links)}</div>
+    </article>
   `;
 }
 
@@ -1027,42 +1012,31 @@ function renderDirectionFigures(direction) {
 }
 
 function renderDirectionPanel(direction) {
-  const entryWorks = (direction.entryPublicationIds || [])
+  const anchorIds = direction.publicAnchorIds || [];
+  const publicAnchors = Array.from(new Set(anchorIds))
     .map(findPublication)
     .filter(Boolean)
-    .map((pub) => renderEntryPointWork(pub, direction.entryLabel || "Entry point"))
+    .map(renderPublicAnchor)
     .join("");
 
-  const entryLayer = entryWorks
-    ? `<div class="entry-point-list" aria-label="Entry-point works">${entryWorks}</div>`
-    : `<p class="entry-point-note">${escapeHTML(direction.entryNote || "")}</p>`;
-
-  const relatedLinks = (direction.relatedPublicationIds || [])
-    .filter((id) => (direction.entryPublicationIds || []).indexOf(id) === -1)
-    .map(findPublication)
-    .filter(Boolean)
-    .map((pub) => `<a href="#selected-works" data-publication-id-link="${escapeHTML(pub.id)}">${escapeHTML(pub.title)}</a>`)
-    .join("");
-
-  const relatedWorks = relatedLinks
-    ? `<div class="direction-related"><span>Related works</span>${relatedLinks}</div>`
-    : "";
-
-  const relatedThread = direction.relatedText
-    ? `<div class="direction-related"><span>Related thread</span><p>${escapeHTML(direction.relatedText)}</p></div>`
+  const publicAnchorBlock = publicAnchors || direction.relatedText
+    ? `
+      <div class="public-anchor-block">
+        <span>Public anchors</span>
+        ${publicAnchors ? `<div class="public-anchor-list">${publicAnchors}</div>` : ""}
+        ${direction.relatedText ? `<p>${escapeHTML(direction.relatedText)}</p>` : ""}
+      </div>
+    `
     : "";
   const figureLayer = renderDirectionFigures(direction);
 
   return `
     <button type="button" class="research-map-panel-close" aria-label="Close research map">×</button>
-    <p class="panel-kicker">${escapeHTML(direction.label)}</p>
     <h3>${escapeHTML(direction.title)}</h3>
     ${figureLayer}
     <p class="panel-summary">${escapeHTML(direction.summary)}</p>
     <div class="direction-map-blocks">${renderDirectionMapSections(direction)}</div>
-    <div class="direction-related entry-point-context"><span>Entry points</span>${entryLayer}</div>
-    ${relatedWorks}
-    ${relatedThread}
+    ${publicAnchorBlock}
   `;
 }
 
