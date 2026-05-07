@@ -1003,8 +1003,8 @@ function renderDirectionPanel(direction) {
     <button type="button" class="research-map-panel-close" aria-label="Close research map">×</button>
     <p class="panel-kicker">${escapeHTML(direction.label)}</p>
     <h3>${escapeHTML(direction.title)}</h3>
-    <p class="panel-summary">${escapeHTML(direction.summary)}</p>
     ${figure}
+    <p class="panel-summary">${escapeHTML(direction.summary)}</p>
     <div class="direction-map-blocks">${renderDirectionMapSections(direction)}</div>
     <div class="direction-related entry-point-context"><span>Entry points</span>${entryLayer}</div>
     ${relatedWorks}
@@ -1090,6 +1090,7 @@ function renderResearchDirections() {
   const container = document.querySelector("#research-directions-grid");
   if (!container) return;
   const panel = document.querySelector("#research-map-panel");
+  const layout = container.closest(".research-map-layout");
   const defaultPanel = panel ? panel.innerHTML : "";
 
   container.innerHTML = RESEARCH_DIRECTIONS.map((direction) => {
@@ -1120,8 +1121,10 @@ function renderResearchDirections() {
       container.querySelectorAll(".research-map-card").forEach((card) => card.classList.remove("is-active"));
 
       if (isOpen || !direction) {
+        panel.hidden = true;
         panel.classList.remove("has-selection");
         panel.innerHTML = defaultPanel;
+        layout?.classList.remove("is-expanded");
         return;
       }
 
@@ -1129,7 +1132,9 @@ function renderResearchDirections() {
       button.textContent = "Map open";
       button.closest(".research-map-card")?.classList.add("is-active");
       panel.innerHTML = renderDirectionPanel(direction);
+      panel.hidden = false;
       panel.classList.add("has-selection");
+      layout?.classList.add("is-expanded");
       wirePublicationIdLinks(panel);
 
       const closeButton = panel.querySelector(".research-map-panel-close");
@@ -1138,8 +1143,10 @@ function renderResearchDirections() {
           button.setAttribute("aria-expanded", "false");
           button.textContent = "Open map";
           button.closest(".research-map-card")?.classList.remove("is-active");
+          panel.hidden = true;
           panel.classList.remove("has-selection");
           panel.innerHTML = defaultPanel;
+          layout?.classList.remove("is-expanded");
           button.focus();
         });
       }
