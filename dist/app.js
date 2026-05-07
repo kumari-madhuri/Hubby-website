@@ -517,7 +517,7 @@ const TALKS = [
   {
     date: "Dec 9, 2025",
     title: "Geodesic flows on a black-hole background",
-    venue: "Quantum Algebras seminar, Queen Mary University of London",
+    venue: "Quantum Algebras seminar, QMU London",
     location: "London",
     type: "seminar talk",
     selected: true,
@@ -529,7 +529,7 @@ const TALKS = [
   {
     date: "May 28, 2024",
     title: "Octonions and the Standard Model",
-    venue: "Quantum Algebras seminar, Queen Mary University of London",
+    venue: "Quantum Algebras seminar, QMU London",
     location: "London",
     type: "seminar talk",
     selected: false,
@@ -539,7 +539,7 @@ const TALKS = [
   {
     date: "Mar 5, 2024",
     title: "Emergence of modified Einstein equation from 1-loop result in IKKT matrix model",
-    venue: "Quantum Algebras seminar, Queen Mary University of London",
+    venue: "Quantum Algebras seminar, QMU London",
     location: "London",
     type: "seminar talk",
     selected: true,
@@ -616,6 +616,7 @@ const TALKS = [
     type: "journal club",
     selected: false,
     links: {
+      event: "https://confluence.desy.de/display/STJC/String+Theory+Journal+Club",
       slides: "./media/YMonMink-DESY.pdf",
     },
     tags: ["Yang–Mills", "Homogeneous Spaces"],
@@ -628,7 +629,7 @@ const TALKS = [
     type: "conference talk",
     selected: true,
     links: {
-      event: "https://indico.in2p3.fr/e/group34",
+      event: "https://indico.in2p3.fr/event/23498/",
       slides: "./media/YMonMink-GROUP34.pdf",
     },
     tags: ["Yang–Mills", "Homogeneous Spaces"],
@@ -689,7 +690,7 @@ const CONFERENCES = [
     date: "Jul 7–11, 2025",
     title: "A Quantum of Noncommutativity",
     location: "Ambleside, UK",
-    url: "https://sites.google.com/view/aqon2025/",
+    url: "https://sites.google.com/view/a-quantum-of-noncommutativity/home",
   },
   {
     date: "Jul 24–28, 2023",
@@ -697,15 +698,30 @@ const CONFERENCES = [
     location: "Prague, Czech Republic",
     url: "https://iopscience.iop.org/issue/1742-6596/2667/1",
   },
-  { date: "Feb 6–17, 2023", title: "Vortex Moduli at ICTS Bangalore", location: "online" },
+  {
+    date: "Feb 6–17, 2023",
+    title: "Vortex Moduli at ICTS Bangalore",
+    location: "online",
+    url: "https://www.icts.res.in/program/Vort2023",
+  },
   {
     date: "Jul 18–22, 2022",
     title: "The 34th International Colloquium on Group Theoretical Methods in Physics",
     location: "Strasbourg, France",
-    url: "https://indico.in2p3.fr/e/group34",
+    url: "https://indico.in2p3.fr/event/23498/",
   },
-  { date: "Aug 2–7, 2021", title: "International Congress on Mathematical Physics and Young Researchers Symposium", location: "Geneva, Switzerland" },
-  { date: "Jan 15–19, 2018", title: "Quantum Groups and Noncommutative Geometry", location: "NISER Bhubaneswar, India" },
+  {
+    date: "Aug 2–7, 2021",
+    title: "International Congress on Mathematical Physics and Young Researchers Symposium",
+    location: "Geneva, Switzerland",
+    url: "https://www.icmp2021.com/",
+  },
+  {
+    date: "Jan 15–19, 2018",
+    title: "Quantum Groups and Noncommutative Geometry",
+    location: "NISER Bhubaneswar, India",
+    url: "https://sites.google.com/a/niser.ac.in/qgrpncg/home",
+  },
 ];
 
 const SCHOOLS = [

@@ -15,18 +15,18 @@
   --text-dark:   #1a1a1a;
   --text-body:   #3d3d3d;
   --text-muted:  #777;
-  --bg-white:    #f7f1e7;
-  --bg-off:      #ede6da;
-  --bg-section:  #e2e3d5;
-  --deep-bg:     #e8e3d6;
-  --deep-bg-soft:#dde5d7;
-  --deep-panel:  #d2dbc9;
+  --bg-white:    #e9e6d6;
+  --bg-off:      #e1e5d8;
+  --bg-section:  #dbe5d7;
+  --deep-bg:     #dfe6d8;
+  --deep-bg-soft:#d8e3d5;
+  --deep-panel:  #d5decc;
   --deep-text:   #1d241e;
   --deep-muted:  #5f665d;
-  --surface-paper: rgba(246, 239, 226, 0.78);
-  --surface-paper-strong: rgba(239, 230, 214, 0.82);
-  --surface-paper-muted: rgba(232, 223, 204, 0.64);
-  --surface-border: rgba(92, 78, 55, 0.16);
+  --surface-paper: rgba(226, 229, 213, 0.78);
+  --surface-paper-strong: rgba(232, 229, 213, 0.82);
+  --surface-paper-muted: rgba(219, 226, 207, 0.66);
+  --surface-border: rgba(92, 98, 76, 0.18);
   --shadow-sm:   0 1px 7px rgba(54, 48, 38, 0.06);
   --shadow-md:   0 7px 18px rgba(54, 48, 38, 0.1);
   --transition:  all 0.3s ease;
@@ -496,7 +496,7 @@ section       { padding: 4rem 0; overflow: hidden; }
   right: -8px;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  border-left: 8px solid rgba(239, 230, 214, 0.92);
+  border-left: 8px solid rgba(232, 229, 213, 0.92);
 }
 .tl-right .tl-content::after {
   content: "";
@@ -505,7 +505,7 @@ section       { padding: 4rem 0; overflow: hidden; }
   left: -8px;
   border-top: 8px solid transparent;
   border-bottom: 8px solid transparent;
-  border-right: 8px solid rgba(239, 230, 214, 0.92);
+  border-right: 8px solid rgba(232, 229, 213, 0.92);
 }
 
 .tl-date {
@@ -565,7 +565,7 @@ section       { padding: 4rem 0; overflow: hidden; }
     left: -8px;
     right: auto;
     border-left: none;
-    border-right: 8px solid rgba(239, 230, 214, 0.92);
+    border-right: 8px solid rgba(232, 229, 213, 0.92);
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
   }
@@ -1345,11 +1345,11 @@ summary:focus-visible {
 }
 
 .academic-trajectory {
-  background: linear-gradient(180deg, #ede7db 0%, var(--deep-bg-soft) 100%);
+  background: linear-gradient(180deg, var(--deep-bg-soft) 0%, var(--deep-bg) 100%);
   padding: 2.2rem 0 0.55rem;
 }
 .academic-trajectory .intro-card {
-  background: linear-gradient(135deg, rgba(239, 230, 214, 0.84), rgba(232, 223, 204, 0.74));
+  background: linear-gradient(135deg, rgba(232, 229, 213, 0.84), rgba(219, 226, 207, 0.72));
   border: 1px solid var(--surface-border);
   box-shadow: var(--shadow-sm);
   padding: 1.35rem 1.65rem;
@@ -1635,7 +1635,7 @@ summary:focus-visible {
 }
 .contact-email {
   align-items: center;
-  background: rgba(229, 148, 0, 0.1);
+  background: var(--surface-paper-muted);
   border: 1px solid rgba(206, 133, 0, 0.26);
   border-radius: var(--radius);
   display: inline-flex;
@@ -1757,8 +1757,8 @@ summary:focus-visible {
 }
 .home-contact-section {
   background:
-    radial-gradient(circle at 18% 20%, rgba(229, 148, 0, 0.12), transparent 28rem),
-    linear-gradient(180deg, #efe8dc 0%, var(--deep-bg-soft) 100%);
+    radial-gradient(circle at 18% 20%, rgba(229, 148, 0, 0.08), transparent 28rem),
+    linear-gradient(180deg, var(--deep-bg-soft) 0%, var(--deep-bg) 100%);
   padding: 4rem 0;
 }
 .home-contact-card {
@@ -1792,6 +1792,16 @@ summary:focus-visible {
   flex-wrap: wrap;
   gap: 0.7rem;
   margin: 1rem 0;
+}
+.home-contact-actions .hero-nav-btn {
+  background: var(--surface-paper-muted);
+  border-color: rgba(206, 133, 0, 0.28);
+  color: var(--gold-dark);
+}
+.home-contact-actions .hero-nav-btn:hover,
+.home-contact-actions .hero-nav-btn:focus-visible {
+  background: rgba(229, 148, 0, 0.12);
+  color: var(--gold-dark);
 }
 .compact-profile-links {
   display: flex;
@@ -1900,7 +1910,7 @@ summary:focus-visible {
 }
 .mechanism-strip-section {
   background:
-    linear-gradient(180deg, #efe8dc 0%, var(--deep-bg-soft) 100%);
+    linear-gradient(180deg, var(--deep-bg) 0%, var(--deep-bg-soft) 100%);
 }
 .mechanism-strip {
   display: grid;
@@ -1950,8 +1960,8 @@ summary:focus-visible {
 .selected-directions-section,
 .research-map-section {
   background:
-    radial-gradient(circle at 78% 10%, rgba(229, 148, 0, 0.08), transparent 24rem),
-    linear-gradient(180deg, #e3e4d4 0%, #e8dfcc 100%);
+    radial-gradient(circle at 78% 10%, rgba(229, 148, 0, 0.07), transparent 24rem),
+    linear-gradient(180deg, var(--deep-bg-soft) 0%, var(--deep-bg) 100%);
 }
 .directions-grid,
 .research-map-grid {
@@ -2252,7 +2262,7 @@ summary:focus-visible {
 }
 .compact-publications-section {
   background:
-    linear-gradient(180deg, #e9e1d3 0%, var(--deep-bg) 100%);
+    linear-gradient(180deg, var(--deep-bg) 0%, var(--deep-bg-soft) 100%);
 }
 .publication-tools {
   background: var(--surface-paper-strong);
@@ -2330,7 +2340,7 @@ summary:focus-visible {
 }
 .research-trajectory-section {
   background:
-    linear-gradient(180deg, var(--deep-bg-soft) 0%, #ece5d8 100%);
+    linear-gradient(180deg, var(--deep-bg-soft) 0%, var(--deep-bg) 100%);
   padding: 3.25rem 0;
 }
 .trajectory-list {
