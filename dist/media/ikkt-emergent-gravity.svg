@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">IKKT matrix model to emergent gravitational equations</title>
+  <desc id="desc">An original schematic linking matrices, emergent metric data, and modified Einstein equations.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef6f3"/>
+      <stop offset="1" stop-color="#fff5e1"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9a5f00"/>
+    </marker>
+  </defs>
+  <rect width="760" height="420" rx="26" fill="url(#bg)"/>
+  <g transform="translate(74 104)">
+    <rect x="0" y="0" width="178" height="178" rx="24" fill="#fffaf2" stroke="#d7c8ad"/>
+    <g fill="#1f4d49">
+      <circle cx="43" cy="42" r="12"/><circle cx="88" cy="42" r="12"/><circle cx="133" cy="42" r="12"/>
+      <circle cx="43" cy="88" r="12"/><circle cx="88" cy="88" r="12"/><circle cx="133" cy="88" r="12"/>
+      <circle cx="43" cy="134" r="12"/><circle cx="88" cy="134" r="12"/><circle cx="133" cy="134" r="12"/>
+    </g>
+    <text x="89" y="223" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="28" font-weight="700">matrices Xᵃ</text>
+  </g>
+  <g stroke="#9a5f00" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M282 196 H373"/>
+    <path d="M494 196 H586"/>
+  </g>
+  <g transform="translate(370 105)">
+    <path d="M20 118 C65 16 135 16 180 118 C128 184 72 184 20 118 Z" fill="#fffaf2" stroke="#1f4d49" stroke-width="5"/>
+    <path d="M52 118 C80 72 120 72 148 118" fill="none" stroke="#9a5f00" stroke-width="4"/>
+    <path d="M100 34 V196 M33 118 H167" stroke="#1f4d49" stroke-width="2" opacity="0.35"/>
+    <text x="100" y="223" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="28" font-weight="700">emergent G</text>
+  </g>
+  <g transform="translate(586 116)">
+    <rect x="0" y="0" width="124" height="158" rx="22" fill="#fffaf2" stroke="#d7c8ad"/>
+    <text x="62" y="54" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="34" font-weight="700">Gμν</text>
+    <text x="62" y="94" text-anchor="middle" fill="#9a5f00" font-family="Georgia, serif" font-size="28">+</text>
+    <text x="62" y="130" text-anchor="middle" fill="#1f4d49" font-family="Georgia, serif" font-size="29" font-weight="700">ΔTμν</text>
+    <text x="62" y="202" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="24" font-weight="700">modified</text>
+    <text x="62" y="230" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="24" font-weight="700">Einstein</text>
+  </g>
+</svg>

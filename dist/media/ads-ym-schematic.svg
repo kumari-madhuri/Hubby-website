@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Anti-de Sitter geometry to exact Yang-Mills fields</title>
+  <desc id="desc">A compact schematic showing anti-de Sitter geometry feeding an equivariant ansatz and producing exact Yang-Mills fields.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff8ed"/>
+      <stop offset="1" stop-color="#e9efe1"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9a5f00"/>
+    </marker>
+  </defs>
+  <rect width="760" height="420" rx="26" fill="url(#bg)"/>
+  <g fill="none" stroke="#1f4d49" stroke-width="5" opacity="0.86">
+    <path d="M115 315 C190 110 285 110 360 315"/>
+    <path d="M155 315 C215 170 260 170 320 315"/>
+    <path d="M95 315 H380"/>
+    <path d="M238 86 V335" stroke-width="2" opacity="0.45"/>
+  </g>
+  <g stroke="#9a5f00" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M398 210 H492"/>
+    <path d="M586 210 H672"/>
+  </g>
+  <g>
+    <rect x="456" y="136" width="138" height="148" rx="18" fill="#fffaf2" stroke="#d7c8ad"/>
+    <path d="M488 245 C515 194 543 194 570 245" fill="none" stroke="#1f4d49" stroke-width="4"/>
+    <path d="M494 178 H564 M494 205 H564" stroke="#9a5f00" stroke-width="3"/>
+    <text x="525" y="122" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="25" font-weight="700">equivariant</text>
+    <text x="525" y="316" text-anchor="middle" fill="#5f665d" font-family="Arial, sans-serif" font-size="19">ansatz</text>
+  </g>
+  <g>
+    <circle cx="705" cy="210" r="38" fill="#fff0cc" stroke="#9a5f00" stroke-width="4"/>
+    <path d="M682 210 C700 184 720 184 735 210 C718 237 700 237 682 210 Z" fill="none" stroke="#1f4d49" stroke-width="4"/>
+    <path d="M705 172 V248 M667 210 H743" stroke="#9a5f00" stroke-width="2" opacity="0.65"/>
+  </g>
+  <text x="238" y="62" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="32" font-weight="700">AdS / coset geometry</text>
+  <text x="705" y="286" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="24" font-weight="700">exact field</text>
+</svg>

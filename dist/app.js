@@ -705,10 +705,23 @@ const RESEARCH_DIRECTIONS = [
     title: "Exact fields and geometric transport",
     label: "Exact field theory",
     summary: "Exact Yang–Mills and Maxwell sectors generated from symmetry, conformal structure, and homogeneous-space reductions.",
-    figure: {
-      src: "./media/MinkFoliations.png",
-      alt: "Conformal foliation diagram used in exact Yang-Mills constructions",
-    },
+    figures: [
+      {
+        src: "./media/MinkFoliations.png",
+        alt: "Conformal foliation diagram used in exact Yang-Mills constructions",
+        caption: "Conformal / homogeneous-space reduction",
+      },
+      {
+        src: "./media/Knots.png",
+        alt: "Rational electromagnetic knot field-line visualisation",
+        caption: "Rational Maxwell knots",
+      },
+      {
+        src: "./media/ads-ym-schematic.svg",
+        alt: "Anti-de Sitter geometry feeding an equivariant ansatz and exact Yang-Mills field",
+        caption: "AdS geometry to exact fields",
+      },
+    ],
     detailSections: [
       {
         label: "Studies",
@@ -745,10 +758,23 @@ const RESEARCH_DIRECTIONS = [
     title: "Quantum geometry and emergent spacetime",
     label: "Quantum spacetime",
     summary: "Quantum-Riemannian black-hole geometry and matrix-model emergent gravity as computable tests of nonclassical spacetime.",
-    figure: {
-      src: "./media/WorkPic3.png",
-      alt: "Spherical geometric diagram representing quantum-geometric flow",
-    },
+    figures: [
+      {
+        src: "./media/qrg-direct-phase-panel.png",
+        alt: "Quantum black-hole flow diagnostic panel showing phase behaviour",
+        caption: "Quantum black-hole flow diagnostics",
+      },
+      {
+        src: "./media/qrg-packet-motion-panel.png",
+        alt: "Packet motion panel from black-hole geodesic-flow computations",
+        caption: "Packet and geodesic motion",
+      },
+      {
+        src: "./media/ikkt-emergent-gravity.svg",
+        alt: "IKKT matrices leading to emergent metric data and modified Einstein equations",
+        caption: "Matrix model to emergent gravity",
+      },
+    ],
     detailSections: [
       {
         label: "Studies",
@@ -782,10 +808,13 @@ const RESEARCH_DIRECTIONS = [
     title: "Algebraic particle geometry",
     label: "Particle geometry",
     summary: "Finite spectral triples and Clifford/division-algebraic structures as constrained settings for particle-sector geometry.",
-    figure: {
-      src: "./media/HiggsMechanics.png",
-      alt: "Geometric potential visual used as a particle-sector motif",
-    },
+    figures: [
+      {
+        src: "./media/cl6-finite-geometry.svg",
+        alt: "Clifford algebra, Peirce decomposition, and finite spectral triple data schematic",
+        caption: "Clifford input to finite internal geometry",
+      },
+    ],
     detailSections: [
       {
         label: "Studies",
@@ -819,10 +848,23 @@ const RESEARCH_DIRECTIONS = [
     title: "Spectral and information geometry",
     label: "Information geometry",
     summary: "Metric and operational geometry of quantum states, from spectral distance to distinguishability and channel diagnostics.",
-    figure: {
-      src: "./media/quantumSpace.jpg",
-      alt: "Fuzzy sphere visualisation with spectral-distance geodesics",
-    },
+    figures: [
+      {
+        src: "./media/qinfo-bloch-calibration.png",
+        alt: "Bloch-ball calibration geometry for Helstrom distinguishability",
+        caption: "Bloch calibration geometry",
+      },
+      {
+        src: "./media/qinfo-scalar-route.png",
+        alt: "Scalar route diagram for Helstrom distinguishability calibration",
+        caption: "Scalar calibration route",
+      },
+      {
+        src: "./media/qinfo-spin1-metric-comparison.png",
+        alt: "Spin-one spectral distance comparison against chord and geodesic distances",
+        caption: "Fuzzy-spin spectral distance",
+      },
+    ],
     detailSections: [
       {
         label: "Studies",
@@ -970,6 +1012,20 @@ function renderDirectionMapSections(direction) {
   `).join("");
 }
 
+function renderDirectionFigures(direction) {
+  const figures = direction.figures || (direction.figure ? [direction.figure] : []);
+  if (!figures.length) return "";
+
+  const cards = figures.slice(0, 3).map((figure) => `
+    <figure class="direction-figure-card">
+      <img src="${escapeHTML(figure.src)}" alt="${escapeHTML(figure.alt)}" loading="lazy" />
+      ${figure.caption ? `<figcaption>${escapeHTML(figure.caption)}</figcaption>` : ""}
+    </figure>
+  `).join("");
+
+  return `<div class="direction-figure-grid figure-count-${Math.min(figures.length, 3)}" aria-label="Visual notes for ${escapeHTML(direction.title)}">${cards}</div>`;
+}
+
 function renderDirectionPanel(direction) {
   const entryWorks = (direction.entryPublicationIds || [])
     .map(findPublication)
@@ -995,15 +1051,13 @@ function renderDirectionPanel(direction) {
   const relatedThread = direction.relatedText
     ? `<div class="direction-related"><span>Related thread</span><p>${escapeHTML(direction.relatedText)}</p></div>`
     : "";
-  const figure = direction.figure
-    ? `<figure class="direction-panel-figure"><img src="${escapeHTML(direction.figure.src)}" alt="${escapeHTML(direction.figure.alt)}" /></figure>`
-    : "";
+  const figureLayer = renderDirectionFigures(direction);
 
   return `
     <button type="button" class="research-map-panel-close" aria-label="Close research map">×</button>
     <p class="panel-kicker">${escapeHTML(direction.label)}</p>
     <h3>${escapeHTML(direction.title)}</h3>
-    ${figure}
+    ${figureLayer}
     <p class="panel-summary">${escapeHTML(direction.summary)}</p>
     <div class="direction-map-blocks">${renderDirectionMapSections(direction)}</div>
     <div class="direction-related entry-point-context"><span>Entry points</span>${entryLayer}</div>

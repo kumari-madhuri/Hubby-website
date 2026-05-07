@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" role="img" aria-labelledby="title desc">
+  <title id="title">Clifford and finite spectral triple data</title>
+  <desc id="desc">An original schematic relating Clifford algebra, Peirce and ladder decompositions, and finite spectral triple data.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff6e8"/>
+      <stop offset="1" stop-color="#edf4e8"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9a5f00"/>
+    </marker>
+  </defs>
+  <rect width="760" height="420" rx="26" fill="url(#bg)"/>
+  <g transform="translate(56 112)">
+    <rect width="190" height="152" rx="22" fill="#fffaf2" stroke="#d7c8ad"/>
+    <text x="95" y="62" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="38" font-weight="700">Cℓ6</text>
+    <text x="95" y="102" text-anchor="middle" fill="#5f665d" font-family="Georgia, serif" font-size="24">≃ End(C⊗O)</text>
+    <text x="95" y="196" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="25" font-weight="700">Clifford input</text>
+  </g>
+  <g stroke="#9a5f00" stroke-width="4" fill="none" marker-end="url(#arrow)">
+    <path d="M276 188 H355"/>
+    <path d="M508 188 H586"/>
+  </g>
+  <g transform="translate(356 96)">
+    <rect width="150" height="184" rx="22" fill="#fffaf2" stroke="#d7c8ad"/>
+    <circle cx="75" cy="51" r="24" fill="#fff0cc" stroke="#9a5f00" stroke-width="4"/>
+    <path d="M48 114 H102 M48 145 H102" stroke="#1f4d49" stroke-width="5" stroke-linecap="round"/>
+    <path d="M75 83 V160" stroke="#1f4d49" stroke-width="3" stroke-dasharray="7 8"/>
+    <text x="75" y="226" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="24" font-weight="700">Peirce / ladder</text>
+  </g>
+  <g transform="translate(586 98)">
+    <rect width="128" height="180" rx="22" fill="#fffaf2" stroke="#d7c8ad"/>
+    <rect x="26" y="28" width="76" height="36" rx="8" fill="#e9efe1" stroke="#1f4d49"/>
+    <rect x="26" y="74" width="76" height="36" rx="8" fill="#fff0cc" stroke="#9a5f00"/>
+    <rect x="26" y="120" width="76" height="36" rx="8" fill="#e9efe1" stroke="#1f4d49"/>
+    <path d="M64 64 V74 M64 110 V120" stroke="#1d241e" stroke-width="3"/>
+    <text x="64" y="225" text-anchor="middle" fill="#1d241e" font-family="Georgia, serif" font-size="23" font-weight="700">finite triple</text>
+  </g>
+</svg>
