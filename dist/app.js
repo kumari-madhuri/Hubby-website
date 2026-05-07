@@ -3,9 +3,8 @@
    ============================================================ */
 
 /* ============================================================
-   Quotes — shuffled on every page load.
-   Categories: physics/maths, Buddhism/Vipassana, Upanishads/Gita,
-   Kabir/Tagore/Hindi tradition, Tolkien, Philosophy.
+   Homepage quotes — shuffled on every page load.
+   Categories: physics/maths, literature, philosophy.
    ============================================================ */
 const QUOTES = [
   "God used beautiful mathematics in creating the world. — Dirac",
@@ -28,17 +27,263 @@ const QUOTES = [
   "The limits of my language mean the limits of my world. — Wittgenstein",
   "Wonder is the beginning of wisdom. — Socrates",
   "He who has a why to live can bear almost any how. — Nietzsche",
-  "That by which the mind thinks — know that alone as Brahman. — Kena Upanishad",
-  "Tat tvam asi: That thou art. — Chandogya Upanishad",
-  "From the unreal lead me to the real; from darkness lead me to light. — Brihadaranyaka Upanishad",
-  "Let right deeds be thy motive, not the fruit which comes from them. — Bhagavad Gita",
-  "The Self is not born, nor does it ever die. — Bhagavad Gita",
-  "Three things cannot be long hidden: the sun, the moon, and the truth. — Buddha",
-  "Work out your own salvation. Do not depend on others. — Buddha",
-  "Peace comes from within. Do not seek it without. — Buddha",
   "Not all those who wander are lost. — Tolkien",
   "All we have to decide is what to do with the time that is given us. — Tolkien",
   "There is some good in this world, and it is worth fighting for. — Tolkien",
+];
+
+const PERSONAL_EPIGRAPHS = [
+  {
+    id: "thag-4-10-dhamma-protects",
+    source: "Theragāthā 4.10, verse 303 — Dhammikattheragāthā",
+    scriptLang: "pi-Deva",
+    romanLang: "pi-Latn",
+    original: [
+      "धम्मो हवे रक्खति धम्मचारिं,",
+      "धम्मो सुचिण्णो सुखमावहति;",
+      "एसानिसंसो धम्मे सुचिण्णे,",
+      "न दुग्गतिं गच्छति धम्मचारी।",
+    ],
+    transliteration: [
+      "Dhammo have rakkhati dhammacāriṃ,",
+      "dhammo suciṇṇo sukhamāvahati;",
+      "esānisaṃso dhamme suciṇṇe,",
+      "na duggatiṃ gacchati dhammacārī.",
+    ],
+    translation: [
+      "Dhamma protects one who lives by Dhamma;",
+      "Dhamma well practised brings happiness.",
+      "This is the benefit of Dhamma well practised:",
+      "one who lives by Dhamma does not go to a bad destination.",
+    ],
+  },
+  {
+    id: "manusmriti-8-15-dharma-protects",
+    source: "Manusmṛti 8.15",
+    scriptLang: "sa-Deva",
+    romanLang: "sa-Latn",
+    original: [
+      "धर्म एव हतो हन्ति धर्मो रक्षति रक्षितः ।",
+      "तस्माद्धर्मो न हन्तव्यो मा नो धर्मो हतोऽवधीत् ॥",
+    ],
+    transliteration: [
+      "dharma eva hato hanti dharmo rakṣati rakṣitaḥ |",
+      "tasmād dharmo na hantavyo mā no dharmo hato'vadhīt ||",
+    ],
+    translation: [
+      "Dharma, when harmed, harms;",
+      "dharma, when protected, protects.",
+      "Therefore dharma should not be harmed,",
+      "lest harmed dharma destroy us.",
+    ],
+  },
+  {
+    id: "dhp-276-effort",
+    source: "Dhammapada 276",
+    scriptLang: "pi-Deva",
+    romanLang: "pi-Latn",
+    original: [
+      "तुम्हेहि किच्चमातप्पं, अक्खातारो तथागता;",
+      "पटिपन्ना पमोक्खन्ति, झायिनो मारबन्धना।",
+    ],
+    transliteration: [
+      "Tumhehi kiccamātappaṃ, akkhātāro tathāgatā;",
+      "paṭipannā pamokkhanti, jhāyino mārabandhanā.",
+    ],
+    translation: [
+      "The effort is yours to make;",
+      "the Tathāgatas only show the way.",
+      "Those who practise in meditation",
+      "are freed from Māra's bonds.",
+    ],
+  },
+  {
+    id: "dhp-277-impermanence",
+    source: "Dhammapada 277",
+    scriptLang: "pi-Deva",
+    romanLang: "pi-Latn",
+    original: [
+      "सब्बे सङ्खारा अनिच्चा’ति,",
+      "यदा पञ्ञाय पस्सति;",
+      "अथ निब्बिन्दति दुक्खे,",
+      "एस मग्गो विसुद्धिया।",
+    ],
+    transliteration: [
+      "Sabbe saṅkhārā aniccā'ti,",
+      "yadā paññāya passati;",
+      "atha nibbindati dukkhe,",
+      "esa maggo visuddhiyā.",
+    ],
+    translation: [
+      "When one sees with wisdom",
+      "that all conditioned things are impermanent,",
+      "one turns away from suffering.",
+      "This is the path of purification.",
+    ],
+  },
+  {
+    id: "dhp-374-arising-passing",
+    source: "Dhammapada 374",
+    scriptLang: "pi-Deva",
+    romanLang: "pi-Latn",
+    original: [
+      "यतो यतो सम्मसति, खन्धानं उदयब्बयं;",
+      "लभती पीतिपामोज्जं, अमतं तं विजानतं।",
+    ],
+    transliteration: [
+      "Yato yato sammasati, khandhānaṃ udayabbayaṃ;",
+      "labhatī pītipāmojjaṃ, amataṃ taṃ vijānataṃ.",
+    ],
+    translation: [
+      "Whenever one closely observes",
+      "the arising and passing of the aggregates,",
+      "one gains rapture and joy;",
+      "for those who understand, this is the deathless.",
+    ],
+  },
+  {
+    id: "dhp-183-purification",
+    source: "Dhammapada 183",
+    scriptLang: "pi-Deva",
+    romanLang: "pi-Latn",
+    original: [
+      "सब्बपापस्स अकरणं,",
+      "कुसलस्स उपसम्पदा;",
+      "सचित्तपरियोदपनं,",
+      "एतं बुद्धान सासनं।",
+    ],
+    transliteration: [
+      "Sabbapāpassa akaraṇaṃ,",
+      "kusalassa upasampadā;",
+      "sacittapariyodapanaṃ,",
+      "etaṃ buddhāna sāsanaṃ.",
+    ],
+    translation: [
+      "Avoid the unwholesome;",
+      "cultivate the wholesome;",
+      "purify one's own mind.",
+      "This is the teaching of the Buddhas.",
+    ],
+  },
+  {
+    id: "dhp-5-non-hatred",
+    source: "Dhammapada 5",
+    scriptLang: "pi-Deva",
+    romanLang: "pi-Latn",
+    original: [
+      "न हि वेरेन वेरानि, सम्मन्तीध कुदाचनं;",
+      "अवेरेन च सम्मन्ति, एस धम्मो सनन्तनो।",
+    ],
+    transliteration: [
+      "Na hi verena verāni, sammantīdha kudācanaṃ;",
+      "averena ca sammanti, esa dhammo sanantano.",
+    ],
+    translation: [
+      "Hatred is never ended by hatred;",
+      "it is ended by non-hatred.",
+      "This is an ancient truth.",
+    ],
+  },
+  {
+    id: "dhp-80-self-training",
+    source: "Dhammapada 80",
+    scriptLang: "pi-Deva",
+    romanLang: "pi-Latn",
+    original: [
+      "उदकञ्हि नयन्ति नेत्तिका,",
+      "उसुकारा नमयन्ति तेजनं;",
+      "दारुं नमयन्ति तच्छका,",
+      "अत्तानं दमयन्ति पण्डिता।",
+    ],
+    transliteration: [
+      "Udakañhi nayanti nettikā,",
+      "usukārā namayanti tejanaṃ;",
+      "dāruṃ namayanti tacchakā,",
+      "attānaṃ damayanti paṇḍitā.",
+    ],
+    translation: [
+      "Irrigators guide water;",
+      "fletchers shape arrows;",
+      "carpenters shape wood;",
+      "the wise train themselves.",
+    ],
+  },
+  {
+    id: "thig-8-1-world-burning",
+    source: "Therīgāthā 8.1",
+    scriptLang: "pi-Deva",
+    romanLang: "pi-Latn",
+    original: [
+      "सब्बो आदिपितो लोको, सब्बो लोको पदीपितो;",
+      "सब्बो पज्जलितो लोको, सब्बो लोको पकम्पितो।",
+    ],
+    transliteration: [
+      "Sabbo ādīpito loko, sabbo loko padīpito;",
+      "sabbo pajjalito loko, sabbo loko pakampito.",
+    ],
+    translation: [
+      "The whole world is on fire;",
+      "the whole world is alight.",
+      "The whole world is ablaze;",
+      "the whole world is shaking.",
+    ],
+  },
+  {
+    id: "gita-6-26-returning-mind",
+    source: "Bhagavad Gītā 6.26",
+    scriptLang: "sa-Deva",
+    romanLang: "sa-Latn",
+    original: [
+      "यतो यतो निश्चरति मनश्चञ्चलमस्थिरम् ।",
+      "ततस्ततो नियम्यैतदात्मन्येव वशं नयेत् ॥",
+    ],
+    transliteration: [
+      "yato yato niścarati manaś cañcalam asthiram |",
+      "tatas tato niyamyaitad ātmany eva vaśaṃ nayet ||",
+    ],
+    translation: [
+      "Wherever the restless, unsteady mind wanders,",
+      "from there one should gently restrain it",
+      "and bring it back under the guidance of the self.",
+    ],
+  },
+  {
+    id: "brhadaranyaka-1-3-28-light",
+    source: "Bṛhadāraṇyaka Upaniṣad 1.3.28",
+    scriptLang: "sa-Deva",
+    romanLang: "sa-Latn",
+    original: [
+      "असतो मा सद्गमय ।",
+      "तमसो मा ज्योतिर्गमय ।",
+      "मृत्योर्मा अमृतं गमय ॥",
+    ],
+    transliteration: [
+      "asato mā sad gamaya |",
+      "tamaso mā jyotir gamaya |",
+      "mṛtyor mā amṛtaṃ gamaya ||",
+    ],
+    translation: [
+      "Lead me from the unreal to the real;",
+      "from darkness to light;",
+      "from death to the deathless.",
+    ],
+  },
+  {
+    id: "yoga-sutra-1-2-stilling",
+    source: "Yoga Sūtra 1.2",
+    scriptLang: "sa-Deva",
+    romanLang: "sa-Latn",
+    original: [
+      "योगश्चित्तवृत्तिनिरोधः ॥",
+    ],
+    transliteration: [
+      "yogaś citta-vṛtti-nirodhaḥ ||",
+    ],
+    translation: [
+      "Yoga is the stilling",
+      "of the fluctuations of the mind.",
+    ],
+  },
 ];
 
 const PROFILE_LINKS = {
@@ -456,44 +701,67 @@ const SCHOOLS = [
 
 const RESEARCH_DIRECTIONS = [
   {
+    id: "exact-fields",
     title: "Exact fields and geometric transport",
     label: "Published work",
-    summary: "Exact Yang–Mills and Maxwell sectors generated from symmetry, conformal structure, and homogeneous-space reductions.",
+    summary: "Exact Yang–Mills and Maxwell sectors generated from symmetry, conformal structure, and homogeneous-space reductions. The emphasis is on fields one can compute with: charges, trajectories, defects, and transport.",
     detail: "This direction grew from de Sitter and Minkowski Yang–Mills constructions and rational electromagnetic knots. The common method is to use a rigid spacetime or symmetry input, reduce the field equations to tractable geometric data, and extract observables such as conserved charges, particle trajectories, or transport channels.",
     tags: ["Yang–Mills", "Exact Fields", "Electromagnetic Knots"],
-    related: [
+    entryPublicationIds: [
+      "adS-exact-gauge-fields",
+      "rational-em-charges",
+    ],
+    relatedPublicationIds: [
       "adS-exact-gauge-fields",
       "minkowski-coset-yang-mills",
       "rational-em-charges",
+      "charged-particle-knots",
       "rational-em-fields",
     ],
   },
   {
+    id: "quantum-geometry",
     title: "Quantum geometry and emergent spacetime",
     label: "Public preprint + published work",
     summary: "Quantum-Riemannian black-hole geometry and matrix-model emergent gravity, with geodesic flows and effective gravitational equations as computable test cases.",
     detail: "This direction connects noncommutative and quantum geometry to gravitational dynamics. Current work with Shahn Majid develops geodesic-flow ideas on black-hole backgrounds, while work with Harold Steinacker studies how one-loop IKKT matrix-model dynamics modifies gravitational field equations.",
     tags: ["Quantum Geometry", "Black Holes", "Matrix Models"],
-    related: [
+    entryPublicationIds: [
+      "black-hole-geodesic-flows",
+      "ikkt-effective-einstein",
+    ],
+    relatedPublicationIds: [
       "black-hole-geodesic-flows",
       "ikkt-effective-einstein",
     ],
   },
   {
+    id: "algebraic-particle-geometry",
     title: "Algebraic particle geometry",
     label: "Ongoing collaboration",
     summary: "Finite spectral triples and Clifford/division-algebraic structures as constrained settings for particle-sector model building.",
     detail: "This line studies how finite geometric and algebraic data — Clifford and division algebras, linked finite spaces, scalar sectors, and inner fluctuations — can organize particle-like degrees of freedom. The public presentation stays deliberately conservative: structural model building, not premature phenomenological claims.",
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
+    entryLabel: "Public context",
+    entryPublicationIds: [
+      "finite-spectral-distance",
+    ],
+    relatedPublicationIds: [
+      "finite-spectral-distance",
+    ],
     relatedText: "Current collaborative work with Shahn Majid and previous work with Nichol Furey.",
   },
   {
+    id: "spectral-information-geometry",
     title: "Spectral and information geometry",
     label: "Published work + current project",
     summary: "Metric and operational geometry of quantum states: spectral distance, finite metric structures, Helstrom distinguishability, and calibration-sensitive information flow.",
     detail: "This direction begins with published spectral-distance computations in noncommutative geometry and extends toward operational quantum-information questions. The public anchor is spectral distance; the information-geometric work is presented as a current extension unless and until public manuscripts are posted.",
     tags: ["Spectral Distance", "Noncommutative Geometry", "Quantum Information"],
-    related: [
+    entryPublicationIds: [
+      "doubled-moyal-spectral-distance",
+    ],
+    relatedPublicationIds: [
       "doubled-moyal-spectral-distance",
       "finite-spectral-distance",
     ],
@@ -580,27 +848,6 @@ function renderPublicationLinks(links) {
   return linkOrder.map(([key, label]) => linkButton(label, links[key])).join("");
 }
 
-function renderPublicationCard(pub, featured) {
-  const significance = featured && pub.shortSignificance
-    ? `<p class="publication-significance">${escapeHTML(pub.shortSignificance)}</p>`
-    : "";
-
-  return `
-    <article class="publication-card ${featured ? "featured-publication-card" : ""}" data-publication-tags="${escapeHTML(pub.tags.map(slugify).join(" "))}" data-publication-id="${escapeHTML(pub.id)}">
-      <div class="publication-meta">
-        <span>${escapeHTML(pub.year)}</span>
-        <span>${escapeHTML(pub.status)}</span>
-      </div>
-      <h3>${escapeHTML(pub.title)}</h3>
-      <p class="publication-authors">${escapeHTML(pub.authors)}</p>
-      <p>${escapeHTML(pub.venue)}</p>
-      ${significance}
-      <div class="tag-list">${renderTagList(pub.tags.slice(0, 4))}</div>
-      <div class="link-row">${renderPublicationLinks(pub.links)}</div>
-    </article>
-  `;
-}
-
 function renderPublicationRow(pub) {
   return `
     <article class="publication-row" data-publication-tags="${escapeHTML(pub.tags.map(slugify).join(" "))}" data-publication-id="${escapeHTML(pub.id)}">
@@ -614,7 +861,7 @@ function renderPublicationRow(pub) {
         <p class="publication-venue">${escapeHTML(pub.venue)}</p>
         <div class="publication-row-footer">
           <div class="link-row">${renderPublicationLinks(pub.links)}</div>
-          <div class="tag-list">${renderTagList(pub.tags.slice(0, 4))}</div>
+          <div class="tag-list">${renderTagList(pub.tags.slice(0, 2))}</div>
         </div>
       </div>
     </article>
@@ -623,6 +870,17 @@ function renderPublicationRow(pub) {
 
 function findPublication(id) {
   return PUBLICATIONS.find((pub) => pub.id === id);
+}
+
+function renderEntryPointWork(pub, label) {
+  return `
+    <article class="entry-point-work">
+      <span>${escapeHTML(label || "Entry point")}</span>
+      <h4>${escapeHTML(pub.title)}</h4>
+      <p>${escapeHTML(pub.year)} · ${escapeHTML(pub.venue)}</p>
+      <div class="link-row">${renderPublicationLinks(pub.links)}</div>
+    </article>
+  `;
 }
 
 function renderPublicationFilters() {
@@ -634,17 +892,6 @@ function renderPublicationFilters() {
       ${escapeHTML(filter)}
     </button>
   `).join("");
-}
-
-function renderFeaturedWorks() {
-  const featuredContainer = document.querySelector("#featured-works-grid");
-  if (!featuredContainer) return;
-
-  featuredContainer.innerHTML = PUBLICATIONS
-    .filter((pub) => pub.featured)
-    .slice(0, 5)
-    .map((pub) => renderPublicationCard(pub, true))
-    .join("");
 }
 
 function renderPublications() {
@@ -692,31 +939,63 @@ function renderResearchDirections() {
   if (!container) return;
 
   container.innerHTML = RESEARCH_DIRECTIONS.map((direction) => {
-    const relatedLinks = (direction.related || [])
+    const entryWorks = (direction.entryPublicationIds || [])
+      .map(findPublication)
+      .filter(Boolean)
+      .map((pub) => renderEntryPointWork(pub, direction.entryLabel || "Entry point"))
+      .join("");
+
+    const entryLayer = entryWorks
+      ? `<div class="entry-point-list" aria-label="Entry-point works">${entryWorks}</div>`
+      : `<p class="entry-point-note">${escapeHTML(direction.entryNote || "")}</p>`;
+
+    const relatedLinks = (direction.relatedPublicationIds || [])
       .map(findPublication)
       .filter(Boolean)
       .map((pub) => `<a href="#selected-works" data-publication-id-link="${escapeHTML(pub.id)}">${escapeHTML(pub.title)}</a>`)
       .join("");
 
-    const related = relatedLinks
+    const relatedWorks = relatedLinks
       ? `<div class="direction-related"><span>Related works</span>${relatedLinks}</div>`
-      : `<div class="direction-related"><span>Related thread</span><p>${escapeHTML(direction.relatedText || "")}</p></div>`;
+      : "";
+
+    const relatedThread = direction.relatedText
+      ? `<div class="direction-related"><span>Related thread</span><p>${escapeHTML(direction.relatedText)}</p></div>`
+      : "";
+
+    const detailId = `direction-${escapeHTML(direction.id)}-detail`;
 
     return `
-      <details class="direction-card">
-        <summary>
+      <article class="research-map-card direction-card" data-direction-id="${escapeHTML(direction.id)}">
+        <div class="research-map-card-head">
           <span class="direction-label">${escapeHTML(direction.label)}</span>
           <h3>${escapeHTML(direction.title)}</h3>
           <p>${escapeHTML(direction.summary)}</p>
           <div class="tag-list">${renderTagList(direction.tags.slice(0, 3))}</div>
-        </summary>
-        <div class="direction-expanded">
-          <p>${escapeHTML(direction.detail)}</p>
-          ${related}
         </div>
-      </details>
+        ${entryLayer}
+        <button type="button" class="direction-toggle" aria-expanded="false" aria-controls="${detailId}">
+          Open context
+        </button>
+        <div class="direction-detail" id="${detailId}" hidden>
+          <p>${escapeHTML(direction.detail)}</p>
+          ${relatedWorks}
+          ${relatedThread}
+        </div>
+      </article>
     `;
   }).join("");
+
+  container.querySelectorAll(".direction-toggle").forEach((button) => {
+    button.addEventListener("click", () => {
+      const detail = document.getElementById(button.getAttribute("aria-controls"));
+      if (!detail) return;
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+      button.setAttribute("aria-expanded", String(!isOpen));
+      button.textContent = isOpen ? "Open context" : "Close context";
+      detail.hidden = isOpen;
+    });
+  });
 }
 
 function renderResearchTrajectory() {
@@ -736,7 +1015,6 @@ function wirePublicationControls() {
   renderResearchDirections();
   renderResearchTrajectory();
   renderPublicationFilters();
-  renderFeaturedWorks();
   renderPublications();
 
   document.querySelectorAll("[data-publication-filter]").forEach((button) => {
@@ -843,6 +1121,83 @@ function renderTalksAndVisits() {
   }
 }
 
+function renderEpigraphLines(lines) {
+  return lines.map(escapeHTML).join("<br />");
+}
+
+function initPersonalEpigraph() {
+  const root = document.querySelector("#personal-epigraph");
+  if (!root || !PERSONAL_EPIGRAPHS.length) return;
+
+  const original = root.querySelector("#epigraph-original");
+  const translation = root.querySelector("#epigraph-translation");
+  const source = root.querySelector("#epigraph-source");
+  const transliteration = root.querySelector("#epigraph-transliteration");
+  const transliterationWrap = root.querySelector("#epigraph-transliteration-wrap");
+  const nextButton = root.querySelector("#epigraph-next");
+  const status = root.querySelector("#epigraph-status");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const pool = shuffleArray(PERSONAL_EPIGRAPHS);
+  let index = 0;
+  let paused = false;
+
+  function applyEpigraph(item, manual) {
+    if (!item || !original || !translation || !source) return;
+
+    original.innerHTML = renderEpigraphLines(item.original);
+    original.setAttribute("lang", item.scriptLang);
+    translation.innerHTML = renderEpigraphLines(item.translation);
+    source.textContent = item.source;
+
+    if (transliteration && transliterationWrap && item.transliteration && item.transliteration.length) {
+      transliteration.innerHTML = renderEpigraphLines(item.transliteration);
+      transliteration.setAttribute("lang", item.romanLang);
+      transliterationWrap.hidden = false;
+    } else if (transliterationWrap) {
+      transliterationWrap.hidden = true;
+    }
+
+    if (manual && status) {
+      status.textContent = `Epigraph changed: ${item.source}`;
+    }
+  }
+
+  function renderEpigraph(item, manual, immediate) {
+    if (prefersReducedMotion || immediate) {
+      applyEpigraph(item, manual);
+      return;
+    }
+
+    root.classList.add("epigraph-is-fading");
+    window.setTimeout(() => {
+      applyEpigraph(item, manual);
+      root.classList.remove("epigraph-is-fading");
+    }, 350);
+  }
+
+  function nextEpigraph(manual) {
+    index = (index + 1) % pool.length;
+    renderEpigraph(pool[index], manual, false);
+  }
+
+  renderEpigraph(pool[index], false, true);
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => nextEpigraph(true));
+  }
+
+  root.addEventListener("mouseenter", () => { paused = true; });
+  root.addEventListener("mouseleave", () => { paused = false; });
+  root.addEventListener("focusin", () => { paused = true; });
+  root.addEventListener("focusout", () => { paused = false; });
+
+  if (!prefersReducedMotion && pool.length > 1) {
+    window.setInterval(() => {
+      if (!paused) nextEpigraph(false);
+    }, 150000);
+  }
+}
+
 /* ============================================================
    TypeWriter
    ============================================================ */
@@ -941,6 +1296,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   wirePublicationControls();
   renderTalksAndVisits();
+  initPersonalEpigraph();
 
   if (typeof gsap === "undefined") return;
 
