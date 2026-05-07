@@ -705,6 +705,10 @@ const RESEARCH_DIRECTIONS = [
     title: "Exact fields and geometric transport",
     label: "Exact field theory",
     summary: "Exact Yang–Mills and Maxwell sectors generated from symmetry, conformal structure, and homogeneous-space reductions.",
+    figure: {
+      src: "./media/MinkFoliations.png",
+      alt: "Conformal foliation diagram used in exact Yang-Mills constructions",
+    },
     detailSections: [
       {
         label: "Studies",
@@ -741,6 +745,10 @@ const RESEARCH_DIRECTIONS = [
     title: "Quantum geometry and emergent spacetime",
     label: "Quantum spacetime",
     summary: "Quantum-Riemannian black-hole geometry and matrix-model emergent gravity as computable tests of nonclassical spacetime.",
+    figure: {
+      src: "./media/WorkPic3.png",
+      alt: "Spherical geometric diagram representing quantum-geometric flow",
+    },
     detailSections: [
       {
         label: "Studies",
@@ -774,6 +782,10 @@ const RESEARCH_DIRECTIONS = [
     title: "Algebraic particle geometry",
     label: "Particle geometry",
     summary: "Finite spectral triples and Clifford/division-algebraic structures as constrained settings for particle-sector geometry.",
+    figure: {
+      src: "./media/HiggsMechanics.png",
+      alt: "Geometric potential visual used as a particle-sector motif",
+    },
     detailSections: [
       {
         label: "Studies",
@@ -807,6 +819,10 @@ const RESEARCH_DIRECTIONS = [
     title: "Spectral and information geometry",
     label: "Information geometry",
     summary: "Metric and operational geometry of quantum states, from spectral distance to distinguishability and channel diagnostics.",
+    figure: {
+      src: "./media/quantumSpace.jpg",
+      alt: "Fuzzy sphere visualisation with spectral-distance geodesics",
+    },
     detailSections: [
       {
         label: "Studies",
@@ -919,13 +935,11 @@ function renderPublicationRow(pub) {
       <div class="publication-row-main">
         <div class="publication-row-heading">
           <h3>${escapeHTML(pub.title)}</h3>
+          <div class="link-row publication-row-links">${renderPublicationLinks(pub.links)}</div>
           <span>${escapeHTML(pub.status)}</span>
         </div>
         <p class="publication-authors">${escapeHTML(pub.authors)}</p>
         <p class="publication-venue">${escapeHTML(pub.venue)}</p>
-        <div class="publication-row-footer">
-          <div class="link-row">${renderPublicationLinks(pub.links)}</div>
-        </div>
       </div>
     </article>
   `;
@@ -981,12 +995,16 @@ function renderDirectionPanel(direction) {
   const relatedThread = direction.relatedText
     ? `<div class="direction-related"><span>Related thread</span><p>${escapeHTML(direction.relatedText)}</p></div>`
     : "";
+  const figure = direction.figure
+    ? `<figure class="direction-panel-figure"><img src="${escapeHTML(direction.figure.src)}" alt="${escapeHTML(direction.figure.alt)}" /></figure>`
+    : "";
 
   return `
     <button type="button" class="research-map-panel-close" aria-label="Close research map">×</button>
     <p class="panel-kicker">${escapeHTML(direction.label)}</p>
     <h3>${escapeHTML(direction.title)}</h3>
     <p class="panel-summary">${escapeHTML(direction.summary)}</p>
+    ${figure}
     <div class="direction-map-blocks">${renderDirectionMapSections(direction)}</div>
     <div class="direction-related entry-point-context"><span>Entry points</span>${entryLayer}</div>
     ${relatedWorks}
@@ -1137,7 +1155,7 @@ function renderResearchTrajectory() {
   const container = document.querySelector("#trajectory-list");
   if (!container) return;
 
-  container.innerHTML = RESEARCH_TRAJECTORY.map((item) => `
+  container.innerHTML = RESEARCH_TRAJECTORY.slice().reverse().map((item) => `
     <article class="trajectory-item">
       <span>${escapeHTML(item.date)}</span>
       <h3>${escapeHTML(item.place)}</h3>
@@ -1195,14 +1213,15 @@ function renderEventLinks(links) {
 }
 
 function renderTalkItem(talk) {
+  const links = renderEventLinks(talk.links);
   return `
     <article class="talk-item">
       <div class="talk-date">${escapeHTML(talk.date)}</div>
+      ${links ? `<div class="link-row talk-links">${links}</div>` : ""}
       <div>
         <h3>${escapeHTML(talk.title)}</h3>
         <p>${escapeHTML(talk.venue)} · ${escapeHTML(talk.location)}</p>
         <p class="talk-kind">${escapeHTML(talk.type)}</p>
-        <div class="link-row">${renderEventLinks(talk.links)}</div>
       </div>
     </article>
   `;
