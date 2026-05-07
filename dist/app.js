@@ -900,10 +900,6 @@ function linkButton(label, href) {
   return `<a class="link-btn" href="${escapeHTML(href)}"${target}>${escapeHTML(label)}</a>`;
 }
 
-function renderTagList(tags) {
-  return tags.map((tag) => `<span>${escapeHTML(tag)}</span>`).join("");
-}
-
 function renderPublicationLinks(links) {
   const linkOrder = [
     ["doi", "DOI"],
@@ -929,7 +925,6 @@ function renderPublicationRow(pub) {
         <p class="publication-venue">${escapeHTML(pub.venue)}</p>
         <div class="publication-row-footer">
           <div class="link-row">${renderPublicationLinks(pub.links)}</div>
-          <div class="tag-list">${renderTagList(pub.tags.slice(0, 2))}</div>
         </div>
       </div>
     </article>
@@ -959,6 +954,44 @@ function renderDirectionMapSections(direction) {
       <p>${escapeHTML(section.text)}</p>
     </section>
   `).join("");
+}
+
+function renderDirectionPanel(direction) {
+  const entryWorks = (direction.entryPublicationIds || [])
+    .map(findPublication)
+    .filter(Boolean)
+    .map((pub) => renderEntryPointWork(pub, direction.entryLabel || "Entry point"))
+    .join("");
+
+  const entryLayer = entryWorks
+    ? `<div class="entry-point-list" aria-label="Entry-point works">${entryWorks}</div>`
+    : `<p class="entry-point-note">${escapeHTML(direction.entryNote || "")}</p>`;
+
+  const relatedLinks = (direction.relatedPublicationIds || [])
+    .filter((id) => (direction.entryPublicationIds || []).indexOf(id) === -1)
+    .map(findPublication)
+    .filter(Boolean)
+    .map((pub) => `<a href="#selected-works" data-publication-id-link="${escapeHTML(pub.id)}">${escapeHTML(pub.title)}</a>`)
+    .join("");
+
+  const relatedWorks = relatedLinks
+    ? `<div class="direction-related"><span>Related works</span>${relatedLinks}</div>`
+    : "";
+
+  const relatedThread = direction.relatedText
+    ? `<div class="direction-related"><span>Related thread</span><p>${escapeHTML(direction.relatedText)}</p></div>`
+    : "";
+
+  return `
+    <button type="button" class="research-map-panel-close" aria-label="Close research map">×</button>
+    <p class="panel-kicker">${escapeHTML(direction.label)}</p>
+    <h3>${escapeHTML(direction.title)}</h3>
+    <p class="panel-summary">${escapeHTML(direction.summary)}</p>
+    <div class="direction-map-blocks">${renderDirectionMapSections(direction)}</div>
+    <div class="direction-related entry-point-context"><span>Entry points</span>${entryLayer}</div>
+    ${relatedWorks}
+    ${relatedThread}
+  `;
 }
 
 function renderPublicationFilters() {
@@ -1012,68 +1045,90 @@ function clearPublicationControls() {
   renderPublications();
 }
 
+function highlightPublicationById(id) {
+  clearPublicationControls();
+  window.setTimeout(() => {
+    const card = Array.from(document.querySelectorAll("[data-publication-id]"))
+      .find((item) => item.getAttribute("data-publication-id") === id);
+    if (card) {
+      card.scrollIntoView({ behavior: "smooth", block: "center" });
+      card.classList.add("publication-highlight");
+      window.setTimeout(() => card.classList.remove("publication-highlight"), 1400);
+    }
+  }, 0);
+}
+
+function wirePublicationIdLinks(root = document) {
+  root.querySelectorAll("[data-publication-id-link]").forEach((link) => {
+    if (link.dataset.publicationLinkWired === "true") return;
+    link.dataset.publicationLinkWired = "true";
+    link.addEventListener("click", () => {
+      highlightPublicationById(link.getAttribute("data-publication-id-link"));
+    });
+  });
+}
+
 function renderResearchDirections() {
   const container = document.querySelector("#research-directions-grid");
   if (!container) return;
+  const panel = document.querySelector("#research-map-panel");
+  const defaultPanel = panel ? panel.innerHTML : "";
 
   container.innerHTML = RESEARCH_DIRECTIONS.map((direction) => {
-    const entryIds = direction.entryPublicationIds || [];
-    const entryWorks = (direction.entryPublicationIds || [])
-      .map(findPublication)
-      .filter(Boolean)
-      .map((pub) => renderEntryPointWork(pub, direction.entryLabel || "Entry point"))
-      .join("");
-
-    const entryLayer = entryWorks
-      ? `<div class="entry-point-list" aria-label="Entry-point works">${entryWorks}</div>`
-      : `<p class="entry-point-note">${escapeHTML(direction.entryNote || "")}</p>`;
-
-    const relatedLinks = (direction.relatedPublicationIds || [])
-      .filter((id) => entryIds.indexOf(id) === -1)
-      .map(findPublication)
-      .filter(Boolean)
-      .map((pub) => `<a href="#selected-works" data-publication-id-link="${escapeHTML(pub.id)}">${escapeHTML(pub.title)}</a>`)
-      .join("");
-
-    const relatedWorks = relatedLinks
-      ? `<div class="direction-related"><span>Related works</span>${relatedLinks}</div>`
-      : "";
-
-    const relatedThread = direction.relatedText
-      ? `<div class="direction-related"><span>Related thread</span><p>${escapeHTML(direction.relatedText)}</p></div>`
-      : "";
-
-    const detailId = `direction-${escapeHTML(direction.id)}-detail`;
-
     return `
       <article class="research-map-card direction-card" data-direction-id="${escapeHTML(direction.id)}">
         <div class="research-map-card-head">
-          <span class="direction-label">${escapeHTML(direction.label)}</span>
           <h3>${escapeHTML(direction.title)}</h3>
           <p>${escapeHTML(direction.summary)}</p>
-          <div class="tag-list">${renderTagList(direction.tags.slice(0, 3))}</div>
         </div>
-        <button type="button" class="direction-toggle" aria-expanded="false" aria-controls="${detailId}">
-          Open methods + entry points
+        <button type="button" class="direction-toggle" aria-expanded="false" data-direction-toggle="${escapeHTML(direction.id)}">
+          Open map
         </button>
-        <div class="direction-detail" id="${detailId}" hidden>
-          <div class="direction-map-blocks">${renderDirectionMapSections(direction)}</div>
-          <div class="direction-related entry-point-context"><span>Entry points</span>${entryLayer}</div>
-          ${relatedWorks}
-          ${relatedThread}
-        </div>
       </article>
     `;
   }).join("");
 
   container.querySelectorAll(".direction-toggle").forEach((button) => {
     button.addEventListener("click", () => {
-      const detail = document.getElementById(button.getAttribute("aria-controls"));
-      if (!detail) return;
+      if (!panel) return;
+      const directionId = button.getAttribute("data-direction-toggle");
+      const direction = RESEARCH_DIRECTIONS.find((item) => item.id === directionId);
       const isOpen = button.getAttribute("aria-expanded") === "true";
-      button.setAttribute("aria-expanded", String(!isOpen));
-      button.textContent = isOpen ? "Open methods + entry points" : "Close map";
-      detail.hidden = isOpen;
+
+      container.querySelectorAll(".direction-toggle").forEach((item) => {
+        item.setAttribute("aria-expanded", "false");
+        item.textContent = "Open map";
+      });
+      container.querySelectorAll(".research-map-card").forEach((card) => card.classList.remove("is-active"));
+
+      if (isOpen || !direction) {
+        panel.classList.remove("has-selection");
+        panel.innerHTML = defaultPanel;
+        return;
+      }
+
+      button.setAttribute("aria-expanded", "true");
+      button.textContent = "Map open";
+      button.closest(".research-map-card")?.classList.add("is-active");
+      panel.innerHTML = renderDirectionPanel(direction);
+      panel.classList.add("has-selection");
+      wirePublicationIdLinks(panel);
+
+      const closeButton = panel.querySelector(".research-map-panel-close");
+      if (closeButton) {
+        closeButton.addEventListener("click", () => {
+          button.setAttribute("aria-expanded", "false");
+          button.textContent = "Open map";
+          button.closest(".research-map-card")?.classList.remove("is-active");
+          panel.classList.remove("has-selection");
+          panel.innerHTML = defaultPanel;
+          button.focus();
+        });
+      }
+
+      if (window.matchMedia("(max-width: 980px)").matches) {
+        panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }
     });
   });
 }
@@ -1129,21 +1184,7 @@ function wirePublicationControls() {
     });
   });
 
-  document.querySelectorAll("[data-publication-id-link]").forEach((link) => {
-    link.addEventListener("click", () => {
-      clearPublicationControls();
-      window.setTimeout(() => {
-        const id = link.getAttribute("data-publication-id-link");
-        const card = Array.from(document.querySelectorAll("[data-publication-id]"))
-          .find((item) => item.getAttribute("data-publication-id") === id);
-        if (card) {
-          card.scrollIntoView({ behavior: "smooth", block: "center" });
-          card.classList.add("publication-highlight");
-          window.setTimeout(() => card.classList.remove("publication-highlight"), 1400);
-        }
-      }, 0);
-    });
-  });
+  wirePublicationIdLinks();
 }
 
 function renderEventLinks(links) {
@@ -1161,7 +1202,6 @@ function renderTalkItem(talk) {
         <h3>${escapeHTML(talk.title)}</h3>
         <p>${escapeHTML(talk.venue)} · ${escapeHTML(talk.location)}</p>
         <p class="talk-kind">${escapeHTML(talk.type)}</p>
-        <div class="tag-list">${renderTagList(talk.tags)}</div>
         <div class="link-row">${renderEventLinks(talk.links)}</div>
       </div>
     </article>

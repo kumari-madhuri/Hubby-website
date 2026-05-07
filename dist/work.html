@@ -113,7 +113,17 @@
             <div class="underline"></div>
             <p>Compact summaries first; open a direction for methods, entry papers, and current directions.</p>
           </div>
-          <div class="research-map-grid directions-grid" id="research-directions-grid"></div>
+          <div class="research-map-layout">
+            <div class="research-map-grid directions-grid" id="research-directions-grid"></div>
+            <aside class="research-map-panel" id="research-map-panel" aria-live="polite">
+              <p class="panel-kicker">Select a direction</p>
+              <h3>Open a research map</h3>
+              <p>
+                Choose one compact card to see methods, outputs, entry papers,
+                and current programme context without expanding the whole grid.
+              </p>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -137,7 +147,7 @@
               <input
                 id="publication-search"
                 type="search"
-                placeholder="Search by title, author, tag, or year"
+                placeholder="Search by title, author, topic, or year"
                 autocomplete="off"
               />
               <button type="button" class="publication-clear" id="clear-publication-filters">Clear filters</button>
@@ -152,13 +162,13 @@
       <section class="talks-visits-section curated-talks-section" id="talks-visits" aria-labelledby="talks-title">
         <div class="section-center">
           <div class="section-title compact-title">
-            <p class="section-eyebrow">Talks</p>
-            <h2 id="talks-title">Research talks, conferences, and schools</h2>
+            <p class="section-eyebrow">Academic activity</p>
+            <h2 id="talks-title">Talks, conferences, and schools</h2>
             <div class="underline"></div>
           </div>
           <div class="records-grid records-generated">
             <article class="record-panel selected-talk-panel">
-              <h3>Research talks</h3>
+              <h3>Selected talks</h3>
               <div class="talk-list" id="selected-talks" aria-live="polite"></div>
               <details class="earlier-talks">
                 <summary>Earlier and local seminars</summary>
@@ -195,15 +205,9 @@
     <footer class="site-footer">
       <div class="section-center site-footer-inner">
         <p>
-          <strong>Dr. Kaushlendra Kumar</strong> &middot; DFG Walter-Benjamin
-          Research Fellow, Queen Mary University of London
+          <strong>Dr. Kaushlendra Kumar</strong> &middot; Queen Mary University of London
+          &middot; Last updated: 7 May 2026
         </p>
-        <nav aria-label="Footer links">
-          <a href="mailto:kaushlendra.kumar@qmul.ac.uk">Email</a>
-          <a href="work.html">Research</a>
-          <a href="./media/CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
-        </nav>
-        <p class="footer-updated">Last updated: 7 May 2026</p>
       </div>
     </footer>
 
