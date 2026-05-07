@@ -809,7 +809,7 @@ section       { padding: 4rem 0; overflow: hidden; }
 }
 .current-focus-section {
   background: #fff;
-  padding: 4rem 0;
+  padding: 3.25rem 0;
 }
 .collaboration-card span,
 .pub-year {
@@ -842,7 +842,7 @@ section       { padding: 4rem 0; overflow: hidden; }
 }
 .selected-works-section {
   background: #fff;
-  padding: 4rem 0;
+  padding: 3.25rem 0;
 }
 .publication-controls {
   display: flex;
@@ -909,18 +909,19 @@ section       { padding: 4rem 0; overflow: hidden; }
 }
 .talks-visits-section {
   background: #f3f5f2;
-  padding: 4rem 0;
+  padding: 3.25rem 0;
 }
 .records-grid {
   display: grid;
   gap: 1rem;
 }
 .record-panel {
-  padding: 1.25rem;
+  padding: 1rem;
 }
 .record-panel h3 {
   border-bottom: 1px solid rgba(206, 133, 0, 0.28);
   color: var(--gold-dark);
+  font-size: 0.92rem;
   letter-spacing: 0.07rem;
   margin-bottom: 0.75rem;
   padding-bottom: 0.35rem;
@@ -1458,38 +1459,42 @@ summary:focus-visible {
 }
 .talk-list {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.45rem;
 }
 .talk-item {
   border-bottom: 1px solid rgba(26, 26, 26, 0.08);
   display: grid;
-  gap: 0.45rem;
-  padding: 0.9rem 0;
+  gap: 0.35rem;
+  padding: 0.55rem 0;
 }
 .talk-item:last-child {
   border-bottom: none;
 }
 .talk-date {
   color: var(--gold-dark);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08rem;
   text-transform: uppercase;
 }
 .talk-item h3 {
-  font-size: 0.98rem;
-  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.18rem;
+}
+.talk-item p {
+  font-size: 0.84rem;
+  line-height: 1.45;
 }
 .talk-kind {
   color: var(--text-muted);
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
 }
 .earlier-talks {
   border-top: 1px solid rgba(206, 133, 0, 0.24);
-  margin-top: 1.1rem;
-  padding-top: 1rem;
+  margin-top: 0.8rem;
+  padding-top: 0.75rem;
 }
 .earlier-talks summary {
   color: var(--gold-dark);
@@ -1498,27 +1503,29 @@ summary:focus-visible {
 }
 .mini-event-list {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.45rem;
 }
 .mini-event {
   border-bottom: 1px solid rgba(26, 26, 26, 0.08);
   display: grid;
   gap: 0.2rem;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.55rem;
 }
 .mini-event:last-child {
   border-bottom: none;
 }
 .mini-event span {
   color: var(--gold-dark);
-  font-size: 0.75rem;
+  font-size: 0.68rem;
   font-weight: 700;
 }
 .mini-event strong {
   color: var(--text-dark);
+  font-size: 0.88rem;
 }
 .mini-event em {
   color: var(--text-muted);
+  font-size: 0.82rem;
   font-style: normal;
 }
 
@@ -1562,26 +1569,6 @@ summary:focus-visible {
   gap: 0.55rem;
   padding: 0.65rem 0.9rem;
 }
-.profile-link-grid {
-  display: grid;
-  gap: 0.65rem;
-}
-.profile-link-grid a {
-  background: var(--bg-off);
-  border: 1px solid rgba(26, 26, 26, 0.08);
-  border-radius: var(--radius);
-  color: var(--text-dark);
-  display: grid;
-  gap: 0.15rem;
-  padding: 0.75rem 0.9rem;
-}
-.profile-link-grid span {
-  color: var(--gold-dark);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.08rem;
-  text-transform: uppercase;
-}
 .contact-haiku {
   border-left: 4px solid rgba(16, 118, 110, 0.28);
   color: var(--text-muted);
@@ -1592,8 +1579,7 @@ summary:focus-visible {
 
 @media (min-width: 720px) {
   .snapshot-grid,
-  .broad-audience-body,
-  .profile-link-grid {
+  .broad-audience-body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .broad-audience-body {
@@ -1601,6 +1587,10 @@ summary:focus-visible {
   }
   .publication-search-row {
     grid-template-columns: 1fr 2fr auto auto;
+  }
+  .home-contact-card {
+    grid-template-columns: 9rem 1fr;
+    padding: 1.7rem;
   }
   .contact-card {
     grid-template-columns: 17rem 1fr;
@@ -1681,13 +1671,59 @@ summary:focus-visible {
   font-size: 1rem;
   line-height: 1.85;
 }
+.home-contact-section {
+  background: #f7f4ef;
+  padding: 4rem 0;
+}
+.home-contact-card {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(26, 26, 26, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+.home-contact-portrait {
+  height: 9rem;
+  margin: 0;
+  width: 9rem;
+}
+.home-contact-copy h2 {
+  color: var(--text-dark);
+  font-size: 1.45rem;
+  margin-bottom: 0.65rem;
+}
+.home-contact-copy p {
+  line-height: 1.7;
+}
+.home-contact-actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin: 1rem 0;
+}
+.compact-profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.85rem;
+  margin-top: 0.6rem;
+}
+.compact-profile-links a {
+  border-bottom: 1px solid rgba(206, 133, 0, 0.45);
+  color: var(--gold-dark);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
 
 .research-program-hero-compact {
   padding: 4.5rem 0 4.25rem;
 }
 .research-program-hero-compact .research-hero-copy h1 {
-  font-size: 2.25rem;
-  max-width: 760px;
+  font-size: 2rem;
+  max-width: 900px;
 }
 .research-program-hero-compact .research-lead {
   max-width: 70ch;
@@ -1769,54 +1805,67 @@ summary:focus-visible {
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
-  padding: 1.15rem;
+  padding: 0.95rem;
 }
 .research-map-card {
   display: grid;
-  gap: 0.9rem;
+  gap: 0.7rem;
 }
 .research-map-card-head {
   display: grid;
   gap: 0.65rem;
 }
 .direction-card h3 {
-  font-size: 1.08rem;
+  font-size: 1rem;
   margin-bottom: 0;
 }
 .direction-card p {
-  line-height: 1.72;
+  font-size: 0.94rem;
+  line-height: 1.62;
 }
 .entry-point-list {
-  display: grid;
-  gap: 0.65rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
 }
-.entry-point-work {
+.entry-chip {
+  align-items: center;
   background: var(--bg-off);
   border: 1px solid rgba(26, 26, 26, 0.08);
   border-radius: var(--radius);
-  display: grid;
-  gap: 0.4rem;
-  padding: 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.65rem;
+  padding: 0.45rem 0.6rem;
 }
-.entry-point-work span {
+.entry-chip > a {
+  color: var(--text-dark);
+  display: grid;
+  gap: 0.1rem;
+}
+.entry-chip > a > span {
   color: var(--text-muted);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08rem;
   text-transform: uppercase;
 }
-.entry-point-work h4 {
-  color: var(--text-dark);
+.entry-chip strong {
   font-family: "Roboto Slab", serif;
-  font-size: 0.95rem;
-  margin: 0;
+  font-size: 0.86rem;
 }
-.entry-point-work p,
+.entry-chip-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.entry-chip-links .link-btn {
+  font-size: 0.78rem;
+}
 .entry-point-note {
   color: var(--text-muted);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   line-height: 1.55;
-  margin: 0;
 }
 .direction-toggle {
   align-self: start;
@@ -1825,8 +1874,9 @@ summary:focus-visible {
   border-radius: 999px;
   color: var(--gold-dark);
   cursor: pointer;
+  font-size: 0.78rem;
   font-weight: 700;
-  padding: 0.5rem 0.85rem;
+  padding: 0.42rem 0.75rem;
 }
 .direction-toggle:hover,
 .direction-toggle:focus-visible,
@@ -1837,18 +1887,37 @@ summary:focus-visible {
 .direction-detail {
   border-top: 1px solid rgba(26, 26, 26, 0.08);
   display: grid;
-  gap: 0.85rem;
-  padding-top: 0.95rem;
+  gap: 0.7rem;
+  padding-top: 0.8rem;
 }
 .direction-detail[hidden] {
   display: none;
+}
+.direction-map-blocks {
+  display: grid;
+  gap: 0.65rem;
+}
+.direction-map-block {
+  display: grid;
+  gap: 0.2rem;
+}
+.direction-map-block h4 {
+  color: var(--gold-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+.direction-map-block p {
+  margin: 0;
 }
 .direction-related {
   border-top: 1px solid rgba(26, 26, 26, 0.08);
   display: grid;
   gap: 0.35rem;
-  margin-top: 0.95rem;
-  padding-top: 0.8rem;
+  margin-top: 0.55rem;
+  padding-top: 0.65rem;
 }
 .direction-related span {
   color: var(--text-muted);
@@ -1864,22 +1933,11 @@ summary:focus-visible {
   font-weight: 700;
   line-height: 1.45;
 }
-.emerging-direction {
-  background: rgba(229, 148, 0, 0.08);
-  border-left: 4px solid var(--gold);
-  border-radius: var(--radius);
-  margin: 1.25rem auto 0;
-  max-width: 860px;
-  padding: 0.9rem 1rem;
+.direction-related .entry-chip > a {
+  color: var(--text-dark);
 }
-.emerging-direction summary {
+.direction-related .entry-chip .entry-chip-links a {
   color: var(--gold-dark);
-  cursor: pointer;
-  font-weight: 700;
-}
-.emerging-direction p {
-  line-height: 1.7;
-  margin: 0.75rem 0 0;
 }
 .compact-publications-section {
   background: #fff;
@@ -1892,25 +1950,17 @@ summary:focus-visible {
   max-width: 920px;
   padding: 0.85rem 1rem;
 }
-.publication-tools summary {
-  color: var(--gold-dark);
-  cursor: pointer;
-  font-weight: 700;
-}
-.publication-tools[open] summary {
-  margin-bottom: 0.9rem;
-}
 .publication-list {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 .publication-row {
   background: #fff;
   border: 1px solid rgba(26, 26, 26, 0.08);
   border-radius: var(--radius);
   display: grid;
-  gap: 0.75rem;
-  padding: 1rem;
+  gap: 0.55rem;
+  padding: 0.72rem 0.85rem;
   transition: var(--transition);
 }
 .publication-row:hover,
@@ -1921,15 +1971,15 @@ summary:focus-visible {
 .publication-row-year {
   color: var(--gold-dark);
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 700;
 }
 .publication-row-heading {
   display: grid;
-  gap: 0.35rem;
+  gap: 0.25rem;
 }
 .publication-row-heading h3 {
-  font-size: 1rem;
+  font-size: 0.94rem;
   margin-bottom: 0;
 }
 .publication-row-heading span {
@@ -1937,18 +1987,21 @@ summary:focus-visible {
   border: 1px solid rgba(206, 133, 0, 0.24);
   border-radius: 999px;
   color: var(--gold-dark);
-  font-size: 0.7rem;
+  font-size: 0.66rem;
   font-weight: 700;
   justify-self: start;
   padding: 0.18rem 0.55rem;
   text-transform: uppercase;
 }
 .publication-venue {
-  font-size: 0.9rem;
+  font-size: 0.84rem;
+}
+.publication-row .publication-authors {
+  font-size: 0.86rem;
 }
 .publication-row-footer {
   display: grid;
-  gap: 0.45rem;
+  gap: 0.25rem;
 }
 .records-generated {
   grid-template-columns: 1fr;
@@ -1956,38 +2009,30 @@ summary:focus-visible {
 .selected-talk-panel {
   min-width: 0;
 }
-.schools-details summary,
-.conference-details summary,
-.trajectory-details summary {
-  border-bottom: 1px solid rgba(206, 133, 0, 0.28);
-  color: var(--gold-dark);
-  cursor: pointer;
-  font-family: var(--font-heading);
-  font-size: 1.02rem;
-  font-weight: 700;
-  letter-spacing: 0.07rem;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.35rem;
-  text-transform: uppercase;
-}
-.schools-details[open] summary,
-.conference-details[open] summary,
-.trajectory-details[open] summary {
-  margin-bottom: 1rem;
-}
 .research-trajectory-section {
   background: #f7f4ef;
-  padding: 4rem 0;
+  padding: 3.25rem 0;
 }
 .trajectory-list {
   display: grid;
-  gap: 0.75rem;
+  gap: 1.2rem;
 }
 .trajectory-item {
   background: #fff;
   border: 1px solid rgba(26, 26, 26, 0.08);
   border-radius: var(--radius);
-  padding: 1rem;
+  padding: 0.85rem;
+  position: relative;
+}
+.trajectory-flow .trajectory-item:not(:last-child)::after {
+  color: var(--gold-dark);
+  content: "↓";
+  font-size: 1rem;
+  font-weight: 700;
+  left: 50%;
+  position: absolute;
+  top: calc(100% + 0.12rem);
+  transform: translateX(-50%);
 }
 .trajectory-item span {
   color: var(--gold-dark);
@@ -2020,7 +2065,7 @@ summary:focus-visible {
     grid-template-columns: 1fr auto;
   }
   .trajectory-list {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2029,7 +2074,7 @@ summary:focus-visible {
     grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
   }
   .research-program-hero-compact .research-hero-copy h1 {
-    font-size: 3rem;
+    font-size: 2.45rem;
   }
   .mechanism-strip {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2042,5 +2087,14 @@ summary:focus-visible {
   }
   .records-generated {
     grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.75fr) minmax(220px, 0.55fr);
+  }
+  .trajectory-list {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .trajectory-flow .trajectory-item:not(:last-child)::after {
+    content: "→";
+    left: calc(100% + 0.24rem);
+    top: 50%;
+    transform: translateY(-50%);
   }
 }

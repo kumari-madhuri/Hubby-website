@@ -703,9 +703,26 @@ const RESEARCH_DIRECTIONS = [
   {
     id: "exact-fields",
     title: "Exact fields and geometric transport",
-    label: "Published work",
-    summary: "Exact Yang–Mills and Maxwell sectors generated from symmetry, conformal structure, and homogeneous-space reductions. The emphasis is on fields one can compute with: charges, trajectories, defects, and transport.",
-    detail: "This direction grew from de Sitter and Minkowski Yang–Mills constructions and rational electromagnetic knots. The common method is to use a rigid spacetime or symmetry input, reduce the field equations to tractable geometric data, and extract observables such as conserved charges, particle trajectories, or transport channels.",
+    label: "Exact field theory",
+    summary: "Exact Yang–Mills and Maxwell sectors generated from symmetry, conformal structure, and homogeneous-space reductions.",
+    detailSections: [
+      {
+        label: "Studies",
+        text: "Closed-form non-Abelian and Abelian field configurations where symmetry and spacetime geometry make the field equations explicitly tractable.",
+      },
+      {
+        label: "Tools",
+        text: "Homogeneous spaces, equivariant reductions, de Sitter and anti-de Sitter embeddings, conformal compactifications, rational Maxwell bases, and knotted field geometry.",
+      },
+      {
+        label: "Outputs",
+        text: "Exact fields, conserved conformal charges, probe trajectories, defect sources, pulse and transport structures, and gauge-theoretic cosmological sectors.",
+      },
+      {
+        label: "Current frontier",
+        text: "A continuing programme of exact gauge-field transport: using rigid geometry to produce computable field sectors rather than perturbative ansätze alone.",
+      },
+    ],
     tags: ["Yang–Mills", "Exact Fields", "Electromagnetic Knots"],
     entryPublicationIds: [
       "adS-exact-gauge-fields",
@@ -722,9 +739,26 @@ const RESEARCH_DIRECTIONS = [
   {
     id: "quantum-geometry",
     title: "Quantum geometry and emergent spacetime",
-    label: "Public preprint + published work",
-    summary: "Quantum-Riemannian black-hole geometry and matrix-model emergent gravity, with geodesic flows and effective gravitational equations as computable test cases.",
-    detail: "This direction connects noncommutative and quantum geometry to gravitational dynamics. Current work with Shahn Majid develops geodesic-flow ideas on black-hole backgrounds, while work with Harold Steinacker studies how one-loop IKKT matrix-model dynamics modifies gravitational field equations.",
+    label: "Quantum spacetime",
+    summary: "Quantum-Riemannian black-hole geometry and matrix-model emergent gravity as computable tests of nonclassical spacetime.",
+    detailSections: [
+      {
+        label: "Studies",
+        text: "Two connected routes to nonclassical spacetime: quantum-Riemannian black-hole geometry and emergent gravity from matrix models.",
+      },
+      {
+        label: "Tools",
+        text: "Quantum Riemannian Geometry, geodesic-flow technology, corrected Schwarzschild backgrounds, IKKT matrix models, one-loop effective actions, and emergent gravitational equations.",
+      },
+      {
+        label: "Outputs",
+        text: "Black-hole geodesic flows, geometric phases and flow diagnostics, modified Einstein equations, and dark-matter-like geometric correction modes.",
+      },
+      {
+        label: "Current frontier",
+        text: "Current public work anchors the black-hole flow line; the broader programme asks how quantum geometry changes the transport and effective dynamics of spacetime.",
+      },
+    ],
     tags: ["Quantum Geometry", "Black Holes", "Matrix Models"],
     entryPublicationIds: [
       "black-hole-geodesic-flows",
@@ -738,9 +772,26 @@ const RESEARCH_DIRECTIONS = [
   {
     id: "algebraic-particle-geometry",
     title: "Algebraic particle geometry",
-    label: "Ongoing collaboration",
-    summary: "Finite spectral triples and Clifford/division-algebraic structures as constrained settings for particle-sector model building.",
-    detail: "This line studies how finite geometric and algebraic data — Clifford and division algebras, linked finite spaces, scalar sectors, and inner fluctuations — can organize particle-like degrees of freedom. The public presentation stays deliberately conservative: structural model building, not premature phenomenological claims.",
+    label: "Particle geometry",
+    summary: "Finite spectral triples and Clifford/division-algebraic structures as constrained settings for particle-sector geometry.",
+    detailSections: [
+      {
+        label: "Studies",
+        text: "Finite geometric models in which particle-like degrees of freedom are organized by algebraic and metric structure rather than introduced as free lists of fields.",
+      },
+      {
+        label: "Tools",
+        text: "Finite spectral triples, Clifford and octonionic structures, quaternionic finite geometry, linked finite spaces, scalar sectors, and inner fluctuations.",
+      },
+      {
+        label: "Outputs",
+        text: "Particle-sector model-building data: finite metrics, scalar/link fields, algebraic constraints on representations, and structured internal geometries.",
+      },
+      {
+        label: "Current frontier",
+        text: "Ongoing collaborative work develops this as structural particle geometry. The public framing stays conservative: finite-geometric organization, not a claimed completed phenomenological model.",
+      },
+    ],
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
     entryLabel: "Public context",
     entryPublicationIds: [
@@ -754,9 +805,26 @@ const RESEARCH_DIRECTIONS = [
   {
     id: "spectral-information-geometry",
     title: "Spectral and information geometry",
-    label: "Published work + current project",
-    summary: "Metric and operational geometry of quantum states: spectral distance, finite metric structures, Helstrom distinguishability, and calibration-sensitive information flow.",
-    detail: "This direction begins with published spectral-distance computations in noncommutative geometry and extends toward operational quantum-information questions. The public anchor is spectral distance; the information-geometric work is presented as a current extension unless and until public manuscripts are posted.",
+    label: "Information geometry",
+    summary: "Metric and operational geometry of quantum states, from spectral distance to distinguishability and channel diagnostics.",
+    detailSections: [
+      {
+        label: "Studies",
+        text: "How geometry measures distinguishability, calibration, and transport in noncommutative spaces and finite-dimensional quantum systems.",
+      },
+      {
+        label: "Tools",
+        text: "Connes spectral distance, finite metric structures, Dirac eigenspinor data, Helstrom distinguishability, matrix-anchor calibration, fuzzy-spin geometry, and anisotropic qubit channels.",
+      },
+      {
+        label: "Outputs",
+        text: "Spectral distances, finite-space metric relations, operational distinguishability measures, calibration-sensitive information geometry, and channel contractivity diagnostics.",
+      },
+      {
+        label: "Current frontier",
+        text: "The published anchor is spectral distance; current projects extend the same exact-metric instinct toward Helstrom geometry, fuzzy-spin distances, and information-flow diagnostics.",
+      },
+    ],
     tags: ["Spectral Distance", "Noncommutative Geometry", "Quantum Information"],
     entryPublicationIds: [
       "doubled-moyal-spectral-distance",
@@ -874,13 +942,23 @@ function findPublication(id) {
 
 function renderEntryPointWork(pub, label) {
   return `
-    <article class="entry-point-work">
-      <span>${escapeHTML(label || "Entry point")}</span>
-      <h4>${escapeHTML(pub.title)}</h4>
-      <p>${escapeHTML(pub.year)} · ${escapeHTML(pub.venue)}</p>
-      <div class="link-row">${renderPublicationLinks(pub.links)}</div>
-    </article>
+    <span class="entry-chip">
+      <a href="#selected-works" data-publication-id-link="${escapeHTML(pub.id)}">
+        <span>${escapeHTML(label || "Entry point")} · ${escapeHTML(pub.year)}</span>
+        <strong>${escapeHTML(pub.title)}</strong>
+      </a>
+      <span class="entry-chip-links">${renderPublicationLinks(pub.links)}</span>
+    </span>
   `;
+}
+
+function renderDirectionMapSections(direction) {
+  return (direction.detailSections || []).map((section) => `
+    <section class="direction-map-block">
+      <h4>${escapeHTML(section.label)}</h4>
+      <p>${escapeHTML(section.text)}</p>
+    </section>
+  `).join("");
 }
 
 function renderPublicationFilters() {
@@ -939,6 +1017,7 @@ function renderResearchDirections() {
   if (!container) return;
 
   container.innerHTML = RESEARCH_DIRECTIONS.map((direction) => {
+    const entryIds = direction.entryPublicationIds || [];
     const entryWorks = (direction.entryPublicationIds || [])
       .map(findPublication)
       .filter(Boolean)
@@ -950,6 +1029,7 @@ function renderResearchDirections() {
       : `<p class="entry-point-note">${escapeHTML(direction.entryNote || "")}</p>`;
 
     const relatedLinks = (direction.relatedPublicationIds || [])
+      .filter((id) => entryIds.indexOf(id) === -1)
       .map(findPublication)
       .filter(Boolean)
       .map((pub) => `<a href="#selected-works" data-publication-id-link="${escapeHTML(pub.id)}">${escapeHTML(pub.title)}</a>`)
@@ -973,12 +1053,12 @@ function renderResearchDirections() {
           <p>${escapeHTML(direction.summary)}</p>
           <div class="tag-list">${renderTagList(direction.tags.slice(0, 3))}</div>
         </div>
-        ${entryLayer}
         <button type="button" class="direction-toggle" aria-expanded="false" aria-controls="${detailId}">
-          Open context
+          Open methods + entry points
         </button>
         <div class="direction-detail" id="${detailId}" hidden>
-          <p>${escapeHTML(direction.detail)}</p>
+          <div class="direction-map-blocks">${renderDirectionMapSections(direction)}</div>
+          <div class="direction-related entry-point-context"><span>Entry points</span>${entryLayer}</div>
           ${relatedWorks}
           ${relatedThread}
         </div>
@@ -992,7 +1072,7 @@ function renderResearchDirections() {
       if (!detail) return;
       const isOpen = button.getAttribute("aria-expanded") === "true";
       button.setAttribute("aria-expanded", String(!isOpen));
-      button.textContent = isOpen ? "Open context" : "Close context";
+      button.textContent = isOpen ? "Open methods + entry points" : "Close map";
       detail.hidden = isOpen;
     });
   });
