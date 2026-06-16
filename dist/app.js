@@ -299,6 +299,7 @@ const PROFILE_LINKS = {
 const PUBLICATION_FILTERS = [
   "All",
   "Quantum Geometry",
+  "Quantum Information",
   "Yang–Mills",
   "Electromagnetic Knots",
   "Noncommutative Geometry",
@@ -308,6 +309,35 @@ const PUBLICATION_FILTERS = [
 ];
 
 const PUBLICATIONS = [
+  {
+    id: "calibrated-helstrom-bloch",
+    title: "Calibrated Helstrom geometry on the Bloch ball via Connes spectral distance",
+    year: "2026",
+    authors: "Kaushlendra Kumar",
+    venue: "arXiv:2606.13824 [quant-ph]",
+    status: "preprint",
+    tags: ["Quantum Information", "Spectral Distance", "Helstrom Geometry"],
+    featured: true,
+    shortSignificance: "Recovers qubit Helstrom trace-distance geometry from a finite scalar-qubit-scalar Connes spectral metric.",
+    links: {
+      arxiv: "https://arxiv.org/abs/2606.13824",
+    },
+  },
+  {
+    id: "geometric-ab-black-hole",
+    title: "Geometric Aharonov-Bohm phase effect around a black hole",
+    year: "2026",
+    authors: "Kaushlendra Kumar and Shahn Majid",
+    venue: "arXiv:2605.28582 [gr-qc]",
+    status: "preprint",
+    tags: ["Quantum Geometry", "Black Holes", "Geometric Phases"],
+    featured: true,
+    shortSignificance: "Upgrades black-hole density flows to amplitude flows and extracts a geometric phase effect near the horizon.",
+    links: {
+      arxiv: "https://arxiv.org/abs/2605.28582",
+      notebook: "https://notebookarchive.org/2026-05-c16632a",
+    },
+  },
   {
     id: "black-hole-geodesic-flows",
     title: "Geodesic flows on a black-hole background",
@@ -763,15 +793,15 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         label: "Methods",
-        text: "The main tools are homogeneous spaces, equivariant reductions, de Sitter and anti-de Sitter embeddings, conformal compactification, rational Maxwell bases, and the geometry of knotted field lines.",
+        text: "The main tools are homogeneous spaces, equivariant reductions, de Sitter and anti-de Sitter embeddings, conformal compactification, rational Maxwell bases, distributional source analysis, and the geometry of knotted field lines.",
       },
       {
         label: "Outputs",
-        text: "The public outputs include closed-form gauge fields, conserved conformal charges, charged-particle trajectories, defect sources, pulse and transport structures, and gauge-theoretic cosmological sectors.",
+        text: "The public outputs include closed-form gauge fields, conserved conformal charges, charged-particle trajectories, source and defect laws, pulse and transport structures, and gauge-theoretic cosmological sectors.",
       },
       {
         label: "Current frontier",
-        text: "The continuing programme is exact gauge-field transport: extending the completed de Sitter, anti-de Sitter, Minkowski, and knotted-field constructions toward pulse/transport laws, defect and source structures, and field sectors whose charges and trajectories remain calculable.",
+        text: "The continuing programme is exact gauge-field transport: extending the completed de Sitter, anti-de Sitter, Minkowski, and knotted-field constructions toward pulse/transport laws, characteristic SO(1,3) lightcone source structures, and defect sectors whose conservation laws and trajectories remain calculable.",
       },
     ],
     tags: ["Yang–Mills", "Exact Fields", "Electromagnetic Knots"],
@@ -787,7 +817,7 @@ const RESEARCH_DIRECTIONS = [
     id: "quantum-geometry",
     title: "Quantum geometry and emergent spacetime",
     label: "Quantum spacetime",
-    summary: "Quantum-Riemannian black-hole geometry and matrix-model emergent gravity as computable tests of nonclassical spacetime.",
+    summary: "Quantum-Riemannian black-hole geometry, geometric phase effects, and matrix-model emergent gravity as computable tests of nonclassical spacetime.",
     figures: [
       {
         src: "./media/qrg-direct-phase-panel.png",
@@ -808,23 +838,24 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction studies two routes to nonclassical spacetime: quantum-Riemannian black-hole geometry with Shahn Majid, and emergent gravity from the IKKT matrix model with Harold Steinacker.",
+        text: "This direction studies nonclassical spacetime through two concrete routes: quantum-Riemannian black-hole geometry and amplitude/density flows with Shahn Majid, and emergent gravity from the IKKT matrix model with Harold Steinacker.",
       },
       {
         label: "Methods",
-        text: "The toolkit includes Quantum Riemannian Geometry, corrected Schwarzschild backgrounds, geodesic-flow technology, density motion across horizons, congruence diagnostics, IKKT matrices, and one-loop effective actions.",
+        text: "The toolkit includes Quantum Riemannian Geometry, corrected Schwarzschild backgrounds, geodesic and amplitude-flow equations, Klein-Gordon semiclassics, density motion across horizons, congruence diagnostics, IKKT matrices, and one-loop effective actions.",
       },
       {
         label: "Outputs",
-        text: "The outputs are geodesic flows, horizon-crossing density evolution, geometric/Aharonov-Bohm phases, modified Einstein equations, and dark-matter-like geometric correction modes.",
+        text: "The outputs are black-hole geodesic flows, horizon-crossing density evolution, geometric/Aharonov-Bohm phases, modified Einstein equations, and dark-matter-like geometric correction modes.",
       },
       {
         label: "Current frontier",
-        text: "The frontier is an ongoing set of quantum-Riemannian spacetime diagnostics: geometric and Aharonov-Bohm phases, companion congruence and flow directions, horizon-crossing density evolution, and effective gravitational equations that remain tied to explicit nonclassical geometry.",
+        text: "The frontier is an ongoing set of quantum-Riemannian spacetime diagnostics: geometric phase and congruence probes, horizon-crossing amplitude transport, and effective gravitational equations that remain tied to explicit nonclassical geometry rather than formal analogy.",
       },
     ],
     tags: ["Quantum Geometry", "Black Holes", "Matrix Models"],
     publicAnchorIds: [
+      "geometric-ab-black-hole",
       "black-hole-geodesic-flows",
       "ikkt-effective-einstein",
     ],
@@ -833,7 +864,7 @@ const RESEARCH_DIRECTIONS = [
     id: "algebraic-particle-geometry",
     title: "Algebraic particle geometry",
     label: "Particle geometry",
-    summary: "Finite spectral triples and Clifford/division-algebraic structures as constrained settings for particle-sector geometry.",
+    summary: "Finite spectral triples, Clifford-octonionic structures, and quaternionic/link geometries as constrained settings for particle-sector geometry.",
     figures: [
       {
         src: "./media/cl6-finite-geometry.svg",
@@ -844,26 +875,41 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. The guiding objects are finite spectral triples, Clifford/octonionic algebras, quaternionic finite spaces, and linked finite geometries whose metric and fluctuation data constrain scalar and representation sectors.",
+        text: "This direction asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. The guiding objects are finite spectral triples, Clifford-octonionic Peirce data, intrinsic quaternionic calculi, and linked finite geometries whose metric and fluctuation data constrain scalar and representation sectors.",
       },
       {
         label: "Methods",
-        text: "Technically the work uses finite Dirac operators, real structures, gradings, order-one conditions, Clifford and Peirce decompositions, quaternionic reductions, scalar-matrix-scalar link geometries, inner fluctuations, and gauge quotients. The emphasis is on deriving the allowed finite one-forms and link fields before making phenomenological claims.",
+        text: "Technically the work uses finite Dirac operators, real structures, gradings, order-one conditions, Clifford and Peirce decompositions, cocycle-twisted quaternionic calculi, scalar-quaternionic link bimodules, inner fluctuations, and gauge quotients. The emphasis is on deriving allowed one-forms, link fields, and Dirac packages before making phenomenological claims.",
       },
       {
         label: "Outputs",
-        text: "Outputs include finite metric data, scalar/link-field sectors, obstruction and completion results for finite triples, algebraic organization of particle-like degrees of freedom, and disciplined model-building constraints.",
+        text: "Outputs include finite algebra and Hilbert-space data, B-L and hypercharge generators, scalar/link-field sectors, obstruction and completion results for finite triples, exact quaternionic Dirac spectra, and disciplined model-building constraints.",
       },
       {
         label: "Current frontier",
-        text: "Near-term work develops a Cl6/octonionic finite-triple line and a linked finite-geometry line with Shahn Majid. The broader frontier is to understand which particle-sector structures are forced by exact finite geometry, and which are optional model-building choices.",
+        text: "Near-term work develops a Cl6/octonionic finite-triple line with Nichol Furey and two Shahn Majid directions: intrinsic quaternionic finite geometry from a cocycle twist, and linked C ⊕ H electroweak geometry. The broader frontier is to separate particle-sector structures forced by exact finite geometry from optional model-building choices.",
       },
     ],
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
-    publicAnchorIds: [
-      "finite-spectral-distance",
+    publicAnchorIds: [],
+    anchorHeading: "Current programme anchors",
+    programmeAnchors: [
+      {
+        title: "A finite real spectral triple from Cℓ6 for one generation of Standard Model fermions",
+        status: "near-public draft with Nichol Furey",
+        text: "Clifford-octonionic Peirce data produce a finite algebra, a 32-dimensional one-generation Hilbert space, B-L and hypercharge generators, and two scalar doublets, while staying short of a completed phenomenological model.",
+      },
+      {
+        title: "Intrinsic quaternionic finite geometry from a cocycle twist",
+        status: "current QRG finite-geometry manuscript with Shahn Majid",
+        text: "The quaternion algebra is treated as an intrinsic cocycle-twisted finite geometry with its own calculus, distinguished quantum Levi-Civita connection, and exactly solvable geometric Dirac operator.",
+      },
+      {
+        title: "Linked C ⊕ H electroweak geometry: Higgs, Yukawa channels, and a genuine Dirac operator",
+        status: "developing linked finite-geometry manuscript with Shahn Majid",
+        text: "The scalar-quaternionic link bimodule carries the Higgs field, yields the bosonic electroweak pattern in a minimal linked calculus, and identifies the link-bundle level where a genuine Dirac-type operator appears.",
+      },
     ],
-    relatedText: "Current collaborative work with Shahn Majid and previous work with Nichol Furey.",
   },
   {
     id: "spectral-information-geometry",
@@ -894,19 +940,20 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         label: "Methods",
-        text: "The tools are Connes spectral distance, finite metric structures, Dirac eigenspinor data, fuzzy-spin distances, isotropic scalar-anchor Helstrom geometry, matrix-anchor calibration, and anisotropic qubit-channel diagnostics.",
+        text: "The tools are Connes spectral distance, finite metric structures, Dirac eigenspinor data, fuzzy-spin distances, scalar-qubit-scalar calibration, Helstrom trace-distance geometry, matrix-anchor calibration, and anisotropic qubit-channel diagnostics.",
       },
       {
         label: "Outputs",
-        text: "The outputs are exact spectral distances, finite-space metric relations, distinguishability metrics, calibration-sensitive information geometry, and diagnostics for channel contractivity and anisotropic information flow.",
+        text: "The outputs are exact spectral distances, finite-space metric relations, Bloch-ball trace-distance geometry from spectral distance, calibration consistency relations, and diagnostics for channel contractivity and anisotropic information flow.",
       },
       {
         label: "Current frontier",
-        text: "Current work develops isotropic scalar-anchor Helstrom geometry, matrix-anchor calibration, fuzzy-spin spectral distances, and anisotropic channel diagnostics. The aim is to make information geometry as explicit as the earlier Connes-distance calculations: exact formulas first, operational interpretation second.",
+        text: "Current work develops calibrated Helstrom geometry on the Bloch ball, matrix-anchor extensions, fuzzy-spin spectral distances, and anisotropic channel diagnostics. The aim is to make information geometry as explicit as the earlier Connes-distance calculations: exact finite metrics first, operational interpretation second.",
       },
     ],
     tags: ["Spectral Distance", "Noncommutative Geometry", "Quantum Information"],
     publicAnchorIds: [
+      "calibrated-helstrom-bloch",
       "doubled-moyal-spectral-distance",
       "finite-spectral-distance",
     ],
@@ -917,7 +964,7 @@ const RESEARCH_TRAJECTORY = [
   {
     date: "2024–present",
     place: "Queen Mary University of London",
-    text: "Current work with Shahn Majid on Quantum Riemannian Geometry.",
+    text: "Current work with Shahn Majid on Quantum Riemannian Geometry, black-hole phase effects, and finite quaternionic geometries.",
   },
   {
     date: "2023–2024",
@@ -1022,6 +1069,18 @@ function renderPublicAnchor(pub) {
   `;
 }
 
+function renderProgrammeAnchor(anchor) {
+  return `
+    <article class="public-anchor-row programme-anchor-row">
+      <div>
+        <strong>${escapeHTML(anchor.title)}</strong>
+        <span>${escapeHTML(anchor.status)}</span>
+        <p>${escapeHTML(anchor.text)}</p>
+      </div>
+    </article>
+  `;
+}
+
 function renderDirectionMapSections(direction) {
   return (direction.detailSections || []).map((section) => `
     <section class="direction-map-block">
@@ -1052,12 +1111,16 @@ function renderDirectionPanel(direction) {
     .filter(Boolean)
     .map(renderPublicAnchor)
     .join("");
+  const programmeAnchors = (direction.programmeAnchors || [])
+    .map(renderProgrammeAnchor)
+    .join("");
+  const anchorContent = [publicAnchors, programmeAnchors].filter(Boolean).join("");
 
-  const publicAnchorBlock = publicAnchors || direction.relatedText
+  const publicAnchorBlock = anchorContent || direction.relatedText
     ? `
       <div class="public-anchor-block">
-        <span>Public anchors</span>
-        ${publicAnchors ? `<div class="public-anchor-list">${publicAnchors}</div>` : ""}
+        <span>${escapeHTML(direction.anchorHeading || "Public anchors")}</span>
+        ${anchorContent ? `<div class="public-anchor-list">${anchorContent}</div>` : ""}
         ${direction.relatedText ? `<p>${escapeHTML(direction.relatedText)}</p>` : ""}
       </div>
     `
