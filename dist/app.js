@@ -545,6 +545,19 @@ const PUBLICATIONS = [
 
 const TALKS = [
   {
+    date: "Jun 29–Jul 4, 2026",
+    title: "Scalar-anchored Connes distance and Helstrom geometry of the qubit Bloch ball",
+    venue: "XLIII Workshop on Geometric Methods in Physics",
+    location: "Białystok",
+    type: "conference talk",
+    selected: true,
+    links: {
+      event: "https://wgmp.uwb.edu.pl/first.html",
+      abstract: "https://wgmp.uwb.edu.pl/abs/Kumar.html",
+    },
+    tags: ["Quantum Information", "Spectral Distance"],
+  },
+  {
     date: "Dec 9, 2025",
     title: "Geodesic flows on a black-hole background",
     venue: "Quantum Algebras seminar, QMU London",
@@ -717,6 +730,18 @@ const TALKS = [
 
 const CONFERENCES = [
   {
+    date: "Jul 15–17, 2026",
+    title: "Black Hole Horizons and Beyond: New Frontiers in Gravity and Holography",
+    location: "Durham, UK",
+    url: "https://indico.global/event/17195/",
+  },
+  {
+    date: "Jun 29–Jul 4, 2026",
+    title: "XLIII Workshop on Geometric Methods in Physics",
+    location: "Białystok, Poland",
+    url: "https://wgmp.uwb.edu.pl/first.html",
+  },
+  {
     date: "Jul 7–11, 2025",
     title: "A Quantum of Noncommutativity",
     location: "Ambleside, UK",
@@ -875,19 +900,19 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. The guiding objects are finite spectral triples, Clifford-octonionic Peirce data, intrinsic quaternionic calculi, and linked finite geometries whose metric and fluctuation data constrain scalar and representation sectors.",
+        text: "This direction asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. One near-public branch uses Clifford-octonionic finite spectral triples; a second, more exploratory branch builds electroweak finite geometry from intrinsic quaternionic and linked C ⊕ H data.",
       },
       {
         label: "Methods",
-        text: "Technically the work uses finite Dirac operators, real structures, gradings, order-one conditions, Clifford and Peirce decompositions, cocycle-twisted quaternionic calculi, scalar-quaternionic link bimodules, inner fluctuations, and gauge quotients. The emphasis is on deriving allowed one-forms, link fields, and Dirac packages before making phenomenological claims.",
+        text: "The technical ingredients are finite Dirac operators, real structures, gradings, order-one conditions, Clifford and Peirce decompositions, cocycle-twisted quaternionic calculi, scalar-quaternionic link bimodules, inner fluctuations, and gauge quotients. The emphasis is on deriving allowed one-forms, link fields, and Dirac packages before making phenomenological claims.",
       },
       {
         label: "Outputs",
-        text: "Outputs include finite algebra and Hilbert-space data, B-L and hypercharge generators, scalar/link-field sectors, obstruction and completion results for finite triples, exact quaternionic Dirac spectra, and disciplined model-building constraints.",
+        text: "The current outputs are finite algebra and Hilbert-space data, B-L and hypercharge generators, scalar/link-field sectors, obstruction and completion results for finite triples, exact quaternionic Dirac spectra, and disciplined model-building constraints.",
       },
       {
         label: "Current frontier",
-        text: "Near-term work develops a Cl6/octonionic finite-triple line with Nichol Furey and two Shahn Majid directions: intrinsic quaternionic finite geometry from a cocycle twist, and linked C ⊕ H electroweak geometry. The broader frontier is to separate particle-sector structures forced by exact finite geometry from optional model-building choices.",
+        text: "The near-term programme is deliberately staged: first the Cl6/octonionic finite-triple construction with Nichol Furey, then a Shahn Majid line in which intrinsic quaternionic geometry supplies the finite calculus and linked C ⊕ H geometry becomes the electroweak build. The frontier is to separate particle-sector structures forced by exact finite geometry from optional model-building choices.",
       },
     ],
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
@@ -900,14 +925,9 @@ const RESEARCH_DIRECTIONS = [
         text: "Clifford-octonionic Peirce data produce a finite algebra, a 32-dimensional one-generation Hilbert space, B-L and hypercharge generators, and two scalar doublets, while staying short of a completed phenomenological model.",
       },
       {
-        title: "Intrinsic quaternionic finite geometry from a cocycle twist",
-        status: "current QRG finite-geometry manuscript with Shahn Majid",
-        text: "The quaternion algebra is treated as an intrinsic cocycle-twisted finite geometry with its own calculus, distinguished quantum Levi-Civita connection, and exactly solvable geometric Dirac operator.",
-      },
-      {
-        title: "Linked C ⊕ H electroweak geometry: Higgs, Yukawa channels, and a genuine Dirac operator",
-        status: "developing linked finite-geometry manuscript with Shahn Majid",
-        text: "The scalar-quaternionic link bimodule carries the Higgs field, yields the bosonic electroweak pattern in a minimal linked calculus, and identifies the link-bundle level where a genuine Dirac-type operator appears.",
+        title: "Quaternionic linked finite geometry for electroweak sectors",
+        status: "developing programme with Shahn Majid",
+        text: "A cocycle-twisted H geometry provides the finite quaternionic calculus and Dirac-building block; the linked C ⊕ H construction is the main electroweak step, where scalar-quaternionic links are being developed into Higgs, Yukawa-channel, and genuine finite-Dirac data.",
       },
     ],
   },
@@ -968,12 +988,12 @@ const RESEARCH_TRAJECTORY = [
   },
   {
     date: "2023–2024",
-    place: "HU Berlin",
+    place: "Humboldt University, Berlin",
     text: "Work with Nichol Furey on division-algebraic and finite-geometric particle structures.",
   },
   {
     date: "2023–2024",
-    place: "ESI Vienna",
+    place: "Erwin Schrödinger Institute, Vienna",
     text: "Collaboration with Harold Steinacker on IKKT matrix models and emergent gravity.",
   },
   {
@@ -983,7 +1003,7 @@ const RESEARCH_TRAJECTORY = [
   },
   {
     date: "2013–2018",
-    place: "S.N. Bose Centre",
+    place: "S.N. Bose Centre, Kolkata",
     text: "Early spectral-distance and noncommutative-geometry work with Biswajit Chakraborty.",
   },
 ];
@@ -1340,6 +1360,7 @@ function wirePublicationControls() {
 function renderEventLinks(links) {
   return [
     ["event", "Event"],
+    ["abstract", "Abstract"],
     ["proceedings", "Proceedings"],
     ["slides", "Slides"],
     ["video", "Video"],
