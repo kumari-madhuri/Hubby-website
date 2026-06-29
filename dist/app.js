@@ -310,6 +310,20 @@ const PUBLICATION_FILTERS = [
 
 const PUBLICATIONS = [
   {
+    id: "so13-characteristic-lightcone-sources",
+    title: "Characteristic Lightcone Sources in SO(1,3) Yang–Mills Theory",
+    year: "2026",
+    authors: "Kaushlendra Kumar",
+    venue: "arXiv:2606.27241 [hep-th]",
+    status: "preprint",
+    tags: ["Yang–Mills", "Exact Fields"],
+    featured: true,
+    shortSignificance: "Completes the singular SO(1,3) Yang–Mills stress tensor on the characteristic null cone, fixing its distributional source and a future/past cone-charge asymmetry.",
+    links: {
+      arxiv: "https://arxiv.org/abs/2606.27241",
+    },
+  },
+  {
     id: "calibrated-helstrom-bloch",
     title: "Calibrated Helstrom geometry on the Bloch ball via Connes spectral distance",
     year: "2026",
@@ -826,7 +840,7 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         label: "Current frontier",
-        text: "The continuing programme is exact gauge-field transport: extending the completed de Sitter, anti-de Sitter, Minkowski, and knotted-field constructions toward pulse/transport laws, characteristic SO(1,3) lightcone source structures, and defect sectors whose conservation laws and trajectories remain calculable.",
+        text: "The continuing programme is exact gauge-field transport: extending the completed de Sitter, anti-de Sitter, Minkowski, and knotted-field constructions toward characteristic SO(1,3) lightcone source structures, pulse/transport laws, and defect sectors whose conservation laws and trajectories remain calculable.",
       },
     ],
     tags: ["Yang–Mills", "Exact Fields", "Electromagnetic Knots"],
@@ -867,15 +881,15 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         label: "Methods",
-        text: "The toolkit includes Quantum Riemannian Geometry, corrected Schwarzschild backgrounds, geodesic and amplitude-flow equations, Klein-Gordon semiclassics, density motion across horizons, congruence diagnostics, IKKT matrices, and one-loop effective actions.",
+        text: "The toolkit includes Quantum Riemannian Geometry, corrected Schwarzschild backgrounds, geodesic and amplitude-flow equations, Klein-Gordon semiclassics, density motion across horizons, congruence diagnostics, projective horizon quantization, IKKT matrices, compact fuzzy transverse factors, and one-loop effective actions.",
       },
       {
         label: "Outputs",
-        text: "The outputs are black-hole geodesic flows, horizon-crossing density evolution, geometric/Aharonov-Bohm phases, modified Einstein equations, and dark-matter-like geometric correction modes.",
+        text: "The outputs are black-hole geodesic flows, horizon-crossing density evolution, geometric/Aharonov-Bohm phases, projective strip spectra for horizon modes, modified Einstein equations, and mirage/dark-matter-like geometric correction modes.",
       },
       {
         label: "Current frontier",
-        text: "The frontier is an ongoing set of quantum-Riemannian spacetime diagnostics: geometric phase and congruence probes, horizon-crossing amplitude transport, and effective gravitational equations that remain tied to explicit nonclassical geometry rather than formal analogy.",
+        text: "The first frontier is quantum-Riemannian black-hole diagnostics: geometric phase robustness, congruence probes, projective horizon quantization, horizon-crossing amplitude transport, and comparison with semiclassical or QFT-in-curved-spacetime observables. The matrix-model line supplies the emergent-gravity comparison through explicit IKKT effective equations, compact-factor tests, state-dependent geometry, and dark-matter-like correction modes.",
       },
     ],
     tags: ["Quantum Geometry", "Black Holes", "Matrix Models"],
@@ -900,7 +914,7 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. One near-public branch uses Clifford-octonionic finite spectral triples; a second, more exploratory branch builds electroweak finite geometry from intrinsic quaternionic and linked C ⊕ H data.",
+        text: "This longer-horizon branch asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. One near-public branch uses Clifford-octonionic finite spectral triples; later extensions test intrinsic quaternionic and linked C ⊕ H data.",
       },
       {
         label: "Methods",
@@ -912,7 +926,7 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         label: "Current frontier",
-        text: "The near-term programme is deliberately staged: first the Cl6/octonionic finite-triple construction with Nichol Furey, then a Shahn Majid line in which intrinsic quaternionic geometry supplies the finite calculus and linked C ⊕ H geometry becomes the electroweak build. The frontier is to separate particle-sector structures forced by exact finite geometry from optional model-building choices.",
+        text: "The programme is deliberately staged: first the Cl6/octonionic finite-triple construction with Nichol Furey, then scalar-sector and completion tests, with quaternionic and linked C ⊕ H geometries as later extensions. The frontier is to separate particle-sector structures forced by exact finite geometry from optional model-building choices.",
       },
     ],
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
@@ -926,7 +940,7 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         title: "Quaternionic linked finite geometry for electroweak sectors",
-        status: "developing programme with Shahn Majid",
+        status: "later extension with Shahn Majid",
         text: "A cocycle-twisted H geometry provides the finite quaternionic calculus and Dirac-building block; the linked C ⊕ H construction is the main electroweak step, where scalar-quaternionic links are being developed into Higgs, Yukawa-channel, and genuine finite-Dirac data.",
       },
     ],
@@ -1629,3 +1643,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+/* ===== Writing / blog (added 2026-06-28) ===== */
+const BLOG_POSTS = [
+  {
+    title: "Sources hiding on the light cone",
+    date: "June 2026",
+    tags: ["Yang–Mills", "exact fields"],
+    summary: "Why a singular gauge-field stress tensor can only be completed — conserved and traceless — on the characteristic null cone, and what that forces as a physical source.",
+    href: "posts/so13-lightcone-sources.html",
+  },
+];
+(function () {
+  var el = document.querySelector("#blog-list");
+  if (!el) return;
+  if (!BLOG_POSTS.length) { el.innerHTML = '<p class="blog-empty">Posts coming soon.</p>'; return; }
+  el.innerHTML = BLOG_POSTS.map(function (p) {
+    var tags = (p.tags || []).map(function (t) { return '<span class="blog-tag">' + t + '</span>'; }).join("");
+    return '<article class="blog-card"><p class="blog-date">' + p.date + '</p>' +
+      '<h3><a href="' + p.href + '">' + p.title + '</a></h3>' +
+      '<p class="blog-summary">' + p.summary + '</p>' +
+      '<div class="blog-tags">' + tags + '</div></article>';
+  }).join("");
+})();
