@@ -1239,42 +1239,6 @@ summary:focus-visible {
 .profile-summary .intro-card {
   border-top-color: #0f766e;
 }
-.research-snapshot-section {
-  background: var(--deep-bg-soft);
-  padding: 4rem 0;
-}
-.snapshot-grid {
-  display: grid;
-  gap: 1rem;
-}
-.snapshot-card {
-  background: var(--surface-paper);
-  border: 1px solid rgba(26, 26, 26, 0.08);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  color: var(--text-body);
-  display: block;
-  padding: 1.35rem;
-  transition: var(--transition);
-}
-.snapshot-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-.snapshot-card span {
-  color: var(--gold-dark);
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12rem;
-  margin-bottom: 0.4rem;
-}
-.snapshot-card h3 {
-  font-size: 1.05rem;
-}
-.snapshot-card p {
-  line-height: 1.75;
-}
 .broad-audience {
   background: var(--deep-bg);
   min-height: auto;
@@ -1639,7 +1603,6 @@ summary:focus-visible {
 }
 
 @media (min-width: 720px) {
-  .snapshot-grid,
   .broad-audience-body {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -2493,7 +2456,7 @@ summary:focus-visible {
 }
 
 /* ===== glass enhancement + blog (added 2026-06-28) ===== */
-.snapshot-card, .record-panel, .research-map-panel, .home-contact-card,
+.record-panel, .research-map-panel, .home-contact-card,
 .broad-audience-panel, .blog-card {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);

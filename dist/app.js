@@ -559,7 +559,7 @@ const PUBLICATIONS = [
 
 const TALKS = [
   {
-    date: "Jun 29–Jul 4, 2026",
+    date: "Jul 1, 2026",
     title: "Scalar-anchored Connes distance and Helstrom geometry of the qubit Bloch ball",
     venue: "XLIII Workshop on Geometric Methods in Physics",
     location: "Białystok",
@@ -807,7 +807,7 @@ const RESEARCH_DIRECTIONS = [
     id: "exact-fields",
     title: "Exact fields and geometric transport",
     label: "Exact field theory",
-    summary: "Exact Yang–Mills and Maxwell sectors generated from symmetry, conformal structure, and homogeneous-space reductions.",
+    summary: "Exact Yang–Mills and Maxwell systems as laboratories for source laws, charges, topological response, pulse transport, and obstruction theorems.",
     figures: [
       {
         src: "./media/MinkFoliations-padded.png",
@@ -828,23 +828,24 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction constructs exact Yang–Mills and Maxwell sectors from rigid spacetime and symmetry data, rather than beginning with perturbative ansätze. The aim is to turn geometry itself into a source of computable field configurations.",
+        text: "This direction constructs exact Yang–Mills and Maxwell sectors from rigid spacetime and symmetry data, then asks what physical structure the exact fields force: sources, charges, defects, trajectories, topological response, and transport.",
       },
       {
         label: "Methods",
-        text: "The main tools are homogeneous spaces, equivariant reductions, de Sitter and anti-de Sitter embeddings, conformal compactification, rational Maxwell bases, distributional source analysis, and the geometry of knotted field lines.",
+        text: "The main tools are homogeneous spaces, equivariant reductions, de Sitter and anti-de Sitter embeddings, conformal compactification, rational Maxwell bases, conormal/distributional source analysis, Gauss-law reduction, and the geometry of knotted field lines.",
       },
       {
         label: "Outputs",
-        text: "The public outputs include closed-form gauge fields, conserved conformal charges, charged-particle trajectories, source and defect laws, pulse and transport structures, and gauge-theoretic cosmological sectors.",
+        text: "The public outputs include closed-form gauge fields, conserved conformal charges, charged-particle trajectories, characteristic lightcone source completions, defect laws, pulse/transport structures, and gauge-theoretic cosmological sectors.",
       },
       {
         label: "Current frontier",
-        text: "The continuing programme is exact gauge-field transport: extending the completed de Sitter, anti-de Sitter, Minkowski, and knotted-field constructions toward characteristic SO(1,3) lightcone source structures, pulse/transport laws, and defect sectors whose conservation laws and trajectories remain calculable.",
+        text: "The frontier is a source/defect/transport dictionary for exact fields: characteristic SO(1,3) lightcone sources, SU(1,1)/AdS seam defects, Maxwell controls, and Yang–Mills pulse transport on R × S³, all with conservation laws and response data kept explicit.",
       },
     ],
     tags: ["Yang–Mills", "Exact Fields", "Electromagnetic Knots"],
     publicAnchorIds: [
+      "so13-characteristic-lightcone-sources",
       "adS-exact-gauge-fields",
       "minkowski-coset-yang-mills",
       "rational-em-charges",
@@ -856,7 +857,7 @@ const RESEARCH_DIRECTIONS = [
     id: "quantum-geometry",
     title: "Quantum geometry and emergent spacetime",
     label: "Quantum spacetime",
-    summary: "Quantum-Riemannian black-hole geometry, geometric phase effects, and matrix-model emergent gravity as computable tests of nonclassical spacetime.",
+    summary: "Black-hole quantum geometry, geometric phase effects, horizon-flow diagnostics, and matrix/emergent-gravity comparison.",
     figures: [
       {
         src: "./media/qrg-direct-phase-panel.png",
@@ -877,19 +878,19 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction studies nonclassical spacetime through two concrete routes: quantum-Riemannian black-hole geometry and amplitude/density flows with Shahn Majid, and emergent gravity from the IKKT matrix model with Harold Steinacker.",
+        text: "This direction studies nonclassical spacetime through concrete diagnostics rather than broad analogy: quantum-Riemannian black-hole flow and geometric phase effects with Shahn Majid, and matrix-model emergent gravity with Harold Steinacker.",
       },
       {
         label: "Methods",
-        text: "The toolkit includes Quantum Riemannian Geometry, corrected Schwarzschild backgrounds, geodesic and amplitude-flow equations, Klein-Gordon semiclassics, density motion across horizons, congruence diagnostics, projective horizon quantization, IKKT matrices, compact fuzzy transverse factors, and one-loop effective actions.",
+        text: "The toolkit includes Quantum Riemannian Geometry, corrected Schwarzschild backgrounds, geodesic and amplitude-flow equations, Klein–Gordon semiclassics, density motion across horizons, congruence diagnostics, projective horizon quantization, IKKT matrices, compact fuzzy transverse factors, and one-loop effective actions.",
       },
       {
         label: "Outputs",
-        text: "The outputs are black-hole geodesic flows, horizon-crossing density evolution, geometric/Aharonov-Bohm phases, projective strip spectra for horizon modes, modified Einstein equations, and mirage/dark-matter-like geometric correction modes.",
+        text: "The outputs are black-hole geodesic flows, horizon-crossing density evolution, geometric/Aharonov–Bohm phases, projective strip spectra for horizon modes, modified Einstein equations, and mirage/dark-matter-like geometric correction modes.",
       },
       {
         label: "Current frontier",
-        text: "The first frontier is quantum-Riemannian black-hole diagnostics: geometric phase robustness, congruence probes, projective horizon quantization, horizon-crossing amplitude transport, and comparison with semiclassical or QFT-in-curved-spacetime observables. The matrix-model line supplies the emergent-gravity comparison through explicit IKKT effective equations, compact-factor tests, state-dependent geometry, and dark-matter-like correction modes.",
+        text: "The immediate frontier is black-hole quantum geometry: phase robustness, congruence probes, projective horizon quantization, and horizon-crossing amplitude transport. The matrix-model line supplies a second test-bed through explicit IKKT effective equations, compact-factor variations, state-dependent geometry, and correction modes that can be compared with emergent-gravity phenomenology.",
       },
     ],
     tags: ["Quantum Geometry", "Black Holes", "Matrix Models"],
@@ -903,7 +904,7 @@ const RESEARCH_DIRECTIONS = [
     id: "algebraic-particle-geometry",
     title: "Algebraic particle geometry",
     label: "Particle geometry",
-    summary: "Finite spectral triples, Clifford-octonionic structures, and quaternionic/link geometries as constrained settings for particle-sector geometry.",
+    summary: "Finite Clifford/octonionic spectral triples, scalar-sector tests, completion questions, and finite-geometric obstruction criteria.",
     figures: [
       {
         src: "./media/cl6-finite-geometry.svg",
@@ -914,19 +915,19 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This longer-horizon branch asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. One near-public branch uses Clifford-octonionic finite spectral triples; later extensions test intrinsic quaternionic and linked C ⊕ H data.",
+        text: "This longer-horizon branch asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. The near-public line uses Clifford/octonionic finite spectral triples; the QRG line explores quaternionic and linked C ⊕ H finite geometries as a possible electroweak-style route.",
       },
       {
         label: "Methods",
-        text: "The technical ingredients are finite Dirac operators, real structures, gradings, order-one conditions, Clifford and Peirce decompositions, cocycle-twisted quaternionic calculi, scalar-quaternionic link bimodules, inner fluctuations, and gauge quotients. The emphasis is on deriving allowed one-forms, link fields, and Dirac packages before making phenomenological claims.",
+        text: "The technical ingredients are finite Dirac operators, real structures, gradings, order-one conditions, Clifford and Peirce decompositions, cocycle-twisted quaternionic calculi, scalar-quaternionic link bimodules, inner fluctuations, determinant/unimodularity tests, and gauge quotients.",
       },
       {
         label: "Outputs",
-        text: "The current outputs are finite algebra and Hilbert-space data, B-L and hypercharge generators, scalar/link-field sectors, obstruction and completion results for finite triples, exact quaternionic Dirac spectra, and disciplined model-building constraints.",
+        text: "The desired outputs are finite algebra and Hilbert-space data, B-L and hypercharge generators, scalar/link-field sectors, obstruction and completion results for finite triples, exact quaternionic Dirac spectra, and disciplined model-building constraints.",
       },
       {
         label: "Current frontier",
-        text: "The programme is deliberately staged: first the Cl6/octonionic finite-triple construction with Nichol Furey, then scalar-sector and completion tests, with quaternionic and linked C ⊕ H geometries as later extensions. The frontier is to separate particle-sector structures forced by exact finite geometry from optional model-building choices.",
+        text: "The programme is deliberately staged: first the Cℓ6/octonionic finite-triple construction with Nichol Furey, then scalar-sector and completion tests, with quaternionic and linked C ⊕ H geometries as exploratory QRG extensions. The frontier is to separate structures forced by exact finite geometry from optional particle-model choices.",
       },
     ],
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
@@ -939,9 +940,9 @@ const RESEARCH_DIRECTIONS = [
         text: "Clifford-octonionic Peirce data produce a finite algebra, a 32-dimensional one-generation Hilbert space, B-L and hypercharge generators, and two scalar doublets, while staying short of a completed phenomenological model.",
       },
       {
-        title: "Quaternionic linked finite geometry for electroweak sectors",
-        status: "later extension with Shahn Majid",
-        text: "A cocycle-twisted H geometry provides the finite quaternionic calculus and Dirac-building block; the linked C ⊕ H construction is the main electroweak step, where scalar-quaternionic links are being developed into Higgs, Yukawa-channel, and genuine finite-Dirac data.",
+        title: "Quaternionic linked finite geometry and C ⊕ H electroweak tests",
+        status: "exploratory QRG programme with Shahn Majid",
+        text: "A cocycle-twisted H geometry supplies a finite quaternionic calculus, metric/Hodge data, and a geometric Dirac block. The linked C ⊕ H construction is the real electroweak test: scalar-quaternionic links, Higgs/Yukawa-style channels, and finite-Dirac data are being developed as a programme rather than presented as completed phenomenology.",
       },
     ],
   },
@@ -949,7 +950,7 @@ const RESEARCH_DIRECTIONS = [
     id: "spectral-information-geometry",
     title: "Spectral and information geometry",
     label: "Information geometry",
-    summary: "Metric and operational geometry of quantum states, from spectral distance to distinguishability and channel diagnostics.",
+    summary: "Operational spectral geometry: Connes distance, Helstrom distinguishability, calibration anchors, channel diagnostics, and finite/fuzzy metric tests.",
     figures: [
       {
         src: "./media/quantumSpace.jpg",
@@ -970,19 +971,19 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction connects older Connes spectral-distance computations in finite, Moyal, and fuzzy spaces with current operational geometry of finite-dimensional quantum states.",
+        text: "This direction asks when a spectral distance has an operational meaning. It connects earlier Connes-distance computations in finite, Moyal, and fuzzy spaces with qubit distinguishability, calibrated finite metrics, and quantum-channel diagnostics.",
       },
       {
         label: "Methods",
-        text: "The tools are Connes spectral distance, finite metric structures, Dirac eigenspinor data, fuzzy-spin distances, scalar-qubit-scalar calibration, Helstrom trace-distance geometry, matrix-anchor calibration, and anisotropic qubit-channel diagnostics.",
+        text: "The tools are Connes spectral distance, finite metric structures, Dirac eigenspinor data, fuzzy-spin distances, scalar-qubit-scalar calibration, Helstrom trace-distance geometry, matrix-anchor calibration, anisotropic Bloch norms, and channel contractivity tests.",
       },
       {
         label: "Outputs",
-        text: "The outputs are exact spectral distances, finite-space metric relations, Bloch-ball trace-distance geometry from spectral distance, calibration consistency relations, and diagnostics for channel contractivity and anisotropic information flow.",
+        text: "The outputs are exact spectral distances, finite-space metric relations, Bloch-ball trace-distance geometry from spectral distance, calibration consistency relations, finite matrix or fuzzy-spin metric tests, and diagnostics for channel contractivity and anisotropic information flow.",
       },
       {
         label: "Current frontier",
-        text: "Current work develops calibrated Helstrom geometry on the Bloch ball, matrix-anchor extensions, fuzzy-spin spectral distances, and anisotropic channel diagnostics. The aim is to make information geometry as explicit as the earlier Connes-distance calculations: exact finite metrics first, operational interpretation second.",
+        text: "Current work develops the calibrated Helstrom geometry baseline, matrix-anchor extensions, fuzzy-spin spectral distances, anisotropic/misaligned channel diagnostics, and a many-body spectral-geometry bridge through FQH guiding-centre metrics. The aim is exact finite metrics first, operational interpretation second.",
       },
     ],
     tags: ["Spectral Distance", "Noncommutative Geometry", "Quantum Information"],
