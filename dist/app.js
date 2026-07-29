@@ -807,7 +807,7 @@ const RESEARCH_DIRECTIONS = [
     id: "exact-fields",
     title: "Exact fields and geometric transport",
     label: "Exact field theory",
-    summary: "Exact Yang–Mills and Maxwell systems as laboratories for source laws, charges, topological response, pulse transport, and obstruction theorems.",
+    summary: "Exact Yang–Mills and Maxwell systems as laboratories for source laws, charges, topological response, pulse transport, and obstruction theorems. This pillar turns homogeneous-space reductions, conformal geometry, and rational field bases into explicit fields whose sources, defects, and probe dynamics can be computed.",
     figures: [
       {
         src: "./media/MinkFoliations-padded.png",
@@ -857,7 +857,7 @@ const RESEARCH_DIRECTIONS = [
     id: "quantum-geometry",
     title: "Quantum geometry and emergent spacetime",
     label: "Quantum spacetime",
-    summary: "Black-hole quantum geometry, geometric phase effects, horizon-flow diagnostics, and matrix/emergent-gravity comparison.",
+    summary: "Black-hole quantum geometry, geometric phase effects, horizon-flow diagnostics, and matrix/emergent-gravity comparison. This pillar uses quantum-Riemannian flows, horizon transport, projective quantization, and matrix-model effective equations as concrete probes of nonclassical spacetime.",
     figures: [
       {
         src: "./media/qrg-direct-phase-panel.png",
@@ -904,7 +904,7 @@ const RESEARCH_DIRECTIONS = [
     id: "algebraic-particle-geometry",
     title: "Algebraic particle geometry",
     label: "Particle geometry",
-    summary: "Finite Clifford/octonionic spectral triples, scalar-sector tests, completion questions, and finite-geometric obstruction criteria.",
+    summary: "Finite Clifford/octonionic spectral triples, scalar-sector tests, completion questions, and finite-geometric obstruction criteria. This longer-horizon branch asks which particle-sector ingredients are forced by finite geometry, and which remain optional model-building choices.",
     figures: [
       {
         src: "./media/cl6-finite-geometry.svg",
@@ -950,7 +950,7 @@ const RESEARCH_DIRECTIONS = [
     id: "spectral-information-geometry",
     title: "Spectral and information geometry",
     label: "Information geometry",
-    summary: "Operational spectral geometry: Connes distance, Helstrom distinguishability, calibration anchors, channel diagnostics, and finite/fuzzy metric tests.",
+    summary: "Operational spectral geometry: Connes distance, Helstrom distinguishability, calibration anchors, channel diagnostics, and finite/fuzzy metric tests. This pillar connects earlier finite and noncommutative spectral-distance work to qubit distinguishability, calibrated metrics, and quantum-information flow.",
     figures: [
       {
         src: "./media/quantumSpace.jpg",
@@ -1161,14 +1161,29 @@ function renderDirectionPanel(direction) {
     `
     : "";
   const figureLayer = renderDirectionFigures(direction);
+  const directionIndex = RESEARCH_DIRECTIONS.findIndex((item) => item.id === direction.id);
+  const previousDirection = RESEARCH_DIRECTIONS[(directionIndex - 1 + RESEARCH_DIRECTIONS.length) % RESEARCH_DIRECTIONS.length];
+  const nextDirection = RESEARCH_DIRECTIONS[(directionIndex + 1) % RESEARCH_DIRECTIONS.length];
 
   return `
-    <button type="button" class="research-map-panel-close" aria-label="Close research map">×</button>
-    <h3>${escapeHTML(direction.title)}</h3>
+    <header class="research-map-panel-header">
+      <p class="research-map-panel-index">${String(directionIndex + 1).padStart(2, "0")} / ${String(RESEARCH_DIRECTIONS.length).padStart(2, "0")}</p>
+      <h3>${escapeHTML(direction.title)}</h3>
+      <button type="button" class="research-map-panel-close" aria-label="Close research map">×</button>
+    </header>
     ${figureLayer}
-    <p class="panel-summary">${escapeHTML(direction.summary)}</p>
     <div class="direction-map-blocks">${renderDirectionMapSections(direction)}</div>
     ${publicAnchorBlock}
+    <nav class="research-map-panel-nav" aria-label="Browse research directions">
+      <button type="button" data-map-direction="${escapeHTML(previousDirection.id)}">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i>
+        <span>${escapeHTML(previousDirection.title)}</span>
+      </button>
+      <button type="button" data-map-direction="${escapeHTML(nextDirection.id)}">
+        <span>${escapeHTML(nextDirection.title)}</span>
+        <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      </button>
+    </nav>
   `;
 }
 
@@ -1253,67 +1268,95 @@ function renderResearchDirections() {
   const layout = container.closest(".research-map-layout");
   const defaultPanel = panel ? panel.innerHTML : "";
 
-  container.innerHTML = RESEARCH_DIRECTIONS.map((direction) => {
+  container.innerHTML = RESEARCH_DIRECTIONS.map((direction, index) => {
     return `
       <article class="research-map-card direction-card" data-direction-id="${escapeHTML(direction.id)}">
         <div class="research-map-card-head">
+          <span class="direction-card-index">${String(index + 1).padStart(2, "0")}</span>
           <h3>${escapeHTML(direction.title)}</h3>
           <p>${escapeHTML(direction.summary)}</p>
         </div>
-        <button type="button" class="direction-toggle" aria-expanded="false" data-direction-toggle="${escapeHTML(direction.id)}">
-          Open map
+        <button
+          type="button"
+          class="direction-toggle"
+          aria-expanded="false"
+          aria-controls="research-map-panel"
+          data-direction-toggle="${escapeHTML(direction.id)}"
+        >
+          <span>Explore direction</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
         </button>
       </article>
     `;
   }).join("");
 
+  function resetDirectionButtons() {
+    container.querySelectorAll(".direction-toggle").forEach((item) => {
+      item.setAttribute("aria-expanded", "false");
+      const label = item.querySelector("span");
+      if (label) label.textContent = "Explore direction";
+      const icon = item.querySelector("i");
+      if (icon) icon.className = "fas fa-arrow-right";
+    });
+    container.querySelectorAll(".research-map-card").forEach((card) => card.classList.remove("is-active"));
+  }
+
+  function closeDirectionPanel(returnFocusTo) {
+    if (!panel) return;
+    resetDirectionButtons();
+    panel.hidden = true;
+    panel.classList.remove("has-selection");
+    panel.innerHTML = defaultPanel;
+    layout?.classList.remove("is-expanded");
+    if (returnFocusTo) returnFocusTo.focus();
+  }
+
+  function openDirectionPanel(directionId, options = {}) {
+    if (!panel) return;
+    const direction = RESEARCH_DIRECTIONS.find((item) => item.id === directionId);
+    const button = container.querySelector(`[data-direction-toggle="${directionId}"]`);
+    if (!direction || !button) return;
+
+    resetDirectionButtons();
+    button.setAttribute("aria-expanded", "true");
+    const label = button.querySelector("span");
+    if (label) label.textContent = "Viewing direction";
+    const icon = button.querySelector("i");
+    if (icon) icon.className = "fas fa-external-link-alt";
+    button.closest(".research-map-card")?.classList.add("is-active");
+
+    panel.innerHTML = renderDirectionPanel(direction);
+    panel.hidden = false;
+    panel.classList.add("has-selection");
+    layout?.classList.add("is-expanded");
+    wirePublicationIdLinks(panel);
+
+    panel.querySelector(".research-map-panel-close")?.addEventListener("click", () => {
+      closeDirectionPanel(button);
+    });
+    panel.querySelectorAll("[data-map-direction]").forEach((mapButton) => {
+      mapButton.addEventListener("click", () => {
+        openDirectionPanel(mapButton.getAttribute("data-map-direction"), { focusPanel: false });
+      });
+    });
+
+    if (options.focusPanel) panel.focus({ preventScroll: true });
+    if (options.scrollIntoView && window.matchMedia("(max-width: 980px)").matches) {
+      panel.scrollIntoView({
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth",
+        block: "nearest",
+      });
+    }
+  }
+
   container.querySelectorAll(".direction-toggle").forEach((button) => {
     button.addEventListener("click", () => {
-      if (!panel) return;
       const directionId = button.getAttribute("data-direction-toggle");
-      const direction = RESEARCH_DIRECTIONS.find((item) => item.id === directionId);
-      const isOpen = button.getAttribute("aria-expanded") === "true";
-
-      container.querySelectorAll(".direction-toggle").forEach((item) => {
-        item.setAttribute("aria-expanded", "false");
-        item.textContent = "Open map";
-      });
-      container.querySelectorAll(".research-map-card").forEach((card) => card.classList.remove("is-active"));
-
-      if (isOpen || !direction) {
-        panel.hidden = true;
-        panel.classList.remove("has-selection");
-        panel.innerHTML = defaultPanel;
-        layout?.classList.remove("is-expanded");
+      if (button.getAttribute("aria-expanded") === "true") {
+        closeDirectionPanel(button);
         return;
       }
-
-      button.setAttribute("aria-expanded", "true");
-      button.textContent = "Map open";
-      button.closest(".research-map-card")?.classList.add("is-active");
-      panel.innerHTML = renderDirectionPanel(direction);
-      panel.hidden = false;
-      panel.classList.add("has-selection");
-      layout?.classList.add("is-expanded");
-      wirePublicationIdLinks(panel);
-
-      const closeButton = panel.querySelector(".research-map-panel-close");
-      if (closeButton) {
-        closeButton.addEventListener("click", () => {
-          button.setAttribute("aria-expanded", "false");
-          button.textContent = "Open map";
-          button.closest(".research-map-card")?.classList.remove("is-active");
-          panel.hidden = true;
-          panel.classList.remove("has-selection");
-          panel.innerHTML = defaultPanel;
-          layout?.classList.remove("is-expanded");
-          button.focus();
-        });
-      }
-
-      if (window.matchMedia("(max-width: 980px)").matches) {
-        panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }
+      openDirectionPanel(directionId, { focusPanel: false, scrollIntoView: true });
     });
   });
 }
@@ -1645,11 +1688,59 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-/* ===== Writing / blog (added 2026-06-28) ===== */
+/* ===== Writing / research notebook ===== */
 const BLOG_POSTS = [
   {
+    title: "What exact structure is supposed to buy us",
+    date: "29 July 2026",
+    dateISO: "2026-07-29",
+    category: "programme",
+    tags: ["research programme", "mathematical physics"],
+    summary: "A research programme should not be unified by vocabulary alone. The useful question is what a rigid structure lets us calculate, constrain, or rule out.",
+    href: "posts/exact-structures-computable-physics.html",
+    featured: true,
+  },
+  {
+    title: "A phase carried by black-hole flow",
+    date: "29 July 2026",
+    dateISO: "2026-07-29",
+    category: "quantum geometry",
+    tags: ["black holes", "geometric phase"],
+    summary: "How a density flow becomes an amplitude flow, why a phase survives around a black hole, and what makes the effect geometric rather than decorative.",
+    href: "posts/geometric-phase-black-hole.html",
+  },
+  {
+    title: "When spectral distance becomes distinguishability",
+    date: "29 July 2026",
+    dateISO: "2026-07-29",
+    category: "spectral geometry",
+    tags: ["spectral distance", "quantum information"],
+    summary: "A finite Connes metric can reproduce the Helstrom geometry of a qubit, but only after the geometry is calibrated against an operational scale.",
+    href: "posts/spectral-distance-helstrom.html",
+  },
+  {
+    title: "Exact fields are laboratories, not ornaments",
+    date: "29 July 2026",
+    dateISO: "2026-07-29",
+    category: "field theory",
+    tags: ["Yang–Mills", "exact fields"],
+    summary: "The value of an exact field is not that its formula closes. It is that sources, charges, trajectories, defects, and transport can be tested without hiding behind an approximation.",
+    href: "posts/exact-fields-as-laboratories.html",
+  },
+  {
+    title: "What finite geometry is allowed to say about particles",
+    date: "29 July 2026",
+    dateISO: "2026-07-29",
+    category: "particle geometry",
+    tags: ["finite geometry", "spectral triples"],
+    summary: "A programme note on Clifford and quaternionic finite geometries, and on separating structures forced by geometry from choices inserted by hand.",
+    href: "posts/finite-geometry-particle-questions.html",
+  },
+  {
     title: "Sources hiding on the light cone",
-    date: "June 2026",
+    date: "28 June 2026",
+    dateISO: "2026-06-28",
+    category: "field theory",
     tags: ["Yang–Mills", "exact fields"],
     summary: "Why a singular gauge-field stress tensor can only be completed — conserved and traceless — on the characteristic null cone, and what that forces as a physical source.",
     href: "posts/so13-lightcone-sources.html",
@@ -1659,11 +1750,43 @@ const BLOG_POSTS = [
   var el = document.querySelector("#blog-list");
   if (!el) return;
   if (!BLOG_POSTS.length) { el.innerHTML = '<p class="blog-empty">Posts coming soon.</p>'; return; }
-  el.innerHTML = BLOG_POSTS.map(function (p) {
-    var tags = (p.tags || []).map(function (t) { return '<span class="blog-tag">' + t + '</span>'; }).join("");
-    return '<article class="blog-card"><p class="blog-date">' + p.date + '</p>' +
-      '<h3><a href="' + p.href + '">' + p.title + '</a></h3>' +
-      '<p class="blog-summary">' + p.summary + '</p>' +
-      '<div class="blog-tags">' + tags + '</div></article>';
-  }).join("");
+  var filters = document.querySelector("#blog-filters");
+  var categories = ["all"].concat(Array.from(new Set(BLOG_POSTS.map(function (post) { return post.category; }))));
+
+  function renderPosts(activeCategory) {
+    el.innerHTML = BLOG_POSTS.filter(function (post) {
+      return activeCategory === "all" || post.category === activeCategory;
+    }).map(function (p) {
+      var tags = (p.tags || []).map(function (t) {
+        return '<span class="blog-tag">' + escapeHTML(t) + '</span>';
+      }).join("");
+      return '<article class="blog-card' + (p.featured ? ' blog-card-featured' : '') + '">' +
+        '<div class="blog-card-meta"><time class="blog-date" datetime="' + escapeHTML(p.dateISO) + '">' + escapeHTML(p.date) + '</time>' +
+        '<span>' + escapeHTML(p.category) + '</span></div>' +
+        '<h3><a href="' + escapeHTML(p.href) + '">' + escapeHTML(p.title) + '</a></h3>' +
+        '<p class="blog-summary">' + escapeHTML(p.summary) + '</p>' +
+        '<div class="blog-card-footer"><div class="blog-tags">' + tags + '</div>' +
+        '<a class="blog-read-link" href="' + escapeHTML(p.href) + '">Read note <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>' +
+        '</article>';
+    }).join("");
+  }
+
+  if (filters) {
+    filters.innerHTML = categories.map(function (category) {
+      var label = category === "all" ? "All notes" : category;
+      return '<button type="button" class="blog-filter' + (category === "all" ? ' active' : '') +
+        '" data-blog-filter="' + escapeHTML(category) + '">' + escapeHTML(label) + '</button>';
+    }).join("");
+    filters.querySelectorAll("[data-blog-filter]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        filters.querySelectorAll("[data-blog-filter]").forEach(function (item) {
+          item.classList.remove("active");
+        });
+        button.classList.add("active");
+        renderPosts(button.getAttribute("data-blog-filter"));
+      });
+    });
+  }
+
+  renderPosts("all");
 })();

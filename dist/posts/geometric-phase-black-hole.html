@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="An accessible account of the geometric Aharonov–Bohm phase carried by amplitude flow around a black hole."
+    />
+    <link rel="canonical" href="https://k-kumar.netlify.app/posts/geometric-phase-black-hole.html" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="../media/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../style.css?v=20260729a" />
+    <title>A phase carried by black-hole flow | Kaushlendra Kumar</title>
+  </head>
+  <body class="blog-page">
+    <header class="home" id="home">
+      <div class="nav">
+        <div class="nav-center">
+          <div class="nav-header">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <ul class="nav-links">
+            <li><a href="../index.html" class="nav-link">home</a></li>
+            <li><a href="../about.html" class="nav-link">academics</a></li>
+            <li><a href="../work.html" class="nav-link">research</a></li>
+            <li><a href="../interest.html" class="nav-link">personal</a></li>
+            <li><a href="../blog.html" class="nav-link current">writing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="hero work-hero"></div>
+    </header>
+
+    <main class="research-page">
+      <article class="blog-post section-center">
+        <p class="section-eyebrow"><a href="../blog.html" class="text-color">&larr; Writing</a></p>
+        <h1>A phase carried by black-hole flow</h1>
+        <p class="blog-date">
+          <time datetime="2026-07-29">29 July 2026</time> &middot; based on arXiv:2605.28582
+        </p>
+
+        <p class="post-lead">
+          A classical flow tells us how density moves. A quantum amplitude must also remember phase. Around a black
+          hole, that additional bookkeeping produces a geometric effect with an Aharonov&ndash;Bohm character.
+        </p>
+
+        <p>
+          The starting point is deliberately concrete. Choose a geodesic velocity field on a Schwarzschild background
+          and evolve a density along it. The continuity equation then tracks compression, dilution, and horizon
+          crossing. This is already useful geometry: it turns a congruence of trajectories into a flow of matter.
+          But a density cannot interfere. To ask a quantum question, the transported object must be a complex
+          amplitude.
+        </p>
+
+        <h2>From density to amplitude</h2>
+
+        <p>
+          The amplitude equation contains the same transport responsible for the density, together with a phase
+          evolution inherited from the curved background and the chosen angular mode. In the reduced system the phase
+          is not an arbitrary decoration placed on top of the flow. It is an integral of the angular component of the
+          velocity along the trajectory. For a mode with angular number <em>k</em>, the contribution is correspondingly
+          <em>k</em>-dependent.
+        </p>
+
+        <p>
+          This is why the effect is naturally compared with the Aharonov&ndash;Bohm phenomenon. The local transport can
+          be described along each path, while the accumulated relative phase records global geometric information. The
+          comparison is structural rather than identical: here the geometry of black-hole flow, not a confined
+          electromagnetic flux tube, supplies the phase.
+        </p>
+
+        <h2>The horizon is part of the calculation</h2>
+
+        <p>
+          Schwarzschild coordinates are poorly suited to deciding whether a transported quantity genuinely crosses
+          the horizon. The flow was therefore checked in Kruskal&ndash;Szekeres variables, where the horizon is regular.
+          The density and phase diagnostics can then be followed through the crossing rather than terminated at a
+          coordinate singularity. Numerical notebooks matter here because they expose the behaviour directly and make
+          the analytic reduction reproducible.
+        </p>
+
+        <p>
+          The broader lesson is that quantum geometry need not begin with a vague claim that spacetime is
+          “nonclassical.” It can begin with a more disciplined question: given a concrete geometric flow, what happens
+          when density is upgraded to amplitude, and which phase information survives? That question produces an
+          observable-style output while remaining close to the underlying geometry.
+        </p>
+
+        <div class="post-links">
+          <a href="https://arxiv.org/abs/2605.28582" target="_blank" rel="noopener noreferrer">Read the preprint</a>
+          <a href="https://notebookarchive.org/2026-05-c16632a" target="_blank" rel="noopener noreferrer">Open the Mathematica notebook</a>
+          <a href="../work.html#current-focus">Quantum-geometry research map</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-center site-footer-inner">
+        <p><strong>Dr. Kaushlendra Kumar</strong> &middot; Queen Mary University of London &middot; Last updated: 29 July 2026</p>
+      </div>
+    </footer>
+
+    <aside class="small-nav" aria-label="Mobile navigation">
+      <div class="sm-nav-container">
+        <button class="close-btn" aria-label="Close navigation"><i class="fas fa-times"></i></button>
+        <ul class="aside-links">
+          <li><a href="../index.html" class="aside-link">home</a></li>
+          <li><a href="../about.html" class="aside-link">academics</a></li>
+          <li><a href="../work.html" class="aside-link">research</a></li>
+          <li><a href="../interest.html" class="aside-link">personal</a></li>
+          <li><a href="../blog.html" class="aside-link current">writing</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <script src="../app.js?v=20260729a"></script>
+  </body>
+</html>
