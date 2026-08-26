@@ -322,6 +322,7 @@ const PUBLICATIONS = [
     shortSignificance: "Shows that one exact occupation law and finite projective snapshots recover the complex Gram kernel, Bargmann phases, quantum metric, and Berry curvature of Laughlin quasiholes.",
     links: {
       arxiv: "https://arxiv.org/abs/2608.22384",
+      notebook: "https://notebookarchive.org/2026-08-a5kp7qk",
     },
   },
   {
@@ -380,7 +381,7 @@ const PUBLICATIONS = [
     shortSignificance: "Develops geodesic-flow technology for quantum-Riemannian black-hole geometry.",
     links: {
       arxiv: "https://arxiv.org/abs/2603.03222",
-      notebook: "https://www.notebookarchive.org/2026-03-0yfd51x/",
+      notebook: "https://notebookarchive.org/2026-03-0yfd51x",
     },
   },
   {
