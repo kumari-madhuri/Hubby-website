@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Research programme of Dr. Kaushlendra Kumar: exact mathematical structures in field theory, gravity, quantum geometry, Yang–Mills theory, geometric phases, spectral distance, and quantum information geometry."
+      content="Kaushlendra Kumar's research programme in quantum-state geometry, exact Yang–Mills fields and sources, quantum spacetime, spectral geometry, and finite particle geometry."
     />
     <link rel="canonical" href="https://k-kumar.netlify.app/work.html" />
     <meta property="og:title" content="Research Programme | Kaushlendra Kumar" />
     <meta
       property="og:description"
-      content="Research programme of Dr. Kaushlendra Kumar: exact mathematical structures in field theory, gravity, quantum geometry, Yang–Mills theory, geometric phases, spectral distance, and quantum information geometry."
+      content="Exact structures for computable physics: Laughlin snapshot geometry, Yang–Mills sources, black-hole phases, and finite geometry."
     />
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://k-kumar.netlify.app/work.html" />
+    <meta property="og:image" content="https://k-kumar.netlify.app/media/fqh-snapshot-geometry.png" />
+    <meta property="og:image:alt" content="Laughlin quasihole metric reconstruction and Gram-kernel diagnostics" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -24,8 +26,31 @@
       referrerpolicy="no-referrer"
     />
     <link rel="shortcut icon" href="./media/favicons/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./style.css?v=20260729a" />
+    <link rel="stylesheet" href="./style.css?v=20260826a" />
     <title>Research Programme | Kaushlendra Kumar</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ScholarlyArticle",
+            "headline": "Laughlin quasihole geometry from a single snapshot ensemble",
+            "datePublished": "2026-08-23",
+            "author": { "@type": "Person", "name": "Kaushlendra Kumar" },
+            "url": "https://arxiv.org/abs/2608.22384",
+            "identifier": "arXiv:2608.22384"
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "headline": "Characteristic lightcone sources in SO(1,3) Yang–Mills theory",
+            "author": { "@type": "Person", "name": "Kaushlendra Kumar" },
+            "isPartOf": { "@type": "Periodical", "name": "Physics Letters B" },
+            "url": "https://doi.org/10.1016/j.physletb.2026.140865",
+            "identifier": "https://doi.org/10.1016/j.physletb.2026.140865"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <header class="home" id="home">
@@ -41,7 +66,6 @@
             <li><a href="about.html" class="nav-link">academics</a></li>
             <li><a href="work.html" class="nav-link current">research</a></li>
             <li><a href="interest.html" class="nav-link">personal</a></li>
-            <li><a href="blog.html" class="nav-link">writing</a></li>
           </ul>
         </div>
       </div>
@@ -53,35 +77,37 @@
         <div class="section-center research-hero-grid">
           <div class="research-hero-copy">
             <p class="section-eyebrow">Research programme</p>
-            <h1 id="research-program-title">
-              Exact mathematical structures in field theory, gravity &amp; quantum/information geometry
-            </h1>
+            <h1 id="research-program-title">Exact mathematical structures for computable physics</h1>
             <p class="research-lead">
-              My research uses rigid mathematical structures &mdash; symmetries, quantum spaces, spectral triples,
-              matrix models, division algebras, and gauge-field ans&auml;tze &mdash; as exact inputs for controlled
-              calculations in field theory, gravity, finite geometry, and quantum information. The aim is concrete
-              physics that can be written and checked explicitly: fields, sources, charges, phases, distances,
-              transport laws, particle-sector data, and information metrics.
+              I develop algebraic and geometric methods that turn difficult physical questions into explicit
+              calculations. The programme now runs across quantum-state geometry, exact gauge fields and sources,
+              quantum spacetime, and finite particle geometry, with public results ranging from Laughlin-state
+              metrics and black-hole phases to characteristic Yang&ndash;Mills sources.
             </p>
+            <div class="research-status-row" aria-label="Current research highlights">
+              <a href="https://arxiv.org/abs/2608.22384" target="_blank" rel="noopener noreferrer">
+                <span>New preprint</span> Laughlin snapshot geometry
+              </a>
+              <a href="https://doi.org/10.1016/j.physletb.2026.140865" target="_blank" rel="noopener noreferrer">
+                <span>Published in PLB 880</span> SO(1,3) lightcone sources
+              </a>
+            </div>
             <div class="hero-mechanism" aria-label="Research mechanism">
-              <p class="hero-mechanism-title">Common mechanism</p>
+              <p class="hero-mechanism-title">How the programme works</p>
               <div class="hero-mechanism-flow">
                 <article>
-                  <span>Exact input</span>
-                  <p>Homogeneous spaces, conformal compactifications, quantum calculi, spectral triples, algebraic ans&auml;tze</p>
+                  <span>Rigid input</span>
+                  <p>Symmetry reductions, finite algebras, quantum calculi, exact state families, or matrix backgrounds</p>
                 </article>
                 <article>
-                  <span>Explicit computation</span>
-                  <p>Field/source equations, Dirac operators, inner fluctuations, Hodge data, variational distances, flows</p>
+                  <span>Controlled construction</span>
+                  <p>Solve the field, metric, phase, spectral, source, or transport problem without hiding its assumptions</p>
                 </article>
                 <article>
-                  <span>Physical output</span>
-                  <p>Gauge fields, lightcone defects, black-hole phases, spectral/Helstrom distances, finite-sector constraints</p>
+                  <span>Physical result</span>
+                  <p>Observable geometry, exact sources and charges, propagation laws, or constraints on viable finite models</p>
                 </article>
               </div>
-              <p class="hero-mechanism-note">
-                The formal input should be rigid, the calculation controlled, and the physical interpretation earned.
-              </p>
             </div>
             <nav class="research-anchor-nav" aria-label="Research page sections">
               <a href="#current-focus">Research map</a>
@@ -91,7 +117,11 @@
             </nav>
           </div>
           <figure class="research-hero-visual">
-            <img src="./media/HiggsMechanics.png" alt="Geometric visual motif for quantum geometry and field theory" />
+            <img
+              src="./media/fqh-snapshot-geometry.png"
+              alt="Laughlin quasihole metric reconstruction and Gram-kernel diagnostics"
+            />
+            <figcaption>Newest result: reconstructing Laughlin quasihole geometry from finite snapshots.</figcaption>
           </figure>
         </div>
       </section>
@@ -102,7 +132,7 @@
             <p class="section-eyebrow">Research map</p>
             <h2 id="directions-title">Directions and entry points</h2>
             <div class="underline"></div>
-            <p>Compact summaries of the public-facing routes through the programme.</p>
+            <p>Four connected routes through the programme; open any direction for methods, figures, and public anchors.</p>
           </div>
           <div class="research-map-layout">
             <div class="research-map-grid directions-grid" id="research-directions-grid"></div>
@@ -196,7 +226,7 @@
       <div class="section-center site-footer-inner">
         <p>
           <strong>Dr. Kaushlendra Kumar</strong> &middot; Queen Mary University of London
-          &middot; Last updated: 29 July 2026
+          &middot; Last updated: 26 August 2026
         </p>
       </div>
     </footer>
@@ -209,13 +239,12 @@
           <li><a href="about.html" class="aside-link">academics</a></li>
           <li><a href="work.html" class="aside-link current">research</a></li>
           <li><a href="interest.html" class="aside-link">personal</a></li>
-          <li><a href="blog.html" class="aside-link">writing</a></li>
         </ul>
       </div>
     </aside>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
-    <script src="./app.js?v=20260729a"></script>
+    <script src="./app.js?v=20260826a"></script>
   </body>
 </html>

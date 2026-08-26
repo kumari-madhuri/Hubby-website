@@ -298,6 +298,7 @@ const PROFILE_LINKS = {
 
 const PUBLICATION_FILTERS = [
   "All",
+  "Fractional Quantum Hall",
   "Quantum Geometry",
   "Quantum Information",
   "Yang–Mills",
@@ -310,16 +311,31 @@ const PUBLICATION_FILTERS = [
 
 const PUBLICATIONS = [
   {
-    id: "so13-characteristic-lightcone-sources",
-    title: "Characteristic Lightcone Sources in SO(1,3) Yang–Mills Theory",
+    id: "laughlin-snapshot-geometry",
+    title: "Laughlin quasihole geometry from a single snapshot ensemble",
     year: "2026",
     authors: "Kaushlendra Kumar",
-    venue: "arXiv:2606.27241 [hep-th]",
+    venue: "arXiv:2608.22384 [quant-ph; cond-mat.str-el]",
     status: "preprint",
+    tags: ["Fractional Quantum Hall", "Quantum Information", "Quantum Geometry"],
+    featured: true,
+    shortSignificance: "Shows that one exact occupation law and finite projective snapshots recover the complex Gram kernel, Bargmann phases, quantum metric, and Berry curvature of Laughlin quasiholes.",
+    links: {
+      arxiv: "https://arxiv.org/abs/2608.22384",
+    },
+  },
+  {
+    id: "so13-characteristic-lightcone-sources",
+    title: "Characteristic lightcone sources in SO(1,3) Yang–Mills theory",
+    year: "2026",
+    authors: "Kaushlendra Kumar",
+    venue: "Physics Letters B 880 (2026) 140865",
+    status: "published",
     tags: ["Yang–Mills", "Exact Fields"],
     featured: true,
     shortSignificance: "Completes the singular SO(1,3) Yang–Mills stress tensor on the characteristic null cone, fixing its distributional source and a future/past cone-charge asymmetry.",
     links: {
+      doi: "https://doi.org/10.1016/j.physletb.2026.140865",
       arxiv: "https://arxiv.org/abs/2606.27241",
     },
   },
@@ -948,14 +964,14 @@ const RESEARCH_DIRECTIONS = [
   },
   {
     id: "spectral-information-geometry",
-    title: "Spectral and information geometry",
-    label: "Information geometry",
-    summary: "Operational spectral geometry: Connes distance, Helstrom distinguishability, calibration anchors, channel diagnostics, and finite/fuzzy metric tests. This pillar connects earlier finite and noncommutative spectral-distance work to qubit distinguishability, calibrated metrics, and quantum-information flow.",
+    title: "Quantum-state and information geometry",
+    label: "State geometry",
+    summary: "Exact geometry reconstructed from operational data: Laughlin quasihole snapshots, calibrated Helstrom distance, spectral metrics, and finite/fuzzy state spaces. This pillar asks which physically accessible measurements determine overlaps, phases, distances, curvature, and information flow.",
     figures: [
       {
-        src: "./media/quantumSpace.jpg",
-        alt: "Fuzzy-sphere visualisation used for noncommutative spectral-distance geometry",
-        caption: "Fuzzy / noncommutative metric geometry",
+        src: "./media/fqh-snapshot-geometry.png",
+        alt: "Laughlin quasihole metric reconstruction, finite-snapshot comparison, and Gram-kernel singular values",
+        caption: "Laughlin geometry from finite snapshots",
       },
       {
         src: "./media/qinfo-bloch-calibration.png",
@@ -971,23 +987,24 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction asks when a spectral distance has an operational meaning. It connects earlier Connes-distance computations in finite, Moyal, and fuzzy spaces with qubit distinguishability, calibrated finite metrics, and quantum-channel diagnostics.",
+        text: "This direction asks when the geometry of a quantum-state family can be reconstructed from accessible data. The newest result uses a single exact Laughlin occupation law and finite snapshots to recover a complex Gram kernel; the spectral line asks when Connes distance reproduces operational distinguishability.",
       },
       {
         label: "Methods",
-        text: "The tools are Connes spectral distance, finite metric structures, Dirac eigenspinor data, fuzzy-spin distances, scalar-qubit-scalar calibration, Helstrom trace-distance geometry, matrix-anchor calibration, anisotropic Bloch norms, and channel contractivity tests.",
+        text: "The tools include projective Gram kernels, occupation-number sampling, Bargmann invariants, Fubini–Study metric and Berry curvature, Connes spectral distance, finite Dirac data, scalar-qubit-scalar calibration, Helstrom trace-distance geometry, fuzzy-spin metrics, and channel contractivity tests.",
       },
       {
         label: "Outputs",
-        text: "The outputs are exact spectral distances, finite-space metric relations, Bloch-ball trace-distance geometry from spectral distance, calibration consistency relations, finite matrix or fuzzy-spin metric tests, and diagnostics for channel contractivity and anisotropic information flow.",
+        text: "The outputs are reconstructed overlaps and phases, exact quantum metrics and curvature, finite-dimensional compression bounds, calibrated Bloch-ball distance, spectral metrics on finite and Moyal spaces, and diagnostics for anisotropic information flow and channel contraction.",
       },
       {
         label: "Current frontier",
-        text: "Current work develops the calibrated Helstrom geometry baseline, matrix-anchor extensions, fuzzy-spin spectral distances, anisotropic/misaligned channel diagnostics, and a many-body spectral-geometry bridge through FQH guiding-centre metrics. The aim is exact finite metrics first, operational interpretation second.",
+        text: "The frontier joins many-body and finite-dimensional geometry: finite-shot Laughlin reconstruction, matrix-anchor calibration, fuzzy-spin spectral distance, and anisotropic channel diagnostics. The common question is how much geometry can be certified from sharply limited data without full tomography.",
       },
     ],
-    tags: ["Spectral Distance", "Noncommutative Geometry", "Quantum Information"],
+    tags: ["Fractional Quantum Hall", "Quantum Information", "Spectral Distance"],
     publicAnchorIds: [
+      "laughlin-snapshot-geometry",
       "calibrated-helstrom-bloch",
       "doubled-moyal-spectral-distance",
       "finite-spectral-distance",
@@ -995,11 +1012,22 @@ const RESEARCH_DIRECTIONS = [
   },
 ];
 
+const RESEARCH_DIRECTION_ORDER = [
+  "spectral-information-geometry",
+  "exact-fields",
+  "quantum-geometry",
+  "algebraic-particle-geometry",
+];
+
+RESEARCH_DIRECTIONS.sort((a, b) => (
+  RESEARCH_DIRECTION_ORDER.indexOf(a.id) - RESEARCH_DIRECTION_ORDER.indexOf(b.id)
+));
+
 const RESEARCH_TRAJECTORY = [
   {
     date: "2024–present",
     place: "Queen Mary University of London",
-    text: "Current work with Shahn Majid on Quantum Riemannian Geometry, black-hole phase effects, and finite quaternionic geometries.",
+    text: "Current work on quantum-state geometry, Quantum Riemannian Geometry, black-hole phase effects, and finite quaternionic geometries.",
   },
   {
     date: "2023–2024",
@@ -1687,106 +1715,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-/* ===== Writing / research notebook ===== */
-const BLOG_POSTS = [
-  {
-    title: "What exact structure is supposed to buy us",
-    date: "29 July 2026",
-    dateISO: "2026-07-29",
-    category: "programme",
-    tags: ["research programme", "mathematical physics"],
-    summary: "A research programme should not be unified by vocabulary alone. The useful question is what a rigid structure lets us calculate, constrain, or rule out.",
-    href: "posts/exact-structures-computable-physics.html",
-    featured: true,
-  },
-  {
-    title: "A phase carried by black-hole flow",
-    date: "29 July 2026",
-    dateISO: "2026-07-29",
-    category: "quantum geometry",
-    tags: ["black holes", "geometric phase"],
-    summary: "How a density flow becomes an amplitude flow, why a phase survives around a black hole, and what makes the effect geometric rather than decorative.",
-    href: "posts/geometric-phase-black-hole.html",
-  },
-  {
-    title: "When spectral distance becomes distinguishability",
-    date: "29 July 2026",
-    dateISO: "2026-07-29",
-    category: "spectral geometry",
-    tags: ["spectral distance", "quantum information"],
-    summary: "A finite Connes metric can reproduce the Helstrom geometry of a qubit, but only after the geometry is calibrated against an operational scale.",
-    href: "posts/spectral-distance-helstrom.html",
-  },
-  {
-    title: "Exact fields are laboratories, not ornaments",
-    date: "29 July 2026",
-    dateISO: "2026-07-29",
-    category: "field theory",
-    tags: ["Yang–Mills", "exact fields"],
-    summary: "The value of an exact field is not that its formula closes. It is that sources, charges, trajectories, defects, and transport can be tested without hiding behind an approximation.",
-    href: "posts/exact-fields-as-laboratories.html",
-  },
-  {
-    title: "What finite geometry is allowed to say about particles",
-    date: "29 July 2026",
-    dateISO: "2026-07-29",
-    category: "particle geometry",
-    tags: ["finite geometry", "spectral triples"],
-    summary: "A programme note on Clifford and quaternionic finite geometries, and on separating structures forced by geometry from choices inserted by hand.",
-    href: "posts/finite-geometry-particle-questions.html",
-  },
-  {
-    title: "Sources hiding on the light cone",
-    date: "28 June 2026",
-    dateISO: "2026-06-28",
-    category: "field theory",
-    tags: ["Yang–Mills", "exact fields"],
-    summary: "Why a singular gauge-field stress tensor can only be completed — conserved and traceless — on the characteristic null cone, and what that forces as a physical source.",
-    href: "posts/so13-lightcone-sources.html",
-  },
-];
-(function () {
-  var el = document.querySelector("#blog-list");
-  if (!el) return;
-  if (!BLOG_POSTS.length) { el.innerHTML = '<p class="blog-empty">Posts coming soon.</p>'; return; }
-  var filters = document.querySelector("#blog-filters");
-  var categories = ["all"].concat(Array.from(new Set(BLOG_POSTS.map(function (post) { return post.category; }))));
-
-  function renderPosts(activeCategory) {
-    el.innerHTML = BLOG_POSTS.filter(function (post) {
-      return activeCategory === "all" || post.category === activeCategory;
-    }).map(function (p) {
-      var tags = (p.tags || []).map(function (t) {
-        return '<span class="blog-tag">' + escapeHTML(t) + '</span>';
-      }).join("");
-      return '<article class="blog-card' + (p.featured ? ' blog-card-featured' : '') + '">' +
-        '<div class="blog-card-meta"><time class="blog-date" datetime="' + escapeHTML(p.dateISO) + '">' + escapeHTML(p.date) + '</time>' +
-        '<span>' + escapeHTML(p.category) + '</span></div>' +
-        '<h3><a href="' + escapeHTML(p.href) + '">' + escapeHTML(p.title) + '</a></h3>' +
-        '<p class="blog-summary">' + escapeHTML(p.summary) + '</p>' +
-        '<div class="blog-card-footer"><div class="blog-tags">' + tags + '</div>' +
-        '<a class="blog-read-link" href="' + escapeHTML(p.href) + '">Read note <i class="fas fa-arrow-right" aria-hidden="true"></i></a></div>' +
-        '</article>';
-    }).join("");
-  }
-
-  if (filters) {
-    filters.innerHTML = categories.map(function (category) {
-      var label = category === "all" ? "All notes" : category;
-      return '<button type="button" class="blog-filter' + (category === "all" ? ' active' : '') +
-        '" data-blog-filter="' + escapeHTML(category) + '">' + escapeHTML(label) + '</button>';
-    }).join("");
-    filters.querySelectorAll("[data-blog-filter]").forEach(function (button) {
-      button.addEventListener("click", function () {
-        filters.querySelectorAll("[data-blog-filter]").forEach(function (item) {
-          item.classList.remove("active");
-        });
-        button.classList.add("active");
-        renderPosts(button.getAttribute("data-blog-filter"));
-      });
-    });
-  }
-
-  renderPosts("all");
-})();
