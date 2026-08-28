@@ -961,11 +961,6 @@ const RESEARCH_DIRECTIONS = [
         status: "draft with Shahn Majid",
         text: "A quantum Kaluza–Klein construction whose finite fibre is the cocycle-twisted quaternion calculus. Its complexified algebra is M₂(ℂ), but its differential graded *-algebra is neither the standard matrix nor the fuzzy-sphere calculus: the symmetric mixed wedge forces commuting Clifford generators, and a character argument selects one quantum Levi-Civita connection at complex spinor rank two. The resulting finite Dirac operator is braiding-independent, with spectrum {−1×4, +1×4}, so the uncrossed spacetime product carries eight fermion modes at a single mass magnitude 1/r rather than the three fuzzy-sphere levels.",
       },
-      {
-        title: "Crossed product geometry: what closes and what obstructs",
-        status: "same draft, open directions",
-        text: "For crossed products the direct-product connections are locally rigid but the nonlinear equations admit disconnected real branches; an exact rank-one branch and an exact full-rank two-dimensional branch are both constructed. The aligned rank-one branch Abelianises exactly, and its scalar Laplacian is the Abelian covariant square for two neutral real scalars and one charged complex scalar. The weak-field vector is massless Maxwell, but a quartic correction and the calculus itself obstruct an ordinary local U(1) gauge reading, while a geometrically realised crossed fermion stays obstructed: the minimal rank-two spinor braiding is noninvertible on every nonzero aligned background, and an explicit rank-four repair restores invertibility only at the cost of Clifford reality. These are geometric inputs for further work rather than a phenomenological model, and the four-dimensional reduction and phenomenology are deliberately not claimed.",
-      },
     ],
   },
   {
