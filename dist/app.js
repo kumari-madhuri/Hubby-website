@@ -932,11 +932,11 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This longer-horizon branch asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. The near-public line uses Clifford/octonionic finite spectral triples; the QRG line explores quaternionic and linked C ⊕ H finite geometries as a possible electroweak-style route.",
+        text: "This longer-horizon branch asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. One line uses Clifford/octonionic finite spectral triples; the other builds quantum Kaluza–Klein geometry on a cocycle-twisted quaternion fibre, asking what a genuinely non-matrix finite calculus forces on spinors, gauge fields and scalars.",
       },
       {
         label: "Methods",
-        text: "The technical ingredients are finite Dirac operators, real structures, gradings, order-one conditions, Clifford and Peirce decompositions, cocycle-twisted quaternionic calculi, scalar-quaternionic link bimodules, inner fluctuations, determinant/unimodularity tests, and gauge quotients.",
+        text: "The technical ingredients are finite Dirac operators, real structures, gradings, order-one conditions, Clifford and Peirce decompositions, cocycle-twisted quaternionic calculi, quantum Levi-Civita connections and braidings, product and crossed-product metrics, inner fluctuations, determinant/unimodularity tests, and gauge quotients.",
       },
       {
         label: "Outputs",
@@ -944,7 +944,7 @@ const RESEARCH_DIRECTIONS = [
       },
       {
         label: "Current frontier",
-        text: "The programme is deliberately staged: first the Cℓ6/octonionic finite-triple construction with Nichol Furey, then scalar-sector and completion tests, with quaternionic and linked C ⊕ H geometries as exploratory QRG extensions. The frontier is to separate structures forced by exact finite geometry from optional particle-model choices.",
+        text: "The programme is deliberately staged: the Cℓ6/octonionic finite-triple construction with Nichol Furey, then scalar-sector and completion tests, alongside the quaternionic Kaluza–Klein line with Shahn Majid. The frontier is to separate structures forced by exact finite geometry from optional particle-model choices, and in the quaternionic case the honest current statement is that the bosonic and scalar reduction closes while a geometrically realised crossed fermion remains obstructed.",
       },
     ],
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
@@ -957,9 +957,14 @@ const RESEARCH_DIRECTIONS = [
         text: "Clifford-octonionic Peirce data produce a finite algebra, a 32-dimensional one-generation Hilbert space, B-L and hypercharge generators, and two scalar doublets, while staying short of a completed phenomenological model.",
       },
       {
-        title: "Quaternionic linked finite geometry and C ⊕ H electroweak tests",
-        status: "exploratory QRG programme with Shahn Majid",
-        text: "A cocycle-twisted H geometry supplies a finite quaternionic calculus, metric/Hodge data, and a geometric Dirac block. The linked C ⊕ H construction is the real electroweak test: scalar-quaternionic links, Higgs/Yukawa-style channels, and finite-Dirac data are being developed as a programme rather than presented as completed phenomenology.",
+        title: "Quantum Kaluza–Klein theory with a cocycle-twisted quaternion fibre",
+        status: "draft with Shahn Majid",
+        text: "A quantum Kaluza–Klein construction whose finite fibre is the cocycle-twisted quaternion calculus. Its complexified algebra is M₂(ℂ), but its differential graded *-algebra is neither the standard matrix nor the fuzzy-sphere calculus: the symmetric mixed wedge forces commuting Clifford generators, and a character argument selects one quantum Levi-Civita connection at complex spinor rank two. The resulting finite Dirac operator is braiding-independent, with spectrum {−1×4, +1×4}, so the uncrossed spacetime product carries eight fermion modes at a single mass magnitude 1/r rather than the three fuzzy-sphere levels.",
+      },
+      {
+        title: "Crossed product geometry: what closes and what obstructs",
+        status: "same draft, open directions",
+        text: "For crossed products the direct-product connections are locally rigid but the nonlinear equations admit disconnected real branches; an exact rank-one branch and an exact full-rank two-dimensional branch are both constructed. The aligned rank-one branch Abelianises exactly, and its scalar Laplacian is the Abelian covariant square for two neutral real scalars and one charged complex scalar. The weak-field vector is massless Maxwell, but a quartic correction and the calculus itself obstruct an ordinary local U(1) gauge reading, while a geometrically realised crossed fermion stays obstructed: the minimal rank-two spinor braiding is noninvertible on every nonzero aligned background, and an explicit rank-four repair restores invertibility only at the cost of Clifford reality. These are geometric inputs for further work rather than a phenomenological model, and the four-dimensional reduction and phenomenology are deliberately not claimed.",
       },
     ],
   },
