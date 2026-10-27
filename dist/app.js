@@ -311,6 +311,20 @@ const PUBLICATION_FILTERS = [
 
 const PUBLICATIONS = [
   {
+    id: "helstrom-time-dependent-calibration",
+    title: "Helstrom geometry with time-dependent spectral calibration",
+    year: "2026",
+    authors: "Kaushlendra Kumar",
+    venue: "arXiv:2610.33848 [quant-ph; math-ph] · Prepared for the XLIII Workshop on Geometric Methods in Physics proceedings",
+    status: "preprint",
+    tags: ["Quantum Information", "Spectral Distance", "Helstrom Geometry", "Proceedings"],
+    featured: true,
+    shortSignificance: "Separates changes in qubit distinguishability from changes in the spectral calibration. Scalar-reference distances recover the scale needed to interpret a growing spectral distance.",
+    links: {
+      arxiv: "https://arxiv.org/abs/2610.33848",
+    },
+  },
+  {
     id: "laughlin-snapshot-geometry",
     title: "Laughlin quasihole geometry from a single snapshot ensemble",
     year: "2026",
@@ -519,7 +533,7 @@ const PUBLICATIONS = [
   },
   {
     id: "finite-spectral-distance",
-    title: "Revisiting Connes’ finite spectral distance on the algebra M2(C)",
+    title: "Revisiting Connes’ finite spectral distance on noncommutative spaces: Moyal plane and fuzzy sphere",
     year: "2018",
     authors: "Yendrembam Chaoba Devi, Kaushlendra Kumar, Biswajit Chakraborty and Frederik G. Scholtz",
     venue: "International Journal of Geometric Methods in Modern Physics 15 (2018) 1850204",
@@ -556,6 +570,7 @@ const PUBLICATIONS = [
     featured: false,
     links: {
       doi: "https://doi.org/10.1088/1742-6596/2667/1/012018",
+      arxiv: "https://arxiv.org/abs/2310.00391",
     },
   },
   {
@@ -583,8 +598,8 @@ const TALKS = [
     type: "conference talk",
     selected: true,
     links: {
-      event: "https://wgmp.uwb.edu.pl/first.html",
-      abstract: "https://wgmp.uwb.edu.pl/abs/Kumar.html",
+      event: "https://wgmp.uwb.edu.pl/wgmp43/",
+      abstract: "https://wgmp.uwb.edu.pl/wgmp43/abs/Kumar.html",
     },
     tags: ["Quantum Information", "Spectral Distance"],
   },
@@ -770,7 +785,7 @@ const CONFERENCES = [
     date: "Jun 29–Jul 4, 2026",
     title: "XLIII Workshop on Geometric Methods in Physics",
     location: "Białystok, Poland",
-    url: "https://wgmp.uwb.edu.pl/first.html",
+    url: "https://wgmp.uwb.edu.pl/wgmp43/",
   },
   {
     date: "Jul 7–11, 2025",
@@ -824,7 +839,7 @@ const RESEARCH_DIRECTIONS = [
     id: "exact-fields",
     title: "Exact fields and geometric transport",
     label: "Exact field theory",
-    summary: "Exact Yang–Mills and Maxwell systems as laboratories for source laws, charges, topological response, pulse transport, and obstruction theorems. This pillar turns homogeneous-space reductions, conformal geometry, and rational field bases into explicit fields whose sources, defects, and probe dynamics can be computed.",
+    summary: "Spacetime symmetries reduce the Yang–Mills and Maxwell equations to problems that admit exact solutions. I use these fields to study conserved charges, charged-particle motion, and the sources represented by singularities, including the characteristic lightcone in SO(1,3) Yang–Mills theory.",
     figures: [
       {
         src: "./media/MinkFoliations-padded.png",
@@ -845,19 +860,19 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction constructs exact Yang–Mills and Maxwell sectors from rigid spacetime and symmetry data, then asks what physical structure the exact fields force: sources, charges, defects, trajectories, topological response, and transport.",
+        text: "Symmetry can make a nonlinear field equation solvable without a perturbative expansion. My work uses de Sitter, anti-de Sitter, and Minkowski geometry to construct exact gauge fields, then examines their conserved quantities and singularities. Rational Maxwell fields provide a related setting in which field lines can form knots.",
       },
       {
         label: "Methods",
-        text: "The main tools are homogeneous spaces, equivariant reductions, de Sitter and anti-de Sitter embeddings, conformal compactification, rational Maxwell bases, conormal/distributional source analysis, Gauss-law reduction, and the geometry of knotted field lines.",
+        text: "Homogeneous spaces and equivariant ansätze reduce the gauge equations. Conformal maps relate the resulting fields on different spacetimes. For rational electromagnetic knots, explicit field expressions allow calculations of conformal charges and numerical trajectories of charged probes.",
       },
       {
         label: "Outputs",
-        text: "The public outputs include closed-form gauge fields, conserved conformal charges, charged-particle trajectories, characteristic lightcone source completions, defect laws, pulse/transport structures, and gauge-theoretic cosmological sectors.",
+        text: "Published results include exact gauge fields from non-compact cosets, conserved charges for rational electromagnetic knots, and charged-particle trajectories in those fields. The 2026 Physics Letters B paper determines a conserved, traceless distributional completion of the SO(1,3) stress tensor on the lightcone.",
       },
       {
-        label: "Current frontier",
-        text: "The frontier is a source/defect/transport dictionary for exact fields: characteristic SO(1,3) lightcone sources, SU(1,1)/AdS seam defects, Maxwell controls, and Yang–Mills pulse transport on R × S³, all with conservation laws and response data kept explicit.",
+        label: "The lightcone source",
+        text: "The singular stress tensor raises a specific question: what source can preserve both conservation and tracelessness? Moving the singular support off the cone cannot retain both properties. A completion on the cone can, with one parameter describing the relative weights of its future and past branches.",
       },
     ],
     tags: ["Yang–Mills", "Exact Fields", "Electromagnetic Knots"],
@@ -874,7 +889,7 @@ const RESEARCH_DIRECTIONS = [
     id: "quantum-geometry",
     title: "Quantum geometry and emergent spacetime",
     label: "Quantum spacetime",
-    summary: "Black-hole quantum geometry, geometric phase effects, horizon-flow diagnostics, and matrix/emergent-gravity comparison. This pillar uses quantum-Riemannian flows, horizon transport, projective quantization, and matrix-model effective equations as concrete probes of nonclassical spacetime.",
+    summary: "With Shahn Majid, I study geodesic flows of densities and amplitudes on a black-hole background, including horizon crossing and a geometric phase effect. A separate collaboration with Harold Steinacker derives gravitational equations from the one-loop effective action of the IKKT matrix model.",
     figures: [
       {
         src: "./media/qrg-direct-phase-panel.png",
@@ -895,19 +910,19 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction studies nonclassical spacetime through concrete diagnostics rather than broad analogy: quantum-Riemannian black-hole flow and geometric phase effects with Shahn Majid, and matrix-model emergent gravity with Harold Steinacker.",
+        text: "A geodesic velocity field can transport a density on spacetime. We also consider an amplitude whose squared modulus gives that density, so that relative phases can affect the evolution. Our black-hole papers study this proposal on Schwarzschild spacetime and relate it to proper-time quantum mechanics.",
       },
       {
         label: "Methods",
-        text: "The toolkit includes Quantum Riemannian Geometry, corrected Schwarzschild backgrounds, geodesic and amplitude-flow equations, Klein–Gordon semiclassics, density motion across horizons, congruence diagnostics, projective horizon quantization, IKKT matrices, compact fuzzy transverse factors, and one-loop effective actions.",
+        text: "The flow calculations use geodesic velocity fields, continuity and amplitude equations, Kruskal–Szekeres coordinates, and an eikonal approximation to Klein–Gordon flow. In the matrix-model work, varying the one-loop effective action gives equations for the geometry of four-dimensional quantum branes.",
       },
       {
         label: "Outputs",
-        text: "The outputs are black-hole geodesic flows, horizon-crossing density evolution, geometric/Aharonov–Bohm phases, projective strip spectra for horizon modes, modified Einstein equations, and mirage/dark-matter-like geometric correction modes.",
+        text: "The public preprints describe density and amplitude flows across the horizon and an Aharonov–Bohm type phase effect for amplitudes approaching a black hole. The published IKKT work obtains modified Einstein equations with additional dilaton, axionic, and classical matrix-action contributions.",
       },
       {
-        label: "Current frontier",
-        text: "The immediate frontier is black-hole quantum geometry: phase robustness, congruence probes, projective horizon quantization, and horizon-crossing amplitude transport. The matrix-model line supplies a second test-bed through explicit IKKT effective equations, compact-factor variations, state-dependent geometry, and correction modes that can be compared with emergent-gravity phenomenology.",
+        label: "Density and phase",
+        text: "Two colliding density profiles can merge, while amplitudes with opposite phases can produce a different final density. This comparison gives a way to examine the amplitude-flow proposal. The phase paper derives the relevant flow equations from an eikonal approximation, making the assumptions behind the interpretation explicit.",
       },
     ],
     tags: ["Quantum Geometry", "Black Holes", "Matrix Models"],
@@ -921,7 +936,7 @@ const RESEARCH_DIRECTIONS = [
     id: "algebraic-particle-geometry",
     title: "Algebraic particle geometry",
     label: "Particle geometry",
-    summary: "Finite Clifford/octonionic spectral triples, scalar-sector tests, completion questions, and finite-geometric obstruction criteria. This longer-horizon branch asks which particle-sector ingredients are forced by finite geometry, and which remain optional model-building choices.",
+    summary: "Finite noncommutative geometry offers a way to organize particle degrees of freedom through algebras, representations, and Dirac operators. I am interested in which field and symmetry choices follow from these data, and which require additional assumptions.",
     figures: [
       {
         src: "./media/cl6-finite-geometry.svg",
@@ -932,42 +947,29 @@ const RESEARCH_DIRECTIONS = [
     detailSections: [
       {
         label: "Core idea",
-        text: "This longer-horizon branch asks how particle-sector structure can be organized by finite geometry rather than by freely listing fields and charges. One line uses Clifford/octonionic finite spectral triples; the other builds quantum Kaluza–Klein geometry on a cocycle-twisted quaternion fibre, asking what a genuinely non-matrix finite calculus forces on spinors, gauge fields and scalars.",
+        text: "The aim is to describe internal particle degrees of freedom by a finite geometry. An algebra acts on a space of states, and a Dirac operator links its components. The question is how much of a field theory can be determined from these choices and their compatibility conditions.",
       },
       {
         label: "Methods",
-        text: "The technical ingredients are finite Dirac operators, real structures, gradings, order-one conditions, Clifford and Peirce decompositions, cocycle-twisted quaternionic calculi, quantum Levi-Civita connections and braidings, product and crossed-product metrics, inner fluctuations, determinant/unimodularity tests, and gauge quotients.",
+        text: "The mathematical setting includes finite spectral triples, Clifford and division algebras, representations, gradings, and real structures. These provide different ways to organize fermionic states and to constrain the operators that couple them.",
       },
       {
-        label: "Outputs",
-        text: "The desired outputs are finite algebra and Hilbert-space data, B-L and hypercharge generators, scalar/link-field sectors, obstruction and completion results for finite triples, exact quaternionic Dirac spectra, and disciplined model-building constraints.",
+        label: "Questions",
+        text: "Which symmetries are fixed by the algebra and its representation? Which couplings are allowed by the Dirac operator? These questions distinguish consequences of the geometry from assumptions introduced to build a particle model.",
       },
       {
-        label: "Current frontier",
-        text: "The programme is deliberately staged: the Cℓ6/octonionic finite-triple construction with Nichol Furey, then scalar-sector and completion tests, alongside the quaternionic Kaluza–Klein line with Shahn Majid. The frontier is to separate structures forced by exact finite geometry from optional particle-model choices, and in the quaternionic case the honest current statement is that the bosonic and scalar reduction closes while a geometrically realised crossed fermion remains obstructed.",
+        label: "Scope",
+        text: "These are structural questions about internal geometry. A proposed field content must satisfy the geometric compatibility conditions and, separately, the requirements of a physical theory. The diagram sketches the algebraic setting for this work.",
       },
     ],
     tags: ["Finite Spectral Triples", "Noncommutative Geometry", "Particle Geometry"],
     publicAnchorIds: [],
-    anchorHeading: "Current programme anchors",
-    programmeAnchors: [
-      {
-        title: "A finite real spectral triple from Cℓ6 for one generation of Standard Model fermions",
-        status: "near-public draft with Nichol Furey",
-        text: "Clifford-octonionic Peirce data produce a finite algebra, a 32-dimensional one-generation Hilbert space, B-L and hypercharge generators, and two scalar doublets, while staying short of a completed phenomenological model.",
-      },
-      {
-        title: "Quantum Kaluza–Klein theory with a cocycle-twisted quaternion fibre",
-        status: "draft with Shahn Majid",
-        text: "A quantum Kaluza–Klein construction whose finite fibre is the cocycle-twisted quaternion calculus. Its complexified algebra is M₂(ℂ), but its differential graded *-algebra is neither the standard matrix nor the fuzzy-sphere calculus: the symmetric mixed wedge forces commuting Clifford generators, and a character argument selects one quantum Levi-Civita connection at complex spinor rank two. The resulting finite Dirac operator is braiding-independent, with spectrum {−1×4, +1×4}, so the uncrossed spacetime product carries eight fermion modes at a single mass magnitude 1/r rather than the three fuzzy-sphere levels.",
-      },
-    ],
   },
   {
     id: "spectral-information-geometry",
     title: "Quantum-state and information geometry",
     label: "State geometry",
-    summary: "Exact geometry reconstructed from operational data: Laughlin quasihole snapshots, calibrated Helstrom distance, spectral metrics, and finite/fuzzy state spaces. This pillar asks which physically accessible measurements determine overlaps, phases, distances, curvature, and information flow.",
+    summary: "What data determine the geometry of quantum states? For lattice Laughlin quasiholes, one reference occupation law and the known analytic state family determine overlaps and phases. For qubits, scalar reference sectors calibrate Connes distance to trace distance, including when the Dirac links vary in time.",
     figures: [
       {
         src: "./media/fqh-snapshot-geometry.png",
@@ -975,36 +977,32 @@ const RESEARCH_DIRECTIONS = [
         caption: "Laughlin geometry from finite snapshots",
       },
       {
-        src: "./media/qinfo-bloch-calibration.png",
-        alt: "Bloch-ball calibration geometry for Helstrom distinguishability",
-        caption: "Bloch calibration geometry",
-      },
-      {
-        src: "./media/qinfo-spin1-metric-comparison.png",
-        alt: "Spin-one spectral distance comparison against chord and geodesic distances",
-        caption: "Fuzzy-spin spectral distance",
+        src: "./media/helstrom-scalar-bloch.png",
+        alt: "Proceedings Figure 1: the qubit Bloch ball, two scalar reference states, and their spectral distances",
+        caption: "Scalar-anchored geometry from the proceedings",
       },
     ],
     detailSections: [
       {
         label: "Core idea",
-        text: "This direction asks when the geometry of a quantum-state family can be reconstructed from accessible data. The newest result uses a single exact Laughlin occupation law and finite snapshots to recover a complex Gram kernel; the spectral line asks when Connes distance reproduces operational distinguishability.",
+        text: "Trace distance measures how well two quantum states can be distinguished. In a finite scalar–qubit–scalar geometry, Connes distance reproduces this metric up to a scale set by the Dirac links. The October proceedings preprint asks what happens when those links change independently of the qubit dynamics.",
       },
       {
         label: "Methods",
-        text: "The tools include projective Gram kernels, occupation-number sampling, Bargmann invariants, Fubini–Study metric and Berry curvature, Connes spectral distance, finite Dirac data, scalar-qubit-scalar calibration, Helstrom trace-distance geometry, fuzzy-spin metrics, and channel contractivity tests.",
+        text: "The spectral calculations evaluate commutator norms and use scalar-reference distances to recover the calibration scale. The Laughlin work uses the analytic quasihole factor and occupation-number samples to reconstruct a complex Gram kernel, from which overlaps, Bargmann phases, the quantum metric, and Berry curvature follow.",
       },
       {
-        label: "Outputs",
-        text: "The outputs are reconstructed overlaps and phases, exact quantum metrics and curvature, finite-dimensional compression bounds, calibrated Bloch-ball distance, spectral metrics on finite and Moyal spaces, and diagnostics for anisotropic information flow and channel contraction.",
+        label: "Moving calibration",
+        text: "A decreasing Dirac scale can make spectral distance grow even under depolarizing evolution, while trace distance contracts. The same positive spectral record can also admit a realization with trace-distance revival. Scalar distances measured at the same times, within the same isotropic geometry, recover the scale and distinguish these histories.",
       },
       {
-        label: "Current frontier",
-        text: "The frontier joins many-body and finite-dimensional geometry: finite-shot Laughlin reconstruction, matrix-anchor calibration, fuzzy-spin spectral distance, and anisotropic channel diagnostics. The common question is how much geometry can be certified from sharply limited data without full tomography.",
+        label: "Earlier and related work",
+        text: "Earlier papers compute spectral distances on Moyal, fuzzy, and finite spaces. The Laughlin preprint addresses a different reconstruction problem: the exact occupation law at one generic reference position, together with the known analytic quasihole factor, determines the kernel. A finite snapshot ensemble estimates it without preparing the other states in the family.",
       },
     ],
     tags: ["Fractional Quantum Hall", "Quantum Information", "Spectral Distance"],
     publicAnchorIds: [
+      "helstrom-time-dependent-calibration",
       "laughlin-snapshot-geometry",
       "calibrated-helstrom-bloch",
       "doubled-moyal-spectral-distance",
@@ -1028,7 +1026,7 @@ const RESEARCH_TRAJECTORY = [
   {
     date: "2024–present",
     place: "Queen Mary University of London",
-    text: "Current work on quantum-state geometry, Quantum Riemannian Geometry, black-hole phase effects, and finite quaternionic geometries.",
+    text: "Quantum-state distances and calibration, Laughlin quasihole geometry, and black-hole flows and phases.",
   },
   {
     date: "2023–2024",

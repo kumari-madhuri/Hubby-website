@@ -12,12 +12,12 @@
     <meta property="og:title" content="Research Programme | Kaushlendra Kumar" />
     <meta
       property="og:description"
-      content="Exact structures for computable physics: Laughlin snapshot geometry, Yang–Mills sources, black-hole phases, and finite geometry."
+      content="Quantum-state distances and calibration, exact Yang–Mills fields, black-hole flows and phases, and finite geometry. Publications and public preprints."
     />
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://k-kumar.netlify.app/work.html" />
-    <meta property="og:image" content="https://k-kumar.netlify.app/media/fqh-snapshot-geometry.png" />
-    <meta property="og:image:alt" content="Laughlin quasihole metric reconstruction and Gram-kernel diagnostics" />
+    <meta property="og:image" content="https://k-kumar.netlify.app/media/helstrom-scalar-bloch.png" />
+    <meta property="og:image:alt" content="Bloch ball and two scalar reference states from the Helstrom calibration proceedings" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -26,12 +26,22 @@
       referrerpolicy="no-referrer"
     />
     <link rel="shortcut icon" href="./media/favicons/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="./style.css?v=20260828a" />
+    <link rel="stylesheet" href="./style.css?v=20261027a" />
     <title>Research Programme | Kaushlendra Kumar</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
+          {
+            "@type": "ScholarlyArticle",
+            "headline": "Helstrom geometry with time-dependent spectral calibration",
+            "datePublished": "2026-10-24",
+            "author": { "@type": "Person", "name": "Kaushlendra Kumar" },
+            "url": "https://arxiv.org/abs/2610.33848",
+            "identifier": "arXiv:2610.33848",
+            "creativeWorkStatus": "Preprint",
+            "description": "Prepared for the proceedings of the XLIII Workshop on Geometric Methods in Physics, Białystok, 2026."
+          },
           {
             "@type": "ScholarlyArticle",
             "headline": "Laughlin quasihole geometry from a single snapshot ensemble",
@@ -77,16 +87,18 @@
         <div class="section-center research-hero-grid">
           <div class="research-hero-copy">
             <p class="section-eyebrow">Research programme</p>
-            <h1 id="research-program-title">Exact mathematical structures for computable physics</h1>
+            <h1 id="research-program-title">Exact mathematical structures in field theory, gravity &amp; quantum/information geometry</h1>
             <p class="research-lead">
-              I develop algebraic and geometric methods that turn difficult physical questions into explicit
-              calculations. The programme now runs across quantum-state geometry, exact gauge fields and sources,
-              quantum spacetime, and finite particle geometry, with public results ranging from Laughlin-state
-              metrics and black-hole phases to characteristic Yang&ndash;Mills sources.
+              My work uses geometry to study quantum states, gauge fields, and spacetime.
+              Recent papers ask how spectral distances encode qubit distinguishability,
+              how a snapshot ensemble determines Laughlin quasihole geometry, and what
+              source is represented by a Yang&ndash;Mills field singular on a lightcone.
+              Work on black-hole flows examines the evolution of densities and amplitudes,
+              including their geometric phases.
             </p>
             <div class="research-status-row" aria-label="Current research highlights">
-              <a href="https://arxiv.org/abs/2608.22384" target="_blank" rel="noopener noreferrer">
-                <span>New preprint</span> Laughlin snapshot geometry
+              <a href="https://arxiv.org/abs/2610.33848" target="_blank" rel="noopener noreferrer">
+                <span>New proceedings preprint</span> Time-dependent Helstrom calibration
               </a>
               <a href="https://doi.org/10.1016/j.physletb.2026.140865" target="_blank" rel="noopener noreferrer">
                 <span>Published in PLB 880</span> SO(1,3) lightcone sources
@@ -96,16 +108,16 @@
               <p class="hero-mechanism-title">How the programme works</p>
               <div class="hero-mechanism-flow">
                 <article>
-                  <span>Rigid input</span>
-                  <p>Symmetry reductions, finite algebras, quantum calculi, exact state families, or matrix backgrounds</p>
+                  <span>Specify the geometry</span>
+                  <p>Choose a spacetime symmetry, a finite algebra and Dirac operator, or a family of quantum states</p>
                 </article>
                 <article>
-                  <span>Controlled construction</span>
-                  <p>Solve the field, metric, phase, spectral, source, or transport problem without hiding its assumptions</p>
+                  <span>Carry out the calculation</span>
+                  <p>Solve the reduced field equations, evaluate spectral distances, or evolve densities and amplitudes</p>
                 </article>
                 <article>
-                  <span>Physical result</span>
-                  <p>Observable geometry, exact sources and charges, propagation laws, or constraints on viable finite models</p>
+                  <span>Interpret the result</span>
+                  <p>Determine sources and charges, compare state distinguishability, or identify the phase acquired by a flow</p>
                 </article>
               </div>
             </div>
@@ -225,7 +237,7 @@
       <div class="section-center site-footer-inner">
         <p>
           <strong>Dr. Kaushlendra Kumar</strong> &middot; Queen Mary University of London
-          &middot; Last updated: 26 August 2026
+          &middot; Last updated: 27 October 2026
         </p>
       </div>
     </footer>
@@ -244,6 +256,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
-    <script src="./app.js?v=20260828a"></script>
+    <script src="./app.js?v=20261027a"></script>
   </body>
 </html>
